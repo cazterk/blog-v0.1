@@ -20,10 +20,9 @@ export default function Home({ posts }) {
         posts.map((p) => {
           return {
             ...p,
-            mainImage: imageBuilder
-              .image(p.mainImage)
-              .width(500)
-              .height(250),
+            mainImage: imageBuilder.image(p.mainImage),
+            // .width(500)
+            // .height(250),
           };
         })
       );
@@ -48,8 +47,9 @@ export default function Home({ posts }) {
                 className={styles.post}
               >
                 <a className={styles.card}>
-                  <h3>{p.title}</h3>
                   <img className={styles.mainImage} src={p.mainImage} />
+
+                  <h3>{p.title}</h3>
                 </a>
               </div>
             ))

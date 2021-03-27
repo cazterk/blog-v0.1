@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Toolbar } from "../components/toolbar";
 import styles from "../styles/Home.module.css";
 import imageUrlBuilder from "@sanity/image-url";
@@ -48,8 +47,10 @@ export default function Home({ posts }) {
               >
                 <a className={styles.card}>
                   <img className={styles.mainImage} src={p.mainImage} />
-
+                  <h3>{p.category}</h3>
                   <h3>{p.title}</h3>
+                  <p>{p.excerpt}</p>
+                  <p>{p.publishedAt}</p>
                 </a>
               </div>
             ))

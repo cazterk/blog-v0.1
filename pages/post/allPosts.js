@@ -1,11 +1,9 @@
-import { Toolbar } from "../components/toolbar";
-import AllPosts from "./post/allPosts";
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Home({ posts }) {
+export default function AllPosts({ posts }) {
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
 
@@ -30,24 +28,21 @@ export default function Home({ posts }) {
       setmappedPost([]);
     }
   }, [posts.length]);
-
   return (
     <div>
-      <Toolbar />
-
-      <div className={styles.main}>
+      <div className="">
         <h1>Welcome to my blog </h1>
         <h3>Recent</h3>
-        <div className={styles.feed}>
+        <div className="">
           {mappedPost.length ? (
             mappedPost.map((p, index) => (
               <div
                 onClick={() => router.push(`/post/${p.slug.current}`)}
                 key={index}
-                className={styles.post}
+                className=""
               >
-                <a className={styles.card}>
-                  <img className={styles.mainImage} src={p.mainImage} />
+                <a className="">
+                  <img className="" src={p.mainImage} />
                   <h3>{p.category}</h3>
                   <h3>{p.title}</h3>
                   <p>{p.excerpt}</p>
@@ -60,14 +55,12 @@ export default function Home({ posts }) {
           )}
         </div>
       </div>
-
-      <AllPosts />
     </div>
   );
 }
 
 export const getServerSideProps = async (pageContext) => {
-  const query = encodeURIComponent(`*[ _type == "post"][0...5]`);
+  const query = encodeURIComponent(`*[ _type == "post"]`);
   const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then((res) => res.json());
 

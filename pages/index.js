@@ -64,7 +64,7 @@ export default function Home({ posts }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-  const query = encodeURIComponent(`*[ _type == "post"]`);
+  const query = encodeURIComponent(`*[ _type == "post"][0...5]`);
   const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then((res) => res.json());
 

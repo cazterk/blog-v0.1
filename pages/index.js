@@ -1,6 +1,6 @@
 import { Navbar } from "../components/navbar";
 import { Heros } from "../components/heros";
-import AllPosts from "./_posts";
+import { Footer } from "../components/footer";
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
@@ -64,6 +64,7 @@ export default function Home({ posts }) {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import { Navbar } from "../components/navbar";
+import { Heros } from "../components/heros";
 import AllPosts from "./_posts";
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
@@ -34,6 +35,7 @@ export default function Home({ posts }) {
   return (
     <div>
       <Navbar />
+      <Heros />
 
       <div className={styles.main}>
         <div className={styles.container}>

@@ -33,20 +33,5 @@ export const Navbar = () => {
         </div>
       </header>
     </div>
-    //   <div>
-    //   <header>
-    //     <div class="container">
-    //       <div class="navbar">
-    //         <nuxt-link to="/" class="logo"> cazterk</nuxt-link>
-    //         <nav>
-    //           <ul>
-    //             <li><nuxt-link to="#footer">Socials</nuxt-link></li>
-    //             <li><nuxt-link to="/support">Support Me</nuxt-link></li>
-    //           </ul>
-    //         </nav>
-    //       </div>
-    //     </div>
-    //   </header>
-    // </div>
   );
 };

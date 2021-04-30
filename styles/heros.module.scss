@@ -23,9 +23,9 @@
   }
 
   .subscribe {
-    height: 44px;
+    height: 40px;
     margin: 30px auto 0;
-    max-width: 520px;
+    max-width: 350px;
     position: relative;
     width: 100%;
     background: #fff;
@@ -37,7 +37,7 @@
       font-size: 1em;
       display: block;
       padding: 5px 100px 5px 18px;
-      color: #e9625b;
+      color: #6b7280;
       pointer-events: none;
       transition: opacity 0.25s ease, transform 0.35s ease;
     }

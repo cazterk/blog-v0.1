@@ -10,19 +10,20 @@
   // box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
 
   .feed {
-    border-radius: 1em;
     padding: 0.8em;
+    border-bottom: 1px solid #e6e5e6;
     margin: 1em 0;
     // box-shadow: 15px 21px 40px 0px rgba(0, 0, 0, 0.04);
 
     li {
       padding: 0 3em 0 3em;
       margin: 1em 0;
-
-      // border-bottom: 1px solid #e6e5e6;
     }
 
     .mainImage {
+      border: 0.5px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
       width: 100%;
     }
   }
@@ -35,6 +36,8 @@
 
     #excerpt {
       color: #6b7280;
+      border-left: 4px solid #59b287;
+      padding: 0.15em 0 0.15em 1em;
     }
 
     .toolbar {
@@ -61,7 +64,7 @@
 
 @media only screen and (min-width: 768px) {
   .main {
-    width: 70%;
+    width: 60%;
 
     li {
       display: grid;

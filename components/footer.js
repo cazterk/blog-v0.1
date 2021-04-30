@@ -28,19 +28,19 @@ export const Footer = () => {
               <ul>
                 <li>
                   {" "}
-                  <a onClick={() => (window.location.href = "#")}>
+                  <a target="_blank" href="https://facebook.com/cazterk">
                     <AiFillFacebook />
                   </a>{" "}
                 </li>
                 <li>
                   {" "}
-                  <a onClick={() => (window.location.href = "#")}>
+                  <a target="_blank" href="https://www.instagram.com/cazterk/">
                     <FaInstagramSquare />
                   </a>{" "}
                 </li>
                 <li>
                   {" "}
-                  <a onClick={() => (window.location.href = "#")}>
+                  <a target="_blank" href="https://twitter.com/cazterk">
                     <AiFillTwitterSquare />
                   </a>{" "}
                 </li>

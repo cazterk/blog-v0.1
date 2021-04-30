@@ -36,23 +36,20 @@ export default function Home({ posts }) {
       <Toolbar />
 
       <div className={styles.main}>
-        <h1>Welcome to my blog </h1>
-        <h3>Recent</h3>
         <div className={styles.feed}>
           {mappedPost.length ? (
             mappedPost.map((p, index) => (
               <li
                 onClick={() => router.push(`/post/${p.slug.current}`)}
                 key={index}
-                className={styles.list}
               >
                 <img className={styles.mainImage} src={p.mainImage} />
                 <a className={styles.card}>
                   <h2>{p.category}</h2>
                   <h2>{p.title}</h2>
-                  <p>{p.excerpt}</p>
-                  <div className="toolbar">
-                    <p>{p.publishedAt}</p>
+                  <p id={styles.excerpt}>{p.excerpt}</p>
+                  <div className={styles.toolbar}>
+                    <p>Updated: {p.publishedAt}</p>
                   </div>
                 </a>
               </li>

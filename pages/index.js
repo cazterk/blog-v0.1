@@ -41,19 +41,21 @@ export default function Home({ posts }) {
         <div className={styles.feed}>
           {mappedPost.length ? (
             mappedPost.map((p, index) => (
-              <div
+              <li
                 onClick={() => router.push(`/post/${p.slug.current}`)}
                 key={index}
-                className={styles.post}
+                className={styles.list}
               >
+                <img className={styles.mainImage} src={p.mainImage} />
                 <a className={styles.card}>
-                  <img className={styles.mainImage} src={p.mainImage} />
-                  <h3>{p.category}</h3>
-                  <h3>{p.title}</h3>
+                  <h2>{p.category}</h2>
+                  <h2>{p.title}</h2>
                   <p>{p.excerpt}</p>
-                  <p>{p.publishedAt}</p>
+                  <div className="toolbar">
+                    <p>{p.publishedAt}</p>
+                  </div>
                 </a>
-              </div>
+              </li>
             ))
           ) : (
             <> No posts yet</>

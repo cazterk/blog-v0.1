@@ -1,8 +1,8 @@
-.header {
-  background: #fff;
+.footer {
+  background: #111;
   text-align: center;
 
-  .navbar {
+  .footerSection {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -21,6 +21,10 @@
     display: flex;
   }
 
+  .copyrights {
+    align-items: center;
+    display: flex;
+  }
   nav {
     display: flex;
 

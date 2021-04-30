@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import styles from "../styles/footer.module.scss";
 import React from "react";
+import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
+import { FaInstagramSquare } from "react-icons/fa";
 
 export const Footer = () => {
   const router = useRouter();
@@ -12,14 +14,14 @@ export const Footer = () => {
 
   return (
     <div>
-      <div className={styles.header}>
+      <div className={styles.footer}>
         <div className={styles.container}>
-          <div className={styles.navbar}>
+          <div className={styles.footerSection}>
             <a className={styles.logo} onClick={() => router.push("/")}>
               {" "}
               cazterk
             </a>
-            <small className="copyrights">
+            <small className={styles.copyrights}>
               cazterk © {year} All Rights Reserved.
             </small>
             <nav>
@@ -27,13 +29,19 @@ export const Footer = () => {
                 <li>
                   {" "}
                   <a onClick={() => (window.location.href = "#")}>
-                    link 1
+                    <AiFillFacebook />
                   </a>{" "}
                 </li>
                 <li>
                   {" "}
                   <a onClick={() => (window.location.href = "#")}>
-                    link 2
+                    <FaInstagramSquare />
+                  </a>{" "}
+                </li>
+                <li>
+                  {" "}
+                  <a onClick={() => (window.location.href = "#")}>
+                    <AiFillTwitterSquare />
                   </a>{" "}
                 </li>
               </ul>

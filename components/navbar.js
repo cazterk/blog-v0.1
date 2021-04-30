@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import styles from "../styles/navbar.module.scss";
+import { BsHouseFill } from "react-icons/bs";
 
 export const Navbar = () => {
   const router = useRouter();
@@ -17,14 +18,8 @@ export const Navbar = () => {
               <ul>
                 <li>
                   {" "}
-                  <a onClick={() => (window.location.href = "#")}>
-                    link 1
-                  </a>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <a onClick={() => (window.location.href = "#")}>
-                    link 2
+                  <a target="_blank" href="https://www.cazterk.xyz/">
+                    <BsHouseFill />
                   </a>{" "}
                 </li>
               </ul>

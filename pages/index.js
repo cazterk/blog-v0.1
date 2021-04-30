@@ -1,6 +1,6 @@
 import { Toolbar } from "../components/toolbar";
-import AllPosts from "./post/allPosts";
-import styles from "../styles/Home.module.css";
+import AllPosts from "./_posts";
+import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -60,8 +60,6 @@ export default function Home({ posts }) {
           )}
         </div>
       </div>
-
-      <AllPosts />
     </div>
   );
 }

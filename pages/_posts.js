@@ -4,36 +4,37 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function AllPosts({ posts }) {
-  const router = useRouter();
-  const [mappedPost, setmappedPost] = useState([]);
+  console.log(posts);
+  // const router = useRouter();
+  // const [mappedPost, setmappedPost] = useState([]);
 
-  useEffect(() => {
-    if (posts.length) {
-      const imageBuilder = imageUrlBuilder({
-        projectId: "b4006agh",
-        dataset: "production",
-      });
+  // useEffect(() => {
+  //   if (posts.length) {
+  //     const imageBuilder = imageUrlBuilder({
+  //       projectId: "b4006agh",
+  //       dataset: "production",
+  //     });
 
-      setmappedPost(
-        posts.map((p) => {
-          return {
-            ...p,
-            mainImage: imageBuilder.image(p.mainImage),
-            // .width(500)
-            // .height(250),
-          };
-        })
-      );
-    } else {
-      setmappedPost([]);
-    }
-  }, [posts.length]);
+  //     setmappedPost(
+  //       posts.map((p) => {
+  //         return {
+  //           ...p,
+  //           mainImage: imageBuilder.image(p.mainImage),
+  //           // .width(500)
+  //           // .height(250),
+  //         };
+  //       })
+  //     );
+  //   } else {
+  //     setmappedPost([]);
+  //   }
+  // }, [posts.length]);
   return (
     <div>
       <div className="">
-        <h1>Welcome to my blog </h1>
-        <h3>Recent</h3>
-        <div className="">
+        <h1>More Posts </h1>
+
+        {/* <div className="">
           {mappedPost.length ? (
             mappedPost.map((p, index) => (
               <div
@@ -53,14 +54,14 @@ export default function AllPosts({ posts }) {
           ) : (
             <> No posts yet</>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
 }
 
-export const getServerSideProps = async (pageContext) => {
-  const query = encodeURIComponent(`*[ _type == "post"]`);
+export const getServerSideProps = async () => {
+  const query = encodeURIComponent('*[ _type == "post"]');
   const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then((res) => res.json());
 

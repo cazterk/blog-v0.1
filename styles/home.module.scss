@@ -1,0 +1,31 @@
+.main h1,
+.main h3 {
+  text-align: center;
+}
+.main {
+  .feed {
+    padding: 0.8em;
+    margin: 1em 0;
+    box-shadow: 15px 21px 40px 0px rgba(0, 0, 0, 0.04);
+
+    .post {
+      padding: 0.5em;
+      .mainImage {
+        width: 100%;
+        border-radius: 0.5em;
+      }
+    }
+  }
+  a {
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin: -0.1em 0 0.2em;
+  }
+
+  .content {
+    padding: 0.5em;
+    // background-color: $dark-gray;
+  }
+}

@@ -1,4 +1,4 @@
-import "../styles/globals.scss";
+import "../styles/global.scss";
 require("typeface-nunito");
 
 function MyApp({ Component, pageProps }) {

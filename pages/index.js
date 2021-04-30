@@ -1,4 +1,4 @@
-import { Toolbar } from "../components/toolbar";
+import { Navbar } from "../components/navbar";
 import AllPosts from "./_posts";
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
@@ -33,13 +33,14 @@ export default function Home({ posts }) {
 
   return (
     <div>
-      <Toolbar />
+      <Navbar />
 
       <div className={styles.main}>
-        <div className={styles.feed}>
+        <div className={styles.container}>
           {mappedPost.length ? (
             mappedPost.map((p, index) => (
               <li
+                className={styles.feed}
                 onClick={() => router.push(`/post/${p.slug.current}`)}
                 key={index}
               >

@@ -1,0 +1,42 @@
+.header {
+  background: #111;
+  text-align: center;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .logo {
+    align-items: center;
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+
+      li a {
+        font-weight: normal;
+        padding: 0.5em;
+      }
+    }
+  }
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+}

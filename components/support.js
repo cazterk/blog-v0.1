@@ -16,33 +16,45 @@ export const Support = () => {
         <div className={styles.statscontainer}>
           <div className={styles.main}>
             {/* item 1 */}
-            <IconContext.Provider value={{ size: 40 }}>
+            <IconContext.Provider value={{ size: 40, color: "#fff" }}>
               <div className={styles.desc}>
                 {" "}
                 <i id="yt-icon">
                   <FaDonate />
                 </i>
-                <h2>Live Stats</h2>
+                <h2>Support Me</h2>
               </div>
             </IconContext.Provider>
             <IconContext.Provider value={{ size: 30, color: "#fff" }}>
               <div className={styles.items}>
                 <div className={styles.icons}>
-                  <div>
+                  <a
+                    target="_blank"
+                    href="https://patreon.com/cazterk"
+                    id={styles.icon}
+                  >
                     <i>
                       <RiPatreonLine />
                     </i>
-                  </div>
-                  <div>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.buymeacoffee.com/cazterk"
+                    id={styles.icon}
+                  >
                     <i>
                       <SiBuymeacoffee />
                     </i>
-                  </div>
-                  <div>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://dashboard.flutterwave.com/donate/h674qnrb4x0w"
+                    id={styles.icon}
+                  >
                     <i>
                       <GiButterfly />
                     </i>
-                  </div>
+                  </a>
                 </div>
               </div>
             </IconContext.Provider>

@@ -1,3 +1,5 @@
+@import "colors";
+
 .main h1,
 .main h3 {
   text-align: center;
@@ -36,7 +38,7 @@
 
     #excerpt {
       color: #6b7280;
-      border-left: 4px solid #59b287;
+      border-left: 4px solid $red;
       padding: 0.15em 0 0.15em 1em;
     }
 

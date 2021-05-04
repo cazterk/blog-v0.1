@@ -41,6 +41,7 @@
   .copyrights {
     margin-bottom: 0rem !important;
   }
+
   nav {
     margin: 0px 10px 0px 10px;
 
@@ -62,12 +63,13 @@
     flex-direction: column !important;
     width: 100% !important;
 
-    .logo {
+    .copyrights {
       margin-bottom: 0.2rem !important;
     }
 
-    .copyrights {
-      margin-bottom: 0.2rem !important;
+    .icons {
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
     }
   }
 }

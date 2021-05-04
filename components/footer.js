@@ -3,7 +3,7 @@ import styles from "../styles/footer.module.scss";
 import React from "react";
 import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
+import { IconContext, icons } from "react-icons/lib";
 
 export const Footer = () => {
   const router = useRouter();
@@ -27,7 +27,7 @@ export const Footer = () => {
             </small>
             <nav>
               <IconContext.Provider value={{ size: 20 }}>
-                <ul>
+                <ul className={styles.icons}>
                   <li>
                     {" "}
                     <a target="_blank" href="https://facebook.com/cazterk">

@@ -49,7 +49,7 @@ export const Support = () => {
                   <a
                     target="_blank"
                     href="https://dashboard.flutterwave.com/donate/h674qnrb4x0w"
-                    id={styles.icon}
+                    // id={styles.icon}
                   >
                     <i>
                       <GiButterfly />

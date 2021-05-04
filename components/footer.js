@@ -3,6 +3,7 @@ import styles from "../styles/footer.module.scss";
 import React from "react";
 import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
 
 export const Footer = () => {
   const router = useRouter();
@@ -25,26 +26,31 @@ export const Footer = () => {
               cazterk © {year} All Rights Reserved.
             </small>
             <nav>
-              <ul>
-                <li>
-                  {" "}
-                  <a target="_blank" href="https://facebook.com/cazterk">
-                    <AiFillFacebook />
-                  </a>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <a target="_blank" href="https://www.instagram.com/cazterk/">
-                    <FaInstagramSquare />
-                  </a>{" "}
-                </li>
-                <li>
-                  {" "}
-                  <a target="_blank" href="https://twitter.com/cazterk">
-                    <AiFillTwitterSquare />
-                  </a>{" "}
-                </li>
-              </ul>
+              <IconContext.Provider value={{ size: 20 }}>
+                <ul>
+                  <li>
+                    {" "}
+                    <a target="_blank" href="https://facebook.com/cazterk">
+                      <AiFillFacebook />
+                    </a>{" "}
+                  </li>
+                  <li>
+                    {" "}
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/cazterk/"
+                    >
+                      <FaInstagramSquare />
+                    </a>{" "}
+                  </li>
+                  <li>
+                    {" "}
+                    <a target="_blank" href="https://twitter.com/cazterk">
+                      <AiFillTwitterSquare />
+                    </a>{" "}
+                  </li>
+                </ul>
+              </IconContext.Provider>
             </nav>
           </div>
         </div>

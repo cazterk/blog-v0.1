@@ -1,7 +1,7 @@
 @import "colors";
 
 .heros {
-  background-color: #111;
+  background-color: $primary;
   color: white;
   text-align: center;
   padding-top: 2em;
@@ -10,7 +10,7 @@
     margin-bottom: 1em;
   }
   .hire {
-    background: darken(#111, 5%);
+    background: darken($primary, 5%);
     padding: 0.5em 3em;
     margin: 2em 0 3em;
     display: inline-block;
@@ -30,7 +30,7 @@
     max-width: 350px;
     position: relative;
     width: 100%;
-    background: #fff;
+    background: $white;
 
     .placeholder {
       top: 4px;

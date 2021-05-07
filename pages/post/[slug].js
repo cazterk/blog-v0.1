@@ -1,7 +1,7 @@
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import { useState, useEffect } from "react";
-import styles from "../../styles/Post.module.css";
+import styles from "../../styles/post.module.scss";
 import { Navbar } from "../../components/navbar";
 
 export const Post = ({ title, body, image }) => {
@@ -21,8 +21,9 @@ export const Post = ({ title, body, image }) => {
       <Navbar />
       <div className={styles.main}>
         <h1>{title}</h1>
-        {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
         <div className={styles.body}>
+          {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
+
           <BlockContent blocks={body} />
         </div>
       </div>

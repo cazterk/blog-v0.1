@@ -1,0 +1,44 @@
+@import "colors";
+
+.main {
+  margin: auto;
+  width: 100%;
+  max-width: calc(100vw - 50px);
+  text-align: center;
+  margin-bottom: 16.551em;
+
+  .body {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%),
+      0 4px 6px -2px rgb(0 0 0 / 5%);
+
+    .mainImage {
+      width: 100%;
+    }
+
+    h2 {
+      margin: 0 0.5em 0 0.5em;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 45px;
+      text-align: justify;
+      margin: 0 0.5em 0 0.5em;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    width: 60%;
+
+    .body {
+      h2 {
+        margin: 0 3.125em 0 3.125em;
+      }
+      p {
+        margin: 0 3.125em 0 3.125em;
+      }
+    }
+  }
+}

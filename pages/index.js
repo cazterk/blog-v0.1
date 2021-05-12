@@ -2,6 +2,7 @@ import { Navbar } from "../components/navbar";
 import { Heros } from "../components/heros";
 import { Footer } from "../components/footer";
 import { Support } from "../components/support";
+import { Pagination } from "../components/pagination";
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
@@ -10,6 +11,9 @@ import { useRouter } from "next/router";
 export default function Home({ posts }) {
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(3);
 
   useEffect(() => {
     if (posts.length) {
@@ -19,7 +23,8 @@ export default function Home({ posts }) {
       });
 
       setmappedPost(
-        posts.map((p) => {
+        currentPosts.map((p) => {
+          // setLoading(true);
           return {
             ...p,
             mainImage: imageBuilder.image(p.mainImage),
@@ -32,6 +37,13 @@ export default function Home({ posts }) {
       setmappedPost([]);
     }
   }, [posts.length]);
+
+  //get current posts
+
+  const indexOfLastpost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastpost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastpost);
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div>
@@ -65,6 +77,11 @@ export default function Home({ posts }) {
           )}
         </div>
       </div>
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={posts.length}
+        paginate={paginate}
+      />
       <Support />
       <Footer />
     </div>

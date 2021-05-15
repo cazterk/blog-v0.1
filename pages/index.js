@@ -2,18 +2,23 @@ import { Navbar } from "../components/navbar";
 import { Heros } from "../components/heros";
 import { Footer } from "../components/footer";
 import { Support } from "../components/support";
-import { Pagination } from "../components/pagination";
+import Pagination from "../components/pagination";
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Home({ posts }) {
+export default function Home({ posts, load }) {
+  if (load) {
+    return <h2>loading</h2>;
+  }
+
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(3);
+  const [postsPerPage] = useState(2);
+  const [visible, setvisible] = useState(2);
 
   useEffect(() => {
     if (posts.length) {
@@ -23,7 +28,7 @@ export default function Home({ posts }) {
       });
 
       setmappedPost(
-        currentPosts.map((p) => {
+        posts.map((p) => {
           // setLoading(true);
           return {
             ...p,
@@ -35,6 +40,7 @@ export default function Home({ posts }) {
       );
     } else {
       setmappedPost([]);
+      setLoading(false);
     }
   }, [posts.length]);
 
@@ -43,7 +49,13 @@ export default function Home({ posts }) {
   const indexOfLastpost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastpost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastpost);
+
+  //change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const showMoreItems = () => {
+    setvisible((preValue) => preValue + 2);
+  };
 
   return (
     <div>
@@ -53,7 +65,7 @@ export default function Home({ posts }) {
       <div className={styles.main}>
         <div className={styles.container}>
           {mappedPost.length ? (
-            mappedPost.map((p, index) => (
+            mappedPost.slice(0, visible).map((p, index) => (
               <li className={styles.feed}>
                 <img className={styles.mainImage} src={p.mainImage} />
                 <a className={styles.card}>
@@ -75,13 +87,16 @@ export default function Home({ posts }) {
           ) : (
             <> No posts yet</>
           )}
+
+          <button onClick={showMoreItems}> Load More </button>
+          {/* <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={posts.length}
+            paginate={paginate}
+          /> */}
         </div>
       </div>
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={posts.length}
-        paginate={paginate}
-      />
+
       <Support />
       <Footer />
     </div>
@@ -89,7 +104,7 @@ export default function Home({ posts }) {
 }
 
 export const getServerSideProps = async (pageContext) => {
-  const query = encodeURIComponent(`*[ _type == "post"][0...5]`);
+  const query = encodeURIComponent(`*[ _type == "post"]`);
   const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then((res) => res.json());
 

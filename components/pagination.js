@@ -1,7 +1,9 @@
 import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "../styles/pagination.module.scss";
 
-export const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -14,12 +16,14 @@ export const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         {pageNumbers.map((number) => (
           <li key={number} className={styles.pageItem}>
             {" "}
-            <a onClick={() => paginate(number)} className={styles.pageLink}>
-              {number}
-            </a>
+            <Link href={`#!`} onClick={(number) => paginate(number)}>
+              <a className={styles.pageLink}>{number}</a>
+            </Link>
           </li>
         ))}
       </ul>
     </nav>
   );
 };
+
+export default Pagination;

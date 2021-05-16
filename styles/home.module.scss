@@ -15,14 +15,14 @@
   .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
     padding: 2rem;
   }
   .card {
     display: flex;
-    text-align: start;
     flex-direction: column;
-    justify-content: center;
+
     flex: 1 0 250px;
     max-width: 350px;
     overflow: hidden;
@@ -33,6 +33,7 @@
 
     &__content {
       padding: 1rem;
+      text-align: start;
     }
 
     &__mainImage {

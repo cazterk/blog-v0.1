@@ -45,12 +45,12 @@ export default function Home({ posts, load }) {
 
   //get current posts
 
-  const indexOfLastpost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastpost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastpost);
+  // const indexOfLastpost = currentPage * postsPerPage;
+  // const indexOfFirstPost = indexOfLastpost - postsPerPage;
+  // const currentPosts = posts.slice(indexOfFirstPost, indexOfLastpost);
 
-  //change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  // //change page
+  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const showMoreItems = () => {
     if (visible < posts.length) {
@@ -72,26 +72,29 @@ export default function Home({ posts, load }) {
       <Heros />
 
       <div className={styles.main}>
-        <div className={styles.container}>
+        <div className={styles.cards}>
           {mappedPost.length ? (
             mappedPost.slice(0, visible).map((p, index) => (
-              <li className={styles.feed}>
-                <img className={styles.mainImage} src={p.mainImage} />
-                <a className={styles.card}>
+              <a
+                onClick={() => router.push(`/post/${p.slug.current}`)}
+                key={index}
+                className={styles.card}
+              >
+                <div
+                  className={styles.card__mainImage}
+                  style={{ backgroundImage: `url(${p.mainImage}` }}
+                ></div>
+
+                <div className={styles.card__content}>
                   <h2>{p.category}</h2>
-                  <h2
-                    className={styles.title}
-                    onClick={() => router.push(`/post/${p.slug.current}`)}
-                    key={index}
-                  >
-                    {p.title}
-                  </h2>
-                  <p id={styles.excerpt}>{p.excerpt}</p>
-                  <div className={styles.toolbar}>
-                    <p>Updated: {p.publishedAt}</p>
-                  </div>
-                </a>
-              </li>
+                  <h2 className={styles.card__title}>{p.title}</h2>
+                  <p className={styles.card__excerpt}>{p.excerpt}</p>
+
+                  <p className={styles.card__toolbar}>
+                    Updated: {p.publishedAt}
+                  </p>
+                </div>
+              </a>
             ))
           ) : (
             <> No posts yet</>

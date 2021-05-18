@@ -16,13 +16,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    grid-gap: 1.5rem;
     gap: 1.5rem;
     padding: 2rem;
   }
   .card {
     display: flex;
     flex-direction: column;
-
+    cursor: pointer;
     flex: 1 0 300px;
     max-width: 350px;
     overflow: hidden;

@@ -12,10 +12,18 @@ export const Heros = () => {
           <p className={styles.subtitle}>
             Your bite-sized blog, keeping it short and simple but informative
           </p>
+
           <div className={styles.subscribe}>
-            <div className={styles.placeholder}>eg@email.com</div>
-            <input type="text" onkeydown="clean()" id="input" />
-            <button class="submit">Subscibe</button>
+            <form action="#">
+              <div className={styles.subscribe__formBox}>
+                <input
+                  type="text"
+                  name="EmailAddress"
+                  placeholder="Enter your email"
+                />
+                <button type="submit">Subscribe</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

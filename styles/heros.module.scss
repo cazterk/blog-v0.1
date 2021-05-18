@@ -25,76 +25,34 @@
   }
 
   .subscribe {
-    height: 40px;
-    margin: 30px auto 0;
-    max-width: 350px;
-    position: relative;
-    width: 100%;
-    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .placeholder {
-      top: 4px;
-      bottom: 4px;
-      position: absolute;
-      font-size: 1em;
-      display: block;
-      padding: 5px 100px 5px 18px;
-      color: #6b7280;
-      pointer-events: none;
-      transition: opacity 0.25s ease, transform 0.35s ease;
-    }
+    &__formBox {
+      padding: 0.375em;
+      border-radius: 3px;
+      background: #ececec;
 
-    input[type="text"] {
-      float: left;
-      height: 100%;
-      width: 70%;
-      border: 0;
-      outline: none;
-      font-size: 1em;
-      padding-left: 10px;
-      padding-right: 10px;
-      color: grey;
-    }
-
-    button {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background: $red;
-      padding: 0;
-      width: 13vh;
-      border: none;
-      font-size: 1em;
-      color: #fff;
-      cursor: pointer;
-      outline: none;
-      transition: transform 0.75s ease, background 0.35s ease;
-
-      &:hover {
-        background: $red;
+      input {
+        color: $primary;
+        border: none;
+        outline: none;
+        background: #ececec;
       }
-    }
 
-    .move-btn {
-      transform: translateX(-280px);
-    }
+      button {
+        color: $white;
+        padding: 0.6em 0.9em;
+        border: none;
+        border-radius: 3px;
+        background: $blue;
+        cursor: pointer;
+        transition: 0.3s;
 
-    .placeholder-active {
-      opacity: 1 !important;
-      transform: translateX(120px);
-    }
-
-    .more-concepts {
-      position: absolute;
-      left: 50%;
-      bottom: 20px;
-      transform: translateX(-50%);
-      text-decoration: none;
-      color: #fff;
-
-      &:hover {
-        text-decoration: underline;
+        &:hover {
+          background: $red;
+        }
       }
     }
   }

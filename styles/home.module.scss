@@ -16,15 +16,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    grid-gap: 1.5rem 1.5rem;
+    gap: 1.5rem 1.5rem;
     padding: 2rem;
   }
   .card {
     display: flex;
     flex-direction: column;
-
-    flex: 1 0 250px;
-    max-width: 500px;
+    cursor: pointer;
+    flex: 1 0 300px;
+    max-width: 350px;
     overflow: hidden;
     background: $white;
     color: $primary;
@@ -37,7 +38,7 @@
     }
 
     &__mainImage {
-      flex: 0 0 150px;
+      flex: 0 0 170px;
       height: inherit;
       background-size: cover;
       background-repeat: no-repeat;
@@ -45,8 +46,8 @@
     }
 
     &__title {
-      font-size: 1.75rem !important;
-      font-weight: 500;
+      font-size: 1.3rem !important;
+      font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
@@ -58,6 +59,7 @@
       color: #6b7280;
       font-size: 0.875rem !important;
       text-align: start;
+      margin-bottom: 0.3rem;
     }
     // .feed {
     //   padding: 2em;

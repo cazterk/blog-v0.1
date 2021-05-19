@@ -3,6 +3,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import { useState, useEffect } from "react";
 import styles from "../../styles/post.module.scss";
 import { Navbar } from "../../components/navbar";
+import { Subscribe } from "../../components/subscribe";
 
 export const Post = ({ title, body, image }) => {
   const [imageUrl, setimageUrl] = useState("");
@@ -26,6 +27,7 @@ export const Post = ({ title, body, image }) => {
 
           <BlockContent blocks={body} />
         </div>
+        <Subscribe />
       </div>
     </div>
   );

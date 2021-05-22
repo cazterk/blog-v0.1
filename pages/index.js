@@ -61,7 +61,7 @@ export default function Home({ posts, load }) {
   };
 
   const showLessItems = () => {
-    if (visible > 2) {
+    if (visible > 4) {
       setvisible((preValue) => preValue - 2);
     }
   };

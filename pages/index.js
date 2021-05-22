@@ -15,9 +15,9 @@ export default function Home({ posts, load }) {
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(2);
-  const [visible, setvisible] = useState(2);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [postsPerPage] = useState(4);
+  const [visible, setvisible] = useState(4);
 
   useEffect(() => {
     if (posts.length) {

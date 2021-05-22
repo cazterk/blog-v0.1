@@ -15,7 +15,6 @@
   .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     grid-gap: 1.5rem;
     gap: 1.5rem;
     padding: 2rem 1rem 2rem 1rem;
@@ -25,7 +24,7 @@
     flex-direction: column;
     cursor: pointer;
     flex: 1 0 300px;
-    max-width: 350px;
+    max-width: 450px;
     overflow: hidden;
     border-radius: 2px;
     background: $white;
@@ -33,9 +32,9 @@
     box-shadow: 3px 2px 14px rgba(#262631, 0.4);
     font-size: 1rem;
 
-    @include tablet {
-      max-width: 430px;
-    }
+    // @include tablet {
+    //   max-width: 430px;
+    // }
 
     &__content {
       padding: 1rem;
@@ -48,6 +47,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
+      border: 15px solid #f2f6fc;
     }
 
     &__title {

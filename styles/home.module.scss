@@ -10,6 +10,7 @@
   list-style-type: none;
   margin: 0 auto;
   width: auto;
+  background: #f2f6fc;
 
   // box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
   .cards {
@@ -48,8 +49,8 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      border: 20px solid #f2f6fc;
-      border-radius: 2px;
+      // border: 20px solid #f2f6fc;
+      // border-radius: 2px;
     }
 
     &__title {

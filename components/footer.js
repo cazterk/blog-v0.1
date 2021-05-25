@@ -3,7 +3,7 @@ import styles from "../styles/footer.module.scss";
 import React from "react";
 import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 import { FaInstagramSquare } from "react-icons/fa";
-import { IconContext, icons } from "react-icons/lib";
+import { IconContext } from "react-icons/lib";
 
 export const Footer = () => {
   const router = useRouter();

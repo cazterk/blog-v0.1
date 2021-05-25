@@ -19,7 +19,7 @@
     justify-content: center;
     grid-gap: 1.5rem;
     gap: 1.5rem;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 1rem 0rem 1rem;
   }
   .card {
     display: flex;
@@ -31,7 +31,7 @@
     border-radius: 2px;
     background: $white;
     color: $primary;
-    box-shadow: 3px 2px 14px rgba(#262631, 0.4);
+    // box-shadow: 3px 2px 14px rgba(#262631, 0.05);
     font-size: 1rem;
 
     // @include tablet {

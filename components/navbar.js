@@ -12,7 +12,7 @@ export const Navbar = () => {
           <div className={styles.navbar}>
             <a className={styles.logo} onClick={() => router.push("/")}>
               {" "}
-              cazterk
+              terklog
             </a>
             <nav>
               <ul>

@@ -6,6 +6,8 @@ import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { IconContext } from "react-icons/lib";
 
 export default function Home({ posts, load }) {
   if (load) {
@@ -102,26 +104,27 @@ export default function Home({ posts, load }) {
         </div>
       </div>
 
-      <div className={styles.holder}>
-        <div className={styles.button} onClick={showLessItems}>
-          <p className={styles.btnText}> Less! </p>
-          {/* <div className={styles.btnTwo}>
-            <p className={styles.btnText2}>Load</p>
-          </div> */}
-        </div>
+      <IconContext.Provider value={{ size: 30 }}>
+        <div className={styles.holder}>
+          <div className={styles.button} onClick={showLessItems}>
+            <p className={styles.btnText}>
+              {" "}
+              <BsArrowLeft />{" "}
+            </p>
+          </div>
 
-        <div className={styles.button} onClick={showMoreItems}>
-          <p className={styles.btnText}>More! </p>
-          {/* <div className={styles.btnTwo}>
-            <p className={styles.btnText2}>Load</p>
-          </div> */}
-        </div>
-        {/* <Pagination
+          <div className={styles.button} onClick={showMoreItems}>
+            <p className={styles.btnText}>
+              <BsArrowRight />{" "}
+            </p>
+          </div>
+          {/* <Pagination
             postsPerPage={postsPerPage}
             totalPosts={posts.length}
             paginate={paginate}
           /> */}
-      </div>
+        </div>
+      </IconContext.Provider>
 
       <Support />
       <Footer />

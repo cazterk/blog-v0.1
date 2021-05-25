@@ -19,13 +19,16 @@
     display: flex;
     border-radius: 1px;
     background: #ececec;
-    width: 35vh;
+    width: 250px;
+
 
     input {
       color: $primary;
       border: none;
       outline: none;
       background: #ececec;
+      width: inherit;
+      font-weight: 700;
     }
   }
 
@@ -38,7 +41,10 @@
     background: $blue;
     cursor: pointer;
     transition: 0.3s;
-    width: 35vh;
+    width: 250px;
+    font-weight: 700;
+
+
 
     &:hover {
       background: $red;
@@ -56,11 +62,11 @@
     }
 
     &__formBox {
-      min-width: auto;
+      width: auto;
     }
 
     button {
-      min-width: auto;
+      width: auto;
     }
   }
 }

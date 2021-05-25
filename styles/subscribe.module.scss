@@ -15,11 +15,12 @@
 
   &__formBox {
     padding-left: 0.375em;
-    height: 30px;
+    height: 35px;
     display: flex;
     border-radius: 1px;
     background: #ececec;
     width: 250px;
+
 
     input {
       color: $primary;
@@ -33,7 +34,7 @@
 
   button {
     color: $white;
-    height: 30px;
+    height: 35px;
     padding: 0.6em 0.9em;
     border: none;
     border-radius: 1px;
@@ -42,6 +43,8 @@
     transition: 0.3s;
     width: 250px;
     font-weight: 700;
+
+
 
     &:hover {
       background: $red;

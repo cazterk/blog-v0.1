@@ -1,3 +1,5 @@
+@import "colors";
+
 .header {
   background: #fff;
   text-align: center;
@@ -6,12 +8,12 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    color: #6b7280;
+    color: $myGray;
     text-decoration: none;
   }
 
   a {
-    color: #6b7280;
+    color: $myGray;
     text-decoration: none;
     cursor: pointer;
   }

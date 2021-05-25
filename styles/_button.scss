@@ -1,63 +1,30 @@
 @import "colors";
 
 .holder {
-  -moz-user-select: -moz-none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
   background: #f5f5f5;
-  padding: 10px auto 10px auto;
-  position: relative;
+  padding: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+
   .button {
     background: $white;
-    margin: 8px auto;
-    width: 150px;
-    height: 40px;
-    overflow: hidden;
-    text-align: center;
+    margin: 0 0.6em 0 0;
+    width: 70px;
+    height: 35px;
+    justify-content: center;
     transition: 0.2s;
     cursor: pointer;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     border-radius: 2px;
 
     border: 2px solid #6b7280 !important;
 
-    .btnTwo {
-      position: relative;
-      width: 230px;
-      height: 100px;
-      margin-top: -100px;
-      padding-top: 2px;
-      background: #276afb;
-      left: -250px;
-      transition: 0.3s;
-    }
-
     .btnText {
-      color: #6b7280;
+      color: $myGray;
       transition: 0.3s;
       font-weight: bolder;
     }
-
-    .btnText2 {
-      margin-top: 63px;
-      margin-right: -170px;
-      color: $white;
-    }
-    // .button:hover .btnTwo {
-    //   /*When hovering over .button change .btnTwo*/
-    //   left: -130px;
-    // }
-    // .button:hover .btnText {
-    //   /*When hovering over .button change .btnText*/
-    //   color: $red;
-    // }
 
     &:active {
       /*Clicked and held*/

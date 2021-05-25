@@ -9,7 +9,7 @@ export const Heros = () => {
     <div>
       <div className={styles.heros}>
         <div className={styles.container}>
-          <div className={styles.heros__hTitle}>cazterk's blog</div>
+          <h1 className={styles.heros__hTitle}>welcome to the terklog</h1>
           <p className={styles.heros__subtitle}>
             Your bite-sized blog, keeping it short and simple but informative
           </p>

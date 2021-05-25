@@ -2,13 +2,24 @@
 
 .subscribe {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: -0.5em;
+  margin-bottom: -0.5em;
+
+  > * {
+    margin-left: 0;
+    margin-bottom: 0.5em;
+  }
 
   &__formBox {
-    padding: 0.375em;
-    border-radius: 2px;
+    padding-left: 0.375em;
+    height: 30px;
+    display: flex;
+    border-radius: 1px;
     background: #ececec;
+    min-width: 35vh;
 
     input {
       color: $primary;
@@ -16,19 +27,40 @@
       outline: none;
       background: #ececec;
     }
+  }
+
+  button {
+    color: $white;
+    height: 30px;
+    padding: 0.6em 0.9em;
+    border: none;
+    border-radius: 1px;
+    background: $blue;
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 35vh;
+
+    &:hover {
+      background: $red;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe {
+    flex-direction: row;
+
+    > * {
+      margin-left: 0.5em;
+      margin-bottom: 0;
+    }
+
+    &__formBox {
+      min-width: auto;
+    }
 
     button {
-      color: $white;
-      padding: 0.6em 0.9em;
-      border: none;
-      border-radius: 2px;
-      background: $blue;
-      cursor: pointer;
-      transition: 0.3s;
-
-      &:hover {
-        background: $red;
-      }
+      min-width: auto;
     }
   }
 }

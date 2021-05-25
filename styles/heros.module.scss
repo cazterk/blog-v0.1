@@ -1,4 +1,5 @@
 @import "colors";
+@import "_media-queries";
 
 .heros {
   background-color: $primary;
@@ -9,16 +10,23 @@
 
   .container {
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
+
+    @include desktop {
+      width: 50%;
+    }
   }
 
   &__hTitle {
-    font-weight: 600;
+    font-weight: 750;
     font-size: 2.5em;
     margin: 0;
     line-height: 1;
   }
 
   &__subtitle {
+    color: #c7c9d3;
+    font-weight: 700;
+    line-height: 1.5em;
   }
 }

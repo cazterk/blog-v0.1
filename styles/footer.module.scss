@@ -1,6 +1,8 @@
+@import "colors";
+
 .footer {
   border-top: 1.5px solid #6b7280;
-  background: #fff;
+  background: $white;
   text-align: center;
   padding-bottom: 1rem;
   position: absolute;

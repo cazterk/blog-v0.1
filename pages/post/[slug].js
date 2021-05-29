@@ -35,28 +35,28 @@ const Post = (props) => {
   //     document.body.appendChild(script);
   //   };
   // }
-  function loadComments() {
-    setEnableLoadComments(false);
-    window.gc_params = {
-      graphcomment_id: "terklog",
+  // function loadComments() {
+  //   setEnableLoadComments(false);
+  //   window.gc_params = {
+  //     graphcomment_id: "terklog",
 
-      // if your website has a fixed header, indicate it's height in pixels
-      fixed_header_height: 0,
-    };
+  //     // if your website has a fixed header, indicate it's height in pixels
+  //     fixed_header_height: 0,
+  //   };
 
-    /* - - - DON'T EDIT BELOW THIS LINE - - - */
+  //   /* - - - DON'T EDIT BELOW THIS LINE - - - */
 
-    (function() {
-      var gc = document.createElement("script");
-      gc.type = "text/javascript";
-      gc.async = true;
-      gc.src = "https://graphcomment.com/js/integration.js?" + Date.now();
-      (
-        document.getElementsByTagName("head")[0] ||
-        document.getElementsByTagName("body")[0]
-      ).appendChild(gc);
-    })();
-  }
+  //   (function() {
+  //     var gc = document.createElement("script");
+  //     gc.type = "text/javascript";
+  //     gc.async = true;
+  //     gc.src = "https://graphcomment.com/js/integration.js?" + Date.now();
+  //     (
+  //       document.getElementsByTagName("head")[0] ||
+  //       document.getElementsByTagName("body")[0]
+  //     ).appendChild(gc);
+  //   })();
+  // }
 
   // const post = props.data;
   // const disqusShortname = "terklog";
@@ -79,11 +79,11 @@ const Post = (props) => {
         </div>
         <Subscribe />
 
-        {enableLoadComments && (
+        {/* {enableLoadComments && (
           <p id="graphcomment" onClick={loadComments}>
             Load Comments
           </p>
-        )}
+        )} */}
         {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
         <Comments />
       </div>

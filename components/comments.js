@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 export const Comments = () => {
+  // const [enableLoadComments, setEnableLoadComments] = useState(true);
+
   useEffect(() => {
     window.gc_params = {
       graphcomment_id: "terklog",
@@ -19,6 +21,7 @@ export const Comments = () => {
       ).appendChild(gc);
     })();
   }, []);
+
   return (
     <div>
       <div id="graphcomment"></div>

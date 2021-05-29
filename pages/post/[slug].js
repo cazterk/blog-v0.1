@@ -70,22 +70,23 @@ const Post = (props) => {
   return (
     <div>
       <Navbar />
-      <div className={styles.main}>
-        <h1>{title}</h1>
-        <div className={styles.body}>
-          {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
+      <div className={styles.container}>
+        <div className={styles.main}>
+          <div className={styles.body}>
+            {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
+            <h1>{title}</h1>
+            <BlockContent blocks={body} />
+          </div>
+          <Subscribe />
 
-          <BlockContent blocks={body} />
-        </div>
-        <Subscribe />
-
-        {/* {enableLoadComments && (
+          {/* {enableLoadComments && (
           <p id="graphcomment" onClick={loadComments}>
             Load Comments
           </p>
         )} */}
-        {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
-        <Comments />
+          {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
+          <Comments />
+        </div>
       </div>
     </div>
   );

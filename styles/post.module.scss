@@ -2,10 +2,12 @@
 
 .main {
   margin: auto;
+  margin-top: 2em;
   width: 100%;
   max-width: calc(100vw - 50px);
   text-align: center;
   margin-bottom: 16.551em;
+  background: $white;
 
   .body {
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%),

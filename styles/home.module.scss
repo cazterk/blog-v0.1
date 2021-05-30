@@ -10,7 +10,7 @@
   list-style-type: none;
   margin: 0 auto;
   width: auto;
-  background: $accent;
+  background: $white;
 
   @include desktop {
     display: grid;
@@ -20,7 +20,7 @@
   .title {
     text-align: start;
     width: 75%;
-    color: $oycrayola;
+    color: $lightRed;
     margin: 0;
     padding-left: 0.5em;
     padding-top: 2rem;
@@ -50,6 +50,7 @@
     background: $white;
     color: $black;
     // box-shadow: 3px 2px 14px rgba(#262631, 0.05);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
     font-size: 1rem;
 
     // @include tablet {
@@ -85,6 +86,8 @@
 
     &__excerpt {
       margin-bottom: 0.5rem;
+      color: $myGray;
+      font-weight: 200;
     }
 
     &__toolbar {

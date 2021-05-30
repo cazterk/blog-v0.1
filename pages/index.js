@@ -94,7 +94,7 @@ export default function Home({ posts, load }) {
                   <p className={styles.card__excerpt}>{p.excerpt}</p>
 
                   <p className={styles.card__toolbar}>
-                    Updated: {p.publishedAt}
+                    Created | {p.publishedAt}
                   </p>
                 </div>
               </a>

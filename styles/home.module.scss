@@ -18,6 +18,7 @@
   }
 
   .title {
+    font-size: 1.3em;
     text-align: start;
     width: 75%;
     color: $lightRed;
@@ -39,6 +40,7 @@
       width: 75%;
     }
   }
+
   .card {
     display: flex;
     flex-direction: column;

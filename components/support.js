@@ -12,53 +12,26 @@ export const Support = () => {
 
   return (
     <div>
-      <div className={styles.support}>
-        <div className={styles.statscontainer}>
-          <div className={styles.main}>
-            {/* item 1 */}
-            <IconContext.Provider value={{ size: 40, color: "#fff" }}>
-              <div className={styles.desc}>
-                {" "}
-                <i id="yt-icon">
-                  <FaDonate />
-                </i>
-                <h2>Support Me</h2>
-              </div>
-            </IconContext.Provider>
-            <IconContext.Provider value={{ size: 30, color: "#fff" }}>
-              <div className={styles.items}>
-                <div className={styles.icons}>
-                  <a
-                    target="_blank"
-                    href="https://patreon.com/cazterk"
-                    id={styles.icon}
-                  >
-                    <i>
-                      <RiPatreonLine />
-                    </i>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://www.buymeacoffee.com/cazterk"
-                    id={styles.icon}
-                  >
-                    <i>
-                      <SiBuymeacoffee />
-                    </i>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://dashboard.flutterwave.com/donate/h674qnrb4x0w"
-                    // id={styles.icon}
-                  >
-                    <i>
-                      <GiButterfly />
-                    </i>
-                  </a>
-                </div>
-              </div>
-            </IconContext.Provider>
-          </div>
+      <div className={styles.container}>
+        <div className={styles.support}>
+          <h2 className={styles.support__title}> Surpport My Work</h2>
+
+          <IconContext.Provider value={{ size: 35 }}>
+            <div className={styles.support__portal}>
+              <a href="">
+                <SiBuymeacoffee />
+                <p id={styles.buymeacoffee}>Buymeacoffee</p>
+              </a>
+              <a href="">
+                <GiButterfly />
+                <p id={styles.butter}>Flutterwave ( paypal supported ) </p>
+              </a>
+              <a href="">
+                <RiPatreonLine />
+                <p id={styles.patreon}>Patreon</p>
+              </a>
+            </div>
+          </IconContext.Provider>
         </div>
       </div>
     </div>

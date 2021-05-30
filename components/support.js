@@ -18,15 +18,18 @@ export const Support = () => {
 
           <IconContext.Provider value={{ size: 35 }}>
             <div className={styles.support__portal}>
-              <a href="">
+              <a target="_blank" href="https://www.buymeacoffee.com/cazterk">
                 <SiBuymeacoffee />
                 <p id={styles.buymeacoffee}>Buymeacoffee</p>
               </a>
-              <a href="">
+              <a
+                target="_blank"
+                href="https://dashboard.flutterwave.com/donate/h674qnrb4x0w"
+              >
                 <GiButterfly />
                 <p id={styles.butter}>Flutterwave ( paypal supported ) </p>
               </a>
-              <a href="">
+              <a target="_blank" href="https://patreon.com/cazterk">
                 <RiPatreonLine />
                 <p id={styles.patreon}>Patreon</p>
               </a>

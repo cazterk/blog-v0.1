@@ -11,9 +11,8 @@ export const Heros = () => {
         <div className={styles.container}>
           <h1 className={styles.heros__hTitle}>welcome to the terklog</h1>
           <p className={styles.heros__subtitle}>
-            Your bite-sized blog, on tech, software and more keeping it short &
-            simple but informative, not more than 500 words per post, focuses on
-            vitals
+            bite-sized blog on,tech, software & more, keeping it short & simple
+            but informative, 500 words per post, focuses on vitals
           </p>
 
           <Subscribe />

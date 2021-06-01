@@ -1,77 +1,90 @@
 @import "colors";
+@import "media-queries";
 
 .footer {
-  border-top: 1.5px solid #6b7280;
   background: $white;
-  text-align: center;
-  padding-bottom: 1rem;
-  position: absolute;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem 0;
 
-  .footerSection {
-    bottom: 0;
+  .container {
+    width: 60%;
+    margin: auto;
+    padding: 0 1.25em;
     display: flex;
-    width: 50%;
-    justify-content: center;
-    margin: 10px auto 10px auto;
     justify-content: space-between;
     align-items: center;
-    color: #6b7280;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    flex-wrap: wrap-reverse;
 
-  a {
-    color: #6b7280;
-    text-decoration: none;
-    cursor: pointer;
-  }
+    @include tablet {
+      width: 100%;
+    }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    z-index: 2;
-    text-decoration: none;
-    font-size: 25px;
-    color: var(--mid-gray);
-    font-weight: bold;
-  }
+    .footerLeft {
+      @include tablet {
+        width: 100%;
+        // margin-top: 2rem;
+        text-align: center;
+      }
+      &__logo {
+        text-decoration: none;
+        font-size: 1.7em;
+        color: $myGray;
+        font-weight: bold;
+      }
 
-  .copyrights {
-    margin-bottom: 0rem !important;
-  }
+      &__copyrights {
+        font-weight: 400;
+        color: $myGray;
+      }
 
-  nav {
-    margin: 0px 10px 0px 10px;
+      &__socials {
+        margin: 0.3em 0;
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
+        a {
+          color: $myGray;
+          margin-right: 0.2em;
+          text-decoration: none;
+          transition: 0.3s linear;
 
-      li a {
-        font-weight: normal;
-        padding: 0.5em;
+          &:hover {
+            color: $red;
+          }
+        }
       }
     }
-  }
-}
 
-@media screen and (max-width: 900px) {
-  .footerSection {
-    flex-direction: column !important;
-    width: 100% !important;
+    .footerRight {
+      display: flex;
+      flex-direction: column;
 
-    .copyrights {
-      margin-bottom: 0.2rem !important;
-    }
+      @include tablet {
+        width: 100%;
+        align-items: center;
+      }
+      h1 {
+        font-size: 1em;
+        font-weight: 800;
+      }
 
-    .icons {
-      margin-top: 0.2em;
-      margin-bottom: 0.2em;
+      &__border {
+        width: 100px;
+        height: 3px;
+        background: $lightRed;
+      }
+
+      &__list {
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: flex;
+          font-weight: 700;
+          align-items: center;
+
+          svg {
+            margin-right: 0.3em;
+          }
+        }
+      }
     }
   }
 }

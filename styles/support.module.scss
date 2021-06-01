@@ -6,10 +6,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  flex-direction: column;
+  color: $lightRed;
+  padding: 2rem 0;
 
   @include tablet {
     height: 400px;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0 0 2rem 0;
   }
 
   .support {
@@ -17,12 +27,6 @@
     justify-content: center;
     width: 65%;
     color: $lightRed;
-
-    &__title {
-      text-align: center;
-      font-weight: 800;
-      font-size: 1.3em;
-    }
 
     &__portal {
       display: flex;
@@ -36,7 +40,7 @@
 
       a {
         margin-bottom: 1.5em;
-        box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
+        box-shadow: 0 0 8px 0 rgb(0 0 0 / 30%);
         padding: 1.2em;
         border-radius: 2px;
 

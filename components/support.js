@@ -3,8 +3,7 @@ import styles from "../styles/support.module.scss";
 import { BsHouseFill } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
 import { FaDonate } from "react-icons/fa";
-import { SiBuymeacoffee } from "react-icons/si";
-import { RiPatreonLine } from "react-icons/ri";
+import { SiBuymeacoffee, SiPatreon } from "react-icons/si";
 import { GiButterfly } from "react-icons/gi";
 
 export const Support = () => {
@@ -13,9 +12,8 @@ export const Support = () => {
   return (
     <div>
       <div className={styles.container}>
+        <h2 className={styles.title}> Surpport My Work</h2>
         <div className={styles.support}>
-          <h2 className={styles.support__title}> Surpport My Work</h2>
-
           <IconContext.Provider value={{ size: 35 }}>
             <div className={styles.support__portal}>
               <a target="_blank" href="https://www.buymeacoffee.com/cazterk">
@@ -30,7 +28,7 @@ export const Support = () => {
                 <p id={styles.butter}>Flutterwave ( paypal supported ) </p>
               </a>
               <a target="_blank" href="https://patreon.com/cazterk">
-                <RiPatreonLine />
+                <SiPatreon />
                 <p id={styles.patreon}>Patreon</p>
               </a>
             </div>

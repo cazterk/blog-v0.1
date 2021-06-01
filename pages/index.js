@@ -105,7 +105,7 @@ export default function Home({ posts, load }) {
         </div>
       </div>
 
-      <IconContext.Provider value={{ size: 15, color: "#6b7280" }}>
+      <IconContext.Provider value={{ size: 20, color: "#fff" }}>
         <div className={styles.holder}>
           <div className={styles.button} onClick={showLessItems}>
             <IoIosArrowBack />

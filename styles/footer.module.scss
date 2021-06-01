@@ -28,7 +28,7 @@
         text-decoration: none;
         font-size: 1.7em;
         color: $myGray;
-        font-weight: bold;
+        font-weight: 800;
       }
 
       &__copyrights {
@@ -61,7 +61,8 @@
         align-items: center;
       }
       h1 {
-        font-size: 1em;
+        font-size: 1.2em;
+        margin: 0;
         font-weight: 800;
       }
 
@@ -76,8 +77,9 @@
         padding: 0;
 
         li {
+          color: $myGray;
           display: flex;
-          font-weight: 700;
+          font-weight: 400;
           align-items: center;
 
           svg {

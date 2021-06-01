@@ -31,7 +31,7 @@ export const Footer = () => {
               onClick={() => router.push("/")}
             >
               {" "}
-              cazterk
+              terklog
             </a>
             <div className={styles.footerLeft__socials}>
               <IconContext.Provider value={{ size: 15 }}>
@@ -58,7 +58,7 @@ export const Footer = () => {
                 </div>
               </IconContext.Provider>
               <small className={styles.footerLeft__copyrights}>
-                cazterk © {year} All Rights Reserved.
+                terklog © {year} All Rights Reserved.
               </small>
             </div>
           </div>

@@ -7,6 +7,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { IconContext } from "react-icons/lib";
 
 export default function Home({ posts, load }) {
@@ -105,16 +106,16 @@ export default function Home({ posts, load }) {
         </div>
       </div>
 
-      <IconContext.Provider value={{ size: 15, color: "#6b7280" }}>
+      <IconContext.Provider value={{ size: 20, color: "#fff" }}>
         <div className={styles.holder}>
           <div className={styles.button} onClick={showLessItems}>
-            <IoIosArrowBack />
+            <MdNavigateBefore />
             <p className={styles.btnText}>Less</p>
           </div>
 
           <div className={styles.button} onClick={showMoreItems}>
             <p className={styles.btnText}>More</p>
-            <IoIosArrowForward />
+            <MdNavigateNext />
           </div>
           {/* <Pagination
             postsPerPage={postsPerPage}

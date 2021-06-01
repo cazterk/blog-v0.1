@@ -20,12 +20,15 @@
   .title {
     font-size: 1.3em;
     text-align: start;
-    width: 75%;
     color: $lightRed;
     margin: 0;
     padding-left: 0.5em;
     padding-top: 2rem;
     border-bottom: 1px solid #eee;
+
+    @include desktop {
+      width: 75%;
+    }
   }
   // box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
   .cards {

@@ -26,19 +26,9 @@ export const Footer = () => {
       <div className={styles.container}>
         <footer>
           <div className={styles.footerLeft}>
-            <h2 className={styles.footerLeft__heading}> Stay in touch</h2>
+            <h2 className={styles.footerLeft__heading}> More content</h2>
 
             <IconContext.Provider value={{ size: 15 }}>
-              {" "}
-              <a target="_blank" href="https://facebook.com/cazterk">
-                <FaFacebookSquare /> FaFacebookSquare
-              </a>{" "}
-              <a target="_blank" href="https://www.instagram.com/cazterk/">
-                <FaInstagram /> instagram
-              </a>{" "}
-              <a target="_blank" href="https://twitter.com/cazterk">
-                <FaTwitter /> twitter
-              </a>{" "}
               <a target="_blank" href="https://youtube.com/c/cazterk">
                 <FaYoutube /> youtube
               </a>{" "}
@@ -50,7 +40,22 @@ export const Footer = () => {
               </a>{" "}
             </IconContext.Provider>
           </div>
+          <div className={styles.footerMid}>
+            <h2 className={styles.footerLeft__heading}> Socials</h2>
 
+            <IconContext.Provider value={{ size: 15 }}>
+              {" "}
+              <a target="_blank" href="https://facebook.com/cazterk">
+                <FaFacebookSquare /> facebook
+              </a>{" "}
+              <a target="_blank" href="https://www.instagram.com/cazterk/">
+                <FaInstagram /> instagram
+              </a>{" "}
+              <a target="_blank" href="https://twitter.com/cazterk">
+                <FaTwitter /> twitter
+              </a>{" "}
+            </IconContext.Provider>
+          </div>
           <div className={styles.footerRight}>
             <h2 className={styles.footerRight__heading}>Contact</h2>
             <div className={styles.footerRight__border}></div>

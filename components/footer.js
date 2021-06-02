@@ -26,34 +26,33 @@ export const Footer = () => {
       <div className={styles.container}>
         <footer>
           <div className={styles.footerLeft}>
-            <h3 className={styles.footerLeft__heading}> More content</h3>
+            <h3 className={styles.footerLeft__heading}> More</h3>
 
             <IconContext.Provider value={{ size: 15 }}>
               <a target="_blank" href="https://youtube.com/c/cazterk">
                 <FaYoutube /> youtube
-              </a>{" "}
+              </a>
               <a target="_blank" href="https://github.com/cazterk/">
                 <FaGithub /> github
-              </a>{" "}
+              </a>
               <a target="_blank" href="https://cazterk.itch.io/">
                 <FaItchIo /> itchIo
-              </a>{" "}
+              </a>
             </IconContext.Provider>
           </div>
           <div className={styles.footerMid}>
             <h3 className={styles.footerLeft__heading}> Socials</h3>
-
             <IconContext.Provider value={{ size: 15 }}>
-              {" "}
               <a target="_blank" href="https://facebook.com/cazterk">
-                <FaFacebookSquare /> facebook
-              </a>{" "}
+                <FaFacebookSquare />
+                facebook
+              </a>
               <a target="_blank" href="https://www.instagram.com/cazterk/">
                 <FaInstagram /> instagram
-              </a>{" "}
+              </a>
               <a target="_blank" href="https://twitter.com/cazterk">
                 <FaTwitter /> twitter
-              </a>{" "}
+              </a>
             </IconContext.Provider>
           </div>
           <div className={styles.footerRight}>
@@ -74,9 +73,7 @@ export const Footer = () => {
           <div className={styles.footerBottom__logo}>
             <a onClick={() => router.push("/")}> terklog</a>
           </div>
-          <small className={styles.footerLeft__copyrights}>
-            terklog © {year} All Rights Reserved.
-          </small>
+          <small>terklog © {year} All Rights Reserved.</small>
         </div>
       </div>
     </div>

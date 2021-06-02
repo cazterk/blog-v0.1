@@ -23,63 +23,62 @@ export const Footer = () => {
 
   return (
     <div>
-      <footer className={styles.footer}>
-        <div className={styles.container}>
+      <div className={styles.container}>
+        <footer>
           <div className={styles.footerLeft}>
-            <a
-              className={styles.footerLeft__logo}
-              onClick={() => router.push("/")}
-            >
+            <h2 className={styles.footerLeft__heading}> Stay in touch</h2>
+
+            <IconContext.Provider value={{ size: 15 }}>
               {" "}
-              terklog
-            </a>
-            <div className={styles.footerLeft__socials}>
-              <IconContext.Provider value={{ size: 15 }}>
-                <div className={styles.icons}>
-                  {" "}
-                  <a target="_blank" href="https://facebook.com/cazterk">
-                    <FaFacebookSquare />
-                  </a>{" "}
-                  <a target="_blank" href="https://www.instagram.com/cazterk/">
-                    <FaInstagram />
-                  </a>{" "}
-                  <a target="_blank" href="https://twitter.com/cazterk">
-                    <FaTwitter />
-                  </a>{" "}
-                  <a target="_blank" href="https://youtube.com/c/cazterk">
-                    <FaYoutube />
-                  </a>{" "}
-                  <a target="_blank" href="https://github.com/cazterk/">
-                    <FaGithub />
-                  </a>{" "}
-                  <a target="_blank" href="https://cazterk.itch.io/">
-                    <FaItchIo />
-                  </a>{" "}
-                </div>
-              </IconContext.Provider>
-              <small className={styles.footerLeft__copyrights}>
-                terklog © {year} All Rights Reserved.
-              </small>
-            </div>
+              <a target="_blank" href="https://facebook.com/cazterk">
+                <FaFacebookSquare /> FaFacebookSquare
+              </a>{" "}
+              <a target="_blank" href="https://www.instagram.com/cazterk/">
+                <FaInstagram /> instagram
+              </a>{" "}
+              <a target="_blank" href="https://twitter.com/cazterk">
+                <FaTwitter /> twitter
+              </a>{" "}
+              <a target="_blank" href="https://youtube.com/c/cazterk">
+                <FaYoutube /> youtube
+              </a>{" "}
+              <a target="_blank" href="https://github.com/cazterk/">
+                <FaGithub /> github
+              </a>{" "}
+              <a target="_blank" href="https://cazterk.itch.io/">
+                <FaItchIo /> itchIo
+              </a>{" "}
+            </IconContext.Provider>
           </div>
 
           <div className={styles.footerRight}>
-            <h1>Contact</h1>
+            <h2 className={styles.footerRight__heading}>Contact</h2>
             <div className={styles.footerRight__border}></div>
-            <ul className={styles.footerRight__list}>
-              <li>
-                <IoLocationSharp />
-                chilanga lusaka zambia
-              </li>
 
-              <li>
-                <GrMail />
-                zcephas2@gmail.com
-              </li>
-            </ul>
+            <i>
+              <IoLocationSharp />
+              chilanga lusaka zambia
+            </i>
+
+            <i>
+              <GrMail />
+              zcephas2@gmail.com
+            </i>
           </div>
+        </footer>
+        <div className={styles.footerBottom}>
+          <a
+            className={styles.footerLeft__logo}
+            onClick={() => router.push("/")}
+          >
+            {" "}
+            terklog
+          </a>
+          <small className={styles.footerLeft__copyrights}>
+            terklog © {year} All Rights Reserved.
+          </small>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };

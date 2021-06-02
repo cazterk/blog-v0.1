@@ -1,92 +1,136 @@
 @import "colors";
 @import "media-queries";
 
-.footer {
-  background: $white;
-  padding: 2rem 0;
+%headings {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
 
-  .container {
-    width: 60%;
-    margin: auto;
-    padding: 0 1.25em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap-reverse;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  a,
+  i {
+    text-decoration: none;
+    color: $myGray;
+    margin-bottom: 0.5rem;
 
-    @include tablet {
-      width: 100%;
-    }
-
-    .footerLeft {
-      @include tablet {
-        width: 100%;
-        // margin-top: 2rem;
-        text-align: center;
-      }
-      &__logo {
-        text-decoration: none;
-        font-size: 1.7em;
-        color: $myGray;
-        font-weight: 800;
-      }
-
-      &__copyrights {
-        font-weight: 400;
-        color: $myGray;
-      }
-
-      &__socials {
-        margin: 0.3em 0;
-
-        a {
-          color: $myGray;
-          margin-right: 0.2em;
-          text-decoration: none;
-          transition: 0.3s linear;
-
-          &:hover {
-            color: $red;
-          }
-        }
-      }
-    }
-
-    .footerRight {
-      display: flex;
-      flex-direction: column;
-
-      @include tablet {
-        width: 100%;
-        align-items: center;
-      }
-      h1 {
-        font-size: 1.2em;
-        margin: 0;
-        font-weight: 800;
-      }
-
-      &__border {
-        width: 100px;
-        height: 3px;
-        background: $lightRed;
-      }
-
-      &__list {
-        list-style: none;
-        padding: 0;
-
-        li {
-          color: $myGray;
-          display: flex;
-          font-weight: 400;
-          align-items: center;
-
-          svg {
-            margin-right: 0.3em;
-          }
-        }
-      }
+    &hover {
+      color: $red;
+      transition: 0.3s ease-in-out;
     }
   }
 }
+
+.container {
+  background: $white;
+  padding: 2rem 0;
+
+  footer {
+    width: 80%;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .footerLeft {
+      @extend %headings;
+    }
+
+    .footerRight {
+      @extend %headings;
+    }
+  }
+}
+
+// .footer {
+//   background: $white;
+//   padding: 2rem 0;
+
+//   .container {
+//     width: 60%;
+//     margin: auto;
+//     padding: 0 1.25em;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-wrap: wrap-reverse;
+
+//     @include tablet {
+//       width: 100%;
+//     }
+
+//     .footerLeft {
+//       @include tablet {
+//         width: 100%;
+//         // margin-top: 2rem;
+//         text-align: center;
+//       }
+//       &__logo {
+//         text-decoration: none;
+//         font-size: 1.7em;
+//         color: $myGray;
+//         font-weight: 800;
+//       }
+
+//       &__copyrights {
+//         font-weight: 400;
+//         color: $myGray;
+//       }
+
+//       &__socials {
+//         margin: 0.3em 0;
+
+//         a {
+//           color: $myGray;
+//           margin-right: 0.2em;
+//           text-decoration: none;
+//           transition: 0.3s linear;
+
+//           &:hover {
+//             color: $red;
+//           }
+//         }
+//       }
+//     }
+
+//     .footerRight {
+//       display: flex;
+//       flex-direction: column;
+
+//       @include tablet {
+//         width: 100%;
+//         align-items: center;
+//       }
+//       h1 {
+//         font-size: 1.2em;
+//         margin: 0;
+//         font-weight: 800;
+//       }
+
+//       &__border {
+//         width: 100px;
+//         height: 3px;
+//         background: $lightRed;
+//       }
+
+//       &__list {
+//         list-style: none;
+//         padding: 0;
+//         // margin: 0 2em 0 0;
+
+//         li {
+//           color: $myGray;
+//           display: flex;
+//           font-weight: 400;
+//           align-items: center;
+
+//           svg {
+//             margin-right: 0.3em;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

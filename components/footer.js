@@ -26,7 +26,7 @@ export const Footer = () => {
       <div className={styles.container}>
         <footer>
           <div className={styles.footerLeft}>
-            <h2 className={styles.footerLeft__heading}> More content</h2>
+            <h3 className={styles.footerLeft__heading}> More content</h3>
 
             <IconContext.Provider value={{ size: 15 }}>
               <a target="_blank" href="https://youtube.com/c/cazterk">
@@ -41,7 +41,7 @@ export const Footer = () => {
             </IconContext.Provider>
           </div>
           <div className={styles.footerMid}>
-            <h2 className={styles.footerLeft__heading}> Socials</h2>
+            <h3 className={styles.footerLeft__heading}> Socials</h3>
 
             <IconContext.Provider value={{ size: 15 }}>
               {" "}
@@ -57,8 +57,7 @@ export const Footer = () => {
             </IconContext.Provider>
           </div>
           <div className={styles.footerRight}>
-            <h2 className={styles.footerRight__heading}>Contact</h2>
-            <div className={styles.footerRight__border}></div>
+            <h3 className={styles.footerRight__heading}>Contact</h3>
 
             <i>
               <IoLocationSharp />
@@ -72,13 +71,9 @@ export const Footer = () => {
           </div>
         </footer>
         <div className={styles.footerBottom}>
-          <a
-            className={styles.footerLeft__logo}
-            onClick={() => router.push("/")}
-          >
-            {" "}
-            terklog
-          </a>
+          <div className={styles.footerBottom__logo}>
+            <a onClick={() => router.push("/")}> terklog</a>
+          </div>
           <small className={styles.footerLeft__copyrights}>
             terklog © {year} All Rights Reserved.
           </small>

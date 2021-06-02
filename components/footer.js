@@ -29,14 +29,14 @@ export const Footer = () => {
             <h3 className={styles.footerLeft__heading}> More</h3>
 
             <IconContext.Provider value={{ size: 15 }}>
-              <a target="_blank" href="https://youtube.com/c/cazterk">
-                <FaYoutube /> youtube
-              </a>
               <a target="_blank" href="https://github.com/cazterk/">
                 <FaGithub /> github
               </a>
               <a target="_blank" href="https://cazterk.itch.io/">
                 <FaItchIo /> itchIo
+              </a>
+              <a target="_blank" href="https://youtube.com/c/cazterk">
+                <FaYoutube /> youtube
               </a>
             </IconContext.Provider>
           </div>

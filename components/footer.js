@@ -23,63 +23,59 @@ export const Footer = () => {
 
   return (
     <div>
-      <footer className={styles.footer}>
-        <div className={styles.container}>
+      <div className={styles.container}>
+        <footer>
           <div className={styles.footerLeft}>
-            <a
-              className={styles.footerLeft__logo}
-              onClick={() => router.push("/")}
-            >
-              {" "}
-              terklog
-            </a>
-            <div className={styles.footerLeft__socials}>
-              <IconContext.Provider value={{ size: 15 }}>
-                <div className={styles.icons}>
-                  {" "}
-                  <a target="_blank" href="https://facebook.com/cazterk">
-                    <FaFacebookSquare />
-                  </a>{" "}
-                  <a target="_blank" href="https://www.instagram.com/cazterk/">
-                    <FaInstagram />
-                  </a>{" "}
-                  <a target="_blank" href="https://twitter.com/cazterk">
-                    <FaTwitter />
-                  </a>{" "}
-                  <a target="_blank" href="https://youtube.com/c/cazterk">
-                    <FaYoutube />
-                  </a>{" "}
-                  <a target="_blank" href="https://github.com/cazterk/">
-                    <FaGithub />
-                  </a>{" "}
-                  <a target="_blank" href="https://cazterk.itch.io/">
-                    <FaItchIo />
-                  </a>{" "}
-                </div>
-              </IconContext.Provider>
-              <small className={styles.footerLeft__copyrights}>
-                terklog © {year} All Rights Reserved.
-              </small>
-            </div>
-          </div>
+            <h3 className={styles.footerLeft__heading}> More</h3>
 
+            <IconContext.Provider value={{ size: 15 }}>
+              <a target="_blank" href="https://github.com/cazterk/">
+                <FaGithub /> github
+              </a>
+              <a target="_blank" href="https://cazterk.itch.io/">
+                <FaItchIo /> itchIo
+              </a>
+              <a target="_blank" href="https://youtube.com/c/cazterk">
+                <FaYoutube /> youtube
+              </a>
+            </IconContext.Provider>
+          </div>
+          <div className={styles.footerMid}>
+            <h3 className={styles.footerLeft__heading}> Socials</h3>
+            <IconContext.Provider value={{ size: 15 }}>
+              <a target="_blank" href="https://facebook.com/cazterk">
+                <FaFacebookSquare />
+                facebook
+              </a>
+              <a target="_blank" href="https://www.instagram.com/cazterk/">
+                <FaInstagram /> instagram
+              </a>
+              <a target="_blank" href="https://twitter.com/cazterk">
+                <FaTwitter /> twitter
+              </a>
+            </IconContext.Provider>
+          </div>
           <div className={styles.footerRight}>
-            <h1>Contact</h1>
-            <div className={styles.footerRight__border}></div>
-            <ul className={styles.footerRight__list}>
-              <li>
-                <IoLocationSharp />
-                chilanga lusaka zambia
-              </li>
+            <h3 className={styles.footerRight__heading}>Contact</h3>
 
-              <li>
-                <GrMail />
-                zcephas2@gmail.com
-              </li>
-            </ul>
+            <i>
+              <IoLocationSharp />
+              chilanga lusaka zambia
+            </i>
+
+            <i>
+              <GrMail />
+              zcephas2@gmail.com
+            </i>
           </div>
+        </footer>
+        <div className={styles.footerBottom}>
+          <div className={styles.footerBottom__logo}>
+            <a onClick={() => router.push("/")}> terklog</a>
+          </div>
+          <small>terklog © {year} All Rights Reserved.</small>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };

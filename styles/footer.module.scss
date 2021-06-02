@@ -31,7 +31,7 @@
     }
   }
 
-  @include mobile {
+  @include mobileSmall {
     margin-right: 2.55rem;
   }
 }
@@ -60,9 +60,12 @@
       @extend %headings;
     }
 
-    @include mobile {
+    @include mobileSmall {
       font-size: 1rem;
-      justify-content: start;
+      justify-content: space-between;
+
+      @include mobileLarge {
+      }
     }
   }
 

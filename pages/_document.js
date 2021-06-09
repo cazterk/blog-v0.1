@@ -7,7 +7,7 @@ class MyDocument extends Document {
   }
 
   render() {
-    const GA_MEASUREMENT_ID = "G-NDHJTF6J5R"; // Paste your GTAG here
+    const GA_MEASUREMENT_ID = "G-G4PJWB3X4Q"; // Paste your GTAG here
     return (
       <Html lang="en">
         <Head>

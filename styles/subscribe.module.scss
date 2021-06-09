@@ -17,7 +17,7 @@
 
   &__formBox {
     padding-left: 0.375em;
-    width: 100%;
+    width: 80%;
     height: 35px;
     display: flex;
     border-radius: 1px;
@@ -29,6 +29,7 @@
 
     @include mobileSmall {
       margin: 0.5em;
+      height: 40px;
     }
 
     input {
@@ -42,7 +43,7 @@
   }
 
   button {
-    width: 100%;
+    width: 80%;
     color: $white;
     height: 35px;
     padding: 0.6em 0.9em;
@@ -55,6 +56,9 @@
 
     &:hover {
       background: $red;
+    }
+    @include mobileSmall {
+      height: 40px;
     }
   }
 }

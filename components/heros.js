@@ -12,7 +12,7 @@ export const Heros = () => {
           <h1 className={styles.heros__hTitle}>welcome to the terklog</h1>
           <p className={styles.heros__subtitle}>
             bite-sized blog on,tech, software & more, keeping it short & simple
-            but informative, 500 words per post, focuses on vitals
+            but informative, less than 500 words per post, focuses on vitals
           </p>
 
           <Subscribe />

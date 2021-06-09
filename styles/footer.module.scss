@@ -15,6 +15,7 @@
   i {
     display: flex;
     font-weight: 600;
+    font-style: normal;
     text-decoration: none;
     color: $myGray;
     margin-bottom: 0.5rem;
@@ -62,10 +63,9 @@
 
     @include mobileSmall {
       font-size: 1rem;
-      justify-content: space-between;
+      justify-content: start;
     }
     @include mobileLarge {
-      width: 60;
       justify-content: start;
     }
   }

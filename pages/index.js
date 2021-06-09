@@ -4,7 +4,7 @@ import { Footer } from "../components/footer";
 import { Support } from "../components/support";
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
@@ -18,6 +18,7 @@ export default function Home({ posts, load }) {
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
   const [loading, setLoading] = useState(false);
+
   // const [currentPage, setCurrentPage] = useState(1);
   // const [postsPerPage] = useState(4);
   const [visible, setvisible] = useState(4);
@@ -108,10 +109,12 @@ export default function Home({ posts, load }) {
 
       <IconContext.Provider value={{ size: 20, color: "#fff" }}>
         <div className={styles.holder}>
-          <div className={styles.button} onClick={showLessItems}>
-            <MdNavigateBefore />
-            <p className={styles.btnText}>Less</p>
-          </div>
+          {visible > 4 && (
+            <div className={styles.button} onClick={showLessItems}>
+              <MdNavigateBefore />
+              <p className={styles.btnText}>Less</p>
+            </div>
+          )}
 
           <div className={styles.button} onClick={showMoreItems}>
             <p className={styles.btnText}>More</p>

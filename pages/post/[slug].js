@@ -82,7 +82,7 @@ const Post = (props) => {
               <h1>{title}</h1>
               <BlockContent blocks={body} />
             </div>
-            <Subscribe />
+            {/* <Subscribe /> */}
 
             {/* {enableLoadComments && (
           <p id="graphcomment" onClick={loadComments}>

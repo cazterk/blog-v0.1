@@ -9,7 +9,7 @@ export const Subscribe = () => {
           <input
             type="text"
             name="EmailAddress"
-            placeholder="Enter your email"
+            placeholder="enter your email"
           />
         </form>
         <button type="submit">Subscribe</button>

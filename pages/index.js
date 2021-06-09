@@ -122,10 +122,12 @@ export default function Home({ posts, load }) {
               </div>
             )}
 
-            <div className={styles.button} onClick={showMoreItems}>
-              <p className={styles.btnText}>More</p>
-              {/* <MdNavigateNext /> */}
-            </div>
+            {visible < posts.length && (
+              <div className={styles.button} onClick={showMoreItems}>
+                <p className={styles.btnText}>More</p>
+                {/* <MdNavigateNext /> */}
+              </div>
+            )}
             {/* <Pagination
             postsPerPage={postsPerPage}
             totalPosts={posts.length}

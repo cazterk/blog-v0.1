@@ -63,8 +63,10 @@
 
     @include mobileSmall {
       font-size: 1rem;
+      justify-content: start;
     }
     @include mobileLarge {
+      justify-content: start;
     }
   }
 

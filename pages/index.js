@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Navbar } from "../components/navbar";
 import { Heros } from "../components/heros";
 import { Footer } from "../components/footer";
@@ -71,66 +72,72 @@ export default function Home({ posts, load }) {
   };
 
   return (
-    <div>
-      <Navbar />
-      <Heros />
+    <>
+      <Head>
+        <title>terklog | home</title>
+      </Head>
 
-      <div className={styles.main}>
-        <h1 className={styles.title}>Posts</h1>
-        <div className={styles.cards}>
-          {mappedPost.length ? (
-            mappedPost.slice(0, visible).map((p, index) => (
-              <a
-                onClick={() => router.push(`/post/${p.slug.current}`)}
-                key={index}
-                className={styles.card}
-              >
-                <div
-                  className={styles.card__mainImage}
-                  style={{ backgroundImage: `url(${p.mainImage}` }}
-                ></div>
+      <div>
+        <Navbar />
+        <Heros />
 
-                <div className={styles.card__content}>
-                  <h2>{p.category}</h2>
-                  <h2 className={styles.card__title}>{p.title}</h2>
-                  <p className={styles.card__excerpt}>{p.excerpt}</p>
+        <div className={styles.main}>
+          <h1 className={styles.title}>Posts</h1>
+          <div className={styles.cards}>
+            {mappedPost.length ? (
+              mappedPost.slice(0, visible).map((p, index) => (
+                <a
+                  onClick={() => router.push(`/post/${p.slug.current}`)}
+                  key={index}
+                  className={styles.card}
+                >
+                  <div
+                    className={styles.card__mainImage}
+                    style={{ backgroundImage: `url(${p.mainImage}` }}
+                  ></div>
 
-                  <p className={styles.card__toolbar}>
-                    Created | {p.publishedAt}
-                  </p>
-                </div>
-              </a>
-            ))
-          ) : (
-            <> No posts yet</>
-          )}
-        </div>
-      </div>
+                  <div className={styles.card__content}>
+                    <h2>{p.category}</h2>
+                    <h2 className={styles.card__title}>{p.title}</h2>
+                    <p className={styles.card__excerpt}>{p.excerpt}</p>
 
-      <IconContext.Provider value={{ size: 20, color: "#fff" }}>
-        <div className={styles.holder}>
-          {visible > 4 && (
-            <div className={styles.button} onClick={showLessItems}>
-              <MdNavigateBefore />
-              <p className={styles.btnText}>Less</p>
-            </div>
-          )}
-
-          <div className={styles.button} onClick={showMoreItems}>
-            <p className={styles.btnText}>More</p>
-            <MdNavigateNext />
+                    <p className={styles.card__toolbar}>
+                      Created | {p.publishedAt}
+                    </p>
+                  </div>
+                </a>
+              ))
+            ) : (
+              <> No posts yet</>
+            )}
           </div>
-          {/* <Pagination
+        </div>
+
+        <IconContext.Provider value={{ size: 20, color: "#fff" }}>
+          <div className={styles.holder}>
+            {visible > 4 && (
+              <div className={styles.button} onClick={showLessItems}>
+                {/* <MdNavigateBefore /> */}
+                <p className={styles.btnText}>Less</p>
+              </div>
+            )}
+
+            <div className={styles.button} onClick={showMoreItems}>
+              <p className={styles.btnText}>More</p>
+              {/* <MdNavigateNext /> */}
+            </div>
+            {/* <Pagination
             postsPerPage={postsPerPage}
             totalPosts={posts.length}
             paginate={paginate}
           /> */}
-        </div>
-      </IconContext.Provider>
+          </div>
+        </IconContext.Provider>
 
-      <Support />
-      <Footer />
-    </div>
+        <Support />
+        <Footer />
+      </div>
+    </>
   );
 }
 

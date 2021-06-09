@@ -1,4 +1,5 @@
 import imageUrlBuilder from "@sanity/image-url";
+import Head from "next/head";
 import BlockContent from "@sanity/block-content-to-react";
 import { useState, useEffect } from "react";
 import styles from "../../styles/post.module.scss";
@@ -68,27 +69,32 @@ const Post = (props) => {
   // };
 
   return (
-    <div>
-      <Navbar />
-      <div className={styles.container}>
-        <div className={styles.main}>
-          <div className={styles.body}>
-            {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
-            <h1>{title}</h1>
-            <BlockContent blocks={body} />
-          </div>
-          <Subscribe />
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div>
+        <Navbar />
+        <div className={styles.container}>
+          <div className={styles.main}>
+            <div className={styles.body}>
+              {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
+              <h1>{title}</h1>
+              <BlockContent blocks={body} />
+            </div>
+            <Subscribe />
 
-          {/* {enableLoadComments && (
+            {/* {enableLoadComments && (
           <p id="graphcomment" onClick={loadComments}>
             Load Comments
           </p>
         )} */}
-          {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
-          <Comments />
+            {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
+            <Comments />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

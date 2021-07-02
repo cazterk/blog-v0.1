@@ -7,8 +7,7 @@ import { Navbar } from "../../components/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Comments } from "../../components/comments";
 
-const Post = (props) => {
-  const { title, body, image } = props;
+const Post = ({ title, body, image }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
 
@@ -80,7 +79,12 @@ const Post = (props) => {
             <div className={styles.body}>
               {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
               <h1>{title}</h1>
-              <BlockContent blocks={body} />
+              <BlockContent
+                blocks={body}
+                projectId="b4006agh"
+                dataset="production"
+                imageOptions={{ w: 620, h: 350, fit: "max" }}
+              />
             </div>
             {/* <Subscribe /> */}
 

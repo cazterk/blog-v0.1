@@ -25,6 +25,7 @@
 
     @include mobileLarge {
       margin: 0.3em;
+      height: 50px;
     }
 
     @include mobileSmall {
@@ -58,11 +59,12 @@
       background: $red;
     }
     @include mobileSmall {
-      height: 40px;
       margin: 0.3em;
+      height: 45px;
     }
     @include mobileLarge {
       margin: 0.3em;
+      height: 45px;
     }
   }
 }

@@ -24,11 +24,11 @@
     background: #ececec;
 
     @include mobileLarge {
-      margin: 0.5em;
+      margin: 0.3em;
     }
 
     @include mobileSmall {
-      margin: 0.5em;
+      margin: 0.3em;
       height: 40px;
     }
 
@@ -59,6 +59,10 @@
     }
     @include mobileSmall {
       height: 40px;
+      margin: 0.3em;
+    }
+    @include mobileLarge {
+      margin: 0.3em;
     }
   }
 }

@@ -15,7 +15,7 @@ function getRequestParams(email) {
   // https://mailchimp.com/developer/reference/lists/list-members/
   const data = {
     email_address: email,
-    status: "subscribed",
+    status: "subscribed successful",
   };
 
   // Api key needs to be encoded in base 64 format
@@ -37,7 +37,7 @@ export default async (req, res) => {
 
   if (!email || !email.length) {
     return res.status(400).json({
-      error: "Forgot to add your email?",
+      error: "forgot to add your email?",
     });
   }
 

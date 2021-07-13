@@ -45,9 +45,29 @@ export const Subscribe = () => {
         </button>
       </div>
       {state === "ERROR" && (
-        <p style={{ color: "#ff6b6b", margin: "0.2em" }}>{errorMessage}</p>
+        <p
+          style={{
+            color: "#ff6b6b",
+            margin: "0",
+            fontWeight: "700",
+            fontSize: "small",
+          }}
+        >
+          {errorMessage}
+        </p>
       )}
-      {state === "SUCCESS" && <p>Success!</p>}
+      {state === "SUCCESS" && (
+        <p
+          style={{
+            color: "#17B890",
+            margin: "0",
+            fontWeight: "670",
+            fontSize: "small",
+          }}
+        >
+          Success!
+        </p>
+      )}
     </div>
   );
 };

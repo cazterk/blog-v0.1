@@ -15,7 +15,7 @@ export const Heros = () => {
             but informative, less than 500 words per post, focuses on vitals
           </p>
 
-          {/* <Subscribe /> */}
+          <Subscribe />
         </div>
       </div>
     </div>

@@ -86,7 +86,9 @@ const Post = ({ title, body, image }) => {
                 imageOptions={{ w: 620, h: 350, fit: "max" }}
               />
             </div>
-            {/* <Subscribe /> */}
+            <div className={styles.sub}>
+              <Subscribe />
+            </div>
 
             {/* {enableLoadComments && (
           <p id="graphcomment" onClick={loadComments}>

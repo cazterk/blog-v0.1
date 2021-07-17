@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styles from "../styles/subscribe.module.scss";
+import { Spinner } from "./spinner";
 
 export const Subscribe = () => {
   const MAILCHIMP_URL = process.env.MAILCHIMP_URL;
@@ -38,10 +39,17 @@ export const Subscribe = () => {
         <button
           type="submit"
           type="button"
-          disabled={state === "LOADING"}
+          disabled={state === "LOADING" ? "" : ""}
           onClick={subscribe}
         >
-          Subscribe
+          {(state === "IDLE" || state === "ERROR" || state === "SUCCESS") && (
+            <p> Subscribe</p>
+          )}
+          {state === "LOADING" && (
+            <span style={{ display: "contents" }}>
+              <Spinner />
+            </span>
+          )}
         </button>
       </div>
       {state === "ERROR" && (

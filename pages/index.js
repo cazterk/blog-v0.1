@@ -82,9 +82,15 @@ export default function Home({ posts, load }) {
     <>
       <Head>
         <title>terklog | home</title>
+        <meta
+          name="description"
+          content="Your bite-sized blog on tech, software and more, keeping it short
+          and simple but informative, with 500 words give or take per post,
+          focuses on vitals"
+        />
       </Head>
 
-      <div>
+      <main>
         <Navbar />
         <Heros />
 
@@ -148,7 +154,7 @@ export default function Home({ posts, load }) {
 
         <Support />
         <Footer />
-      </div>
+      </main>
     </>
   );
 }

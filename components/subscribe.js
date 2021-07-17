@@ -46,9 +46,9 @@ export const Subscribe = () => {
             <p> Subscribe</p>
           )}
           {state === "LOADING" && (
-            <span style={{ display: "contents" }}>
+            <i>
               <Spinner />
-            </span>
+            </i>
           )}
         </button>
       </div>

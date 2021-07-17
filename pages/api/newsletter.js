@@ -15,7 +15,7 @@ function getRequestParams(email) {
   // https://mailchimp.com/developer/reference/lists/list-members/
   const data = {
     email_address: email,
-    status: "subscribed successful",
+    status: "subscribed",
   };
 
   // Api key needs to be encoded in base 64 format

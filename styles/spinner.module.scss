@@ -2,9 +2,8 @@
 
 .loader {
   text-align: center;
-  padding: 1em;
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  justify-content: center;
 
   svg path,
   svg rect {

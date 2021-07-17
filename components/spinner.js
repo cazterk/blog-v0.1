@@ -11,8 +11,8 @@ export const Spinner = () => {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         x="0px"
         y="0px"
-        width="40px"
-        height="40px"
+        width="35px"
+        height="35px"
         viewBox="0 0 50 50"
         style={{ enableBackground: "new 0 0 50 50" }}
         xmlSpace="preserve"

@@ -3,6 +3,7 @@ import { Navbar } from "../components/navbar";
 import { Heros } from "../components/heros";
 import { Footer } from "../components/footer";
 import { Support } from "../components/support";
+import { Spinner } from "../components/spinner";
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import React, { useState, useEffect } from "react";
@@ -10,10 +11,16 @@ import { useRouter } from "next/router";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import { IconContext } from "react-icons/lib";
+import { SP } from "next/dist/next-server/lib/utils";
 
 export default function Home({ posts, load }) {
   if (load) {
-    return <h2>loading</h2>;
+    return (
+      <div>
+        {" "}
+        <Spinner />
+      </div>
+    );
   }
 
   const router = useRouter();
@@ -108,7 +115,10 @@ export default function Home({ posts, load }) {
                 </a>
               ))
             ) : (
-              <> No posts yet</>
+              <>
+                {" "}
+                <Spinner />
+              </>
             )}
           </div>
         </div>

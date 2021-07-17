@@ -1,0 +1,13 @@
+@import "colors";
+
+.loader {
+  text-align: center;
+  padding: 1em;
+  display: inline-block;
+  vertical-align: top;
+
+  svg path,
+  svg rect {
+    fill: $oycrayola;
+  }
+}

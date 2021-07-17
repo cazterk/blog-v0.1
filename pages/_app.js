@@ -1,7 +1,6 @@
 import "../styles/_global.scss";
 import Head from "next/head";
 require("typeface-nunito");
-require("localenv");
 
 function MyApp({ Component, pageProps }) {
   return (

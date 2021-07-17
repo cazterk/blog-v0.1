@@ -1,13 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
 import styles from "../styles/subscribe.module.scss";
 import { Spinner } from "./spinner";
 
 export const Subscribe = () => {
-  const MAILCHIMP_URL = process.env.MAILCHIMP_URL;
-
   const [email, setEmail] = useState("");
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -73,7 +70,7 @@ export const Subscribe = () => {
             fontSize: "small",
           }}
         >
-          Success!
+          subscribed successful!!
         </p>
       )}
     </div>

@@ -87,6 +87,7 @@ const Post = ({ title, body, image }) => {
               />
             </div>
             <div className={styles.sub}>
+              <h4>Subscribe to blog email list</h4>
               <Subscribe />
             </div>
 

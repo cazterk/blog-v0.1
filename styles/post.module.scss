@@ -26,6 +26,15 @@
     h2 {
       margin: 0 0.5em 0 0.5em;
     }
+    h3,
+    h4,
+    p {
+      font-size: 1em;
+      // line-height: 2.2em;
+      text-align: justify;
+      margin: 0 1em 0em 1em;
+      word-spacing: 0;
+    }
 
     p,
     ul {
@@ -58,6 +67,11 @@
       h2 {
         margin: 0 3.125em 0 3.125em;
       }
+      h3,
+      h4 {
+        margin: 0 3.125em 0 3.125em;
+      }
+
       p,
       ul {
         margin: 0 3.125em 2em 3.125em;

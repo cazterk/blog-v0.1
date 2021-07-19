@@ -6,9 +6,11 @@ import styles from "../../styles/post.module.scss";
 import { Navbar } from "../../components/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Comments } from "../../components/comments";
+import { CgChevronDown } from "react-icons/cg";
 
 const Post = ({ title, body, image }) => {
   const [imageUrl, setimageUrl] = useState("");
+  const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
 
   useEffect(() => {
@@ -20,6 +22,15 @@ const Post = ({ title, body, image }) => {
     setimageUrl(imageBuilder.image(image));
   }, [image]);
 
+  const showComments = () => {
+    setState("CLICKED");
+    setEnableLoadComments(false);
+    return (
+      <>
+        <Comments />
+      </>
+    );
+  };
   // function loadComments() {
   //   setEnableLoadComments(false);
 
@@ -34,28 +45,6 @@ const Post = ({ title, body, image }) => {
 
   //     document.body.appendChild(script);
   //   };
-  // }
-  // function loadComments() {
-  //   setEnableLoadComments(false);
-  //   window.gc_params = {
-  //     graphcomment_id: "terklog",
-
-  //     // if your website has a fixed header, indicate it's height in pixels
-  //     fixed_header_height: 0,
-  //   };
-
-  //   /* - - - DON'T EDIT BELOW THIS LINE - - - */
-
-  //   (function() {
-  //     var gc = document.createElement("script");
-  //     gc.type = "text/javascript";
-  //     gc.async = true;
-  //     gc.src = "https://graphcomment.com/js/integration.js?" + Date.now();
-  //     (
-  //       document.getElementsByTagName("head")[0] ||
-  //       document.getElementsByTagName("body")[0]
-  //     ).appendChild(gc);
-  //   })();
   // }
 
   // const post = props.data;
@@ -94,14 +83,21 @@ const Post = ({ title, body, image }) => {
               </p>
               <Subscribe />
             </div>
-
-            {/* {enableLoadComments && (
-          <p id="graphcomment" onClick={loadComments}>
-            Load Comments
-          </p>
-        )} */}
             {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
-            <Comments />
+            <div className={styles.comments}>
+              {" "}
+              {enableLoadComments && (
+                <button onClick={showComments}>
+                  Loading comments <CgChevronDown />
+                </button>
+              )}
+            </div>{" "}
+            {state === "CLICKED" && (
+              <div>
+                {" "}
+                <Comments />
+              </div>
+            )}
           </div>
         </div>
       </div>

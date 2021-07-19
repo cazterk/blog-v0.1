@@ -88,7 +88,7 @@ const Post = ({ title, body, image }) => {
               {" "}
               {enableLoadComments && (
                 <button onClick={showComments}>
-                  Loading comments <CgChevronDown />
+                  Load comments <CgChevronDown />
                 </button>
               )}
             </div>{" "}

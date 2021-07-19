@@ -87,7 +87,11 @@ const Post = ({ title, body, image }) => {
               />
             </div>
             <div className={styles.sub}>
-              <h4>Subscribe to blog email list</h4>
+              <h4>Stay in the loop with the terklog</h4>
+              <p className={styles.subp}>
+                I would love to send you an e-mail whenever I have something new
+                on the log.
+              </p>
               <Subscribe />
             </div>
 

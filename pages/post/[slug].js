@@ -6,7 +6,7 @@ import styles from "../../styles/post.module.scss";
 import { Navbar } from "../../components/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Comments } from "../../components/comments";
-import { CgChevronDown } from "react-icons/cg";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Post = ({ title, body, image }) => {
   const [imageUrl, setimageUrl] = useState("");
@@ -88,7 +88,7 @@ const Post = ({ title, body, image }) => {
               {" "}
               {enableLoadComments && (
                 <button onClick={showComments}>
-                  Load comments <CgChevronDown />
+                  Load comments <MdKeyboardArrowDown />
                 </button>
               )}
             </div>{" "}

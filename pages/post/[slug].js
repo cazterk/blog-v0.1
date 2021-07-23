@@ -8,7 +8,7 @@ import { Subscribe } from "../../components/subscribe";
 import { Comments } from "../../components/comments";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const Post = ({ title, body, image }) => {
+const Post = ({ title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
@@ -66,8 +66,16 @@ const Post = ({ title, body, image }) => {
         <div className={styles.container}>
           <div className={styles.main}>
             <div className={styles.body}>
-              {imageUrl && <img className={styles.mainImage} src={imageUrl} />}
-              <h1>{title}</h1>
+              <div className={styles.top}>
+                <h1 className={styles.top__title}>{title}</h1>
+                <p className={styles.top__excerpt}>{excerpt}</p>
+                <p className={styles.top__date}>Publish Date | {date}</p>
+                <div className={styles.top__line}></div>
+              </div>
+              <div className={styles.mainImage}>
+                {imageUrl && <img src={imageUrl} />}
+              </div>
+
               <BlockContent
                 blocks={body}
                 projectId="b4006agh"
@@ -132,6 +140,8 @@ export const getServerSideProps = async (pageContext) => {
         body: post.body,
         title: post.title,
         image: post.mainImage,
+        date: post.publishedAt,
+        excerpt: post.excerpt,
       },
     };
   }

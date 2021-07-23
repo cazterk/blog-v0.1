@@ -21,7 +21,7 @@
     height: 2.5rem;
     display: flex;
     border-radius: 1px;
-    background: #ececec;
+    background: $lightGrey;
 
     @include mobileLarge {
       margin-bottom: 0.5em;
@@ -35,7 +35,7 @@
       color: $primary;
       border: none;
       outline: none;
-      background: #ececec;
+      background: $lightGrey;
       width: inherit;
       font-weight: 400;
     }

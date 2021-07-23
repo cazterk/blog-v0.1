@@ -14,13 +14,13 @@
       0 4px 6px -2px rgb(0 0 0 / 5%);
     text-align: start;
     line-height: 2em;
+    padding: 2em;
+    margin: 2em 0;
 
     .top {
       text-align: left;
-      padding: 2em 0;
 
       &__title {
-        padding: 0 1rem;
         line-height: 1.3em;
       }
 
@@ -29,13 +29,12 @@
         font-style: italic;
         font-weight: 300;
 
-        margin: 1em 1em 1em 1em;
+        margin: 1em 0;
       }
 
       &__date {
         color: #6b7280;
         text-align: start;
-        margin-bottom: 0.3rem;
       }
     }
 
@@ -43,7 +42,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 1em 0 1em;
       img {
         width: 100%;
       }
@@ -51,21 +49,19 @@
 
     h2,
     h3,
-    h4 {
-      font-size: 1em;
-      // line-height: 2.2em;
-      text-align: justify;
-      margin: 0 1em 0em 1em;
-      word-spacing: 0;
-    }
-
+    h4,
     p,
     ul {
       font-size: 1em;
       // line-height: 2.2em;
       text-align: justify;
-      margin: 0 1em 2em 1em;
+
       word-spacing: 0;
+    }
+
+    ul {
+      background: #ececec;
+      border-radius: 1px;
     }
 
     figure {
@@ -126,35 +122,12 @@
 
     .body {
       .top {
-        &__title {
-          padding: 0 3.125rem;
-        }
-
-        &__excerpt {
-          margin: 1em 3.125em 1em 3.125em;
-        }
-
         &__line {
-          margin: 1em 3.125em 1em 3.125em;
+          margin: 2em 0;
           height: 2px;
           border-radius: 1px;
           background-color: #f1f1f1;
         }
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        margin: 0 3.125em;
-      }
-
-      p,
-      ul {
-        margin: 0 3.125em 2em 3.125em;
-      }
-
-      .mainImage {
-        margin: 0 3.125em 0 3.125em;
       }
     }
   }

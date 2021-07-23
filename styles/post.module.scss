@@ -34,18 +34,20 @@
         font-style: italic;
         font-weight: 300;
 
-        margin: 1em 0;
+        margin: 1em 0 !important;
       }
 
       &__date {
         color: #6b7280;
         text-align: start;
+        margin: 0 !important;
       }
     }
 
     .mainImage {
       @extend %align-center;
       justify-content: center;
+      margin-bottom: 1em;
 
       img {
         width: 100%;
@@ -60,8 +62,11 @@
       font-size: 1em;
       // line-height: 2.2em;
       text-align: justify;
-
       word-spacing: 0;
+    }
+
+    p {
+      margin-bottom: 1em !important;
     }
 
     ul {

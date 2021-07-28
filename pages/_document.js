@@ -7,11 +7,11 @@ class MyDocument extends Document {
   }
 
   render() {
-    const GA_MEASUREMENT_ID = "G-G4PJWB3X4Q"; // Paste your GTAG here
+    // const GA_MEASUREMENT_ID = "G-G4PJWB3X4Q"; // Paste your GTAG here
     return (
       <Html lang="en">
         <Head>
-          <script
+          {/* <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           />
@@ -27,7 +27,7 @@ class MyDocument extends Document {
                   });
                 `,
             }}
-          />
+          /> */}
         </Head>
         <body>
           <Main />

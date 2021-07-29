@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap:http://localhost:3000/api/blogSitemap
+Sitemap:https://www.terklog.com/api/next-sitemap

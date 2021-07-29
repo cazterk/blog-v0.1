@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import styles from "../styles/pagination.module.scss";
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {

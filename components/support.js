@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
 import styles from "../styles/support.module.scss";
-import { BsHouseFill } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
-import { FaDonate } from "react-icons/fa";
 import { SiBuymeacoffee, SiPatreon } from "react-icons/si";
 import { GiButterfly } from "react-icons/gi";
 

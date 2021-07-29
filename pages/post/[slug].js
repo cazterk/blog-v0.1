@@ -82,7 +82,7 @@ const Post = ({ title, body, image, date, excerpt }) => {
                 blocks={body}
                 projectId="b4006agh"
                 dataset="production"
-                imageOptions={{ w: 620, h: 350, fit: "max" }}
+                imageOptions={{}}
               />
             </div>
             <div className={styles.sub}>

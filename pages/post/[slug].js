@@ -2,11 +2,10 @@ import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
 import BlockContent from "@sanity/block-content-to-react";
 import { useState, useEffect } from "react";
-// import dynamic from "next/dynamic";
 import styles from "../../styles/post.module.scss";
 import { Navbar } from "../../components/navbar";
-// const Navbar = dynamic(() => import("../../components/navbar"));
 import { Subscribe } from "../../components/subscribe";
+import { Coffee } from "../../components/coffee";
 import { Comments } from "../../components/comments";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
@@ -84,6 +83,9 @@ const Post = ({ title, body, image, date, excerpt }) => {
                 dataset="production"
                 imageOptions={{}}
               />
+              <div className={styles.coffee}>
+                <Coffee />
+              </div>
             </div>
             <div className={styles.sub}>
               <h4>Stay in the loop with the terklog</h4>

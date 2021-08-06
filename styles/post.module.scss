@@ -90,6 +90,12 @@
         border: 10px solid $lightGrey;
       }
     }
+
+    .coffee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .sub {

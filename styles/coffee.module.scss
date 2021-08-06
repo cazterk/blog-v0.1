@@ -47,5 +47,13 @@
     @include tablet {
       font-weight: 800;
     }
+
+    @include mobileLarge {
+      font-weight: 800;
+    }
+
+    @include mobileSmall {
+      font-weight: 800;
+    }
   }
 }

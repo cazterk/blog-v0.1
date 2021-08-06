@@ -49,11 +49,7 @@
     }
 
     @include mobileLarge {
-      font-weight: 800;
-    }
-
-    @include mobileSmall {
-      font-weight: 800;
+      font-weight: 900;
     }
   }
 }

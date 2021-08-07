@@ -10,7 +10,7 @@ import { Comments } from "../../components/comments";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { DiscussionEmbed } from "disqus-react";
 
-const Post = ({ title, body, image, date, excerpt }) => {
+const Post = ({ slug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
@@ -36,7 +36,7 @@ const Post = ({ title, body, image, date, excerpt }) => {
 
   const disqusConfig = {
     shortname: `terklog`,
-    config: { identifier: "{slug.current}", title: "{title}" },
+    config: { identifier: slug, title },
   };
   // function loadComments() {
   //   setEnableLoadComments(false);
@@ -116,7 +116,7 @@ const Post = ({ title, body, image, date, excerpt }) => {
                 <Comments />
               </div>
             )}
-            <DiscussionEmbed {...disqusConfig} />
+            {/* <DiscussionEmbed {...disqusConfig} /> */}
           </div>
         </div>
       </div>
@@ -148,6 +148,7 @@ export const getServerSideProps = async (pageContext) => {
   } else {
     return {
       props: {
+        slug: post.slug,
         body: post.body,
         title: post.title,
         image: post.mainImage,

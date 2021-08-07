@@ -1,13 +1,14 @@
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
 import BlockContent from "@sanity/block-content-to-react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/post.module.scss";
 import { Navbar } from "../../components/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
 import { Comments } from "../../components/comments";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { DiscussionEmbed } from "disqus-react";
 
 const Post = ({ title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
@@ -31,6 +32,11 @@ const Post = ({ title, body, image, date, excerpt }) => {
         <Comments />
       </>
     );
+  };
+
+  const disqusConfig = {
+    shortname: `terklog`,
+    config: { identifier: "{slug.current}", title: "{title}" },
   };
   // function loadComments() {
   //   setEnableLoadComments(false);
@@ -110,6 +116,7 @@ const Post = ({ title, body, image, date, excerpt }) => {
                 <Comments />
               </div>
             )}
+            <DiscussionEmbed {...disqusConfig} />
           </div>
         </div>
       </div>

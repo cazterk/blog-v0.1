@@ -67,8 +67,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
             <div className={styles.sub}>
               <h4>Stay in the loop with the terklog</h4>
               <p className={styles.subp}>
-                I would love to send you an e-mail whenever I have something new
-                on the log.
+                Love what you see? well consider subscribing for updates.
               </p>
               <Subscribe />
             </div>

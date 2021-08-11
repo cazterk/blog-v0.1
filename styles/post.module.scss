@@ -93,6 +93,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 1em 0;
+
+      @include mobileLarge {
+        border-top: 2px solid $lightGrey;
+        border-bottom: 2px solid $lightGrey;
+      }
     }
   }
 

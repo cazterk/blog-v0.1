@@ -5,8 +5,7 @@
   background-color: $primary;
   color: white;
   text-align: center;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding: 2em 0;
 
   @include desktop {
     padding-top: 2em;
@@ -30,10 +29,12 @@
   }
 
   &__subtitle {
-    color: #c7c9d3;
-    font-weight: 400;
+    font-style: italic;
+    font-weight: 600;
     line-height: 1.5em;
-    font-size: 0.9rem;
-    margin: 1.3em 0 1.3em 0;
+    font-size: 1rem;
+    color: $white;
+    opacity: 0.65;
+    margin: 1em 0 1em 0;
   }
 }

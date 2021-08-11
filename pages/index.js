@@ -84,9 +84,9 @@ export default function Home({ posts, load }) {
         <title>terklog | home</title>
         <meta
           name="description"
-          content="Your bite-sized blog on tech, software and more, keeping it short
-          and simple but informative, with 500 words give or take per post,
-          focuses on vitals"
+          content=" With the principle of continuous improvement, the terklog delivers
+          quality content that's ever getting better, subscribe to get the
+          latest updates in software and technology"
         />
       </Head>
 

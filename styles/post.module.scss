@@ -20,11 +20,9 @@
   }
 
   .body {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%),
-      0 4px 6px -2px rgb(0 0 0 / 5%);
     text-align: start;
     line-height: 2em;
-    padding: 1em;
+
     margin: 1em 0;
 
     .top {
@@ -99,7 +97,7 @@
   }
 
   .sub {
-    box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
     padding: 2em 0;
 
     h4 {
@@ -110,7 +108,7 @@
       font-size: 1em;
       margin: 0 1em 1em 1em;
       word-spacing: 0;
-      font-weight: 200;
+      font-weight: 300;
     }
   }
 
@@ -145,6 +143,9 @@
     width: 60%;
 
     .body {
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%),
+        0 4px 6px -2px rgb(0 0 0 / 5%);
+
       padding: 2em;
       .top {
         &__line {
@@ -158,6 +159,10 @@
           margin-bottom: 0em;
         }
       }
+    }
+
+    .sub {
+      box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
     }
   }
 }

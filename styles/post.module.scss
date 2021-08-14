@@ -103,7 +103,7 @@
   }
 
   .sub {
-    box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
     padding: 2em 0;
 
     h4 {
@@ -165,10 +165,6 @@
           margin-bottom: 0em;
         }
       }
-    }
-
-    .sub {
-      box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
     }
   }
 }

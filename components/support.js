@@ -19,18 +19,18 @@ export const Support = () => {
                 <SiBuymeacoffee />
                 <p id={styles.buymeacoffee}>Buymeacoffee</p>
               </a>
+
+              <a target="_blank" href="https://www.subscribestar.com/cazterk">
+                <GiReceiveMoney />
+                <p id={styles.subscribestar}>Subscribestar</p>
+              </a>
               <a
                 target="_blank"
                 href="https://dashboard.flutterwave.com/donate/h674qnrb4x0w"
               >
                 <GiButterfly />
-                <p id={styles.butter}>Flutterwave ( paypal supported ) </p>
+                <p id={styles.butter}>Flutterwave </p>
               </a>
-              <a target="_blank" href="https://www.subscribestar.com/cazterk">
-                <GiReceiveMoney />
-                <p id={styles.subscribestar}>Subscribestar</p>
-              </a>
-
               <a target="_blank" href="https://patreon.com/cazterk">
                 <SiPatreon />
                 <p id={styles.patreon}>Patreon</p>

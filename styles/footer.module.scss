@@ -41,9 +41,6 @@
   background: $white;
   padding: 2rem;
 
-  @include tablet {
-    padding: 2rem 1em;
-  }
   footer {
     background: $white;
     display: flex;

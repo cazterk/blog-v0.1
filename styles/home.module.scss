@@ -93,7 +93,10 @@
     &__excerpt {
       margin-bottom: 0.5rem;
       color: $myGray;
-      font-weight: 300;
+      font-weight: 400;
+      font-size: 0.9em;
+      line-height: 1.5;
+      opacity: 0.8;
     }
 
     &__toolbar {

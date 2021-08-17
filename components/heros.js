@@ -11,9 +11,10 @@ export const Heros = () => {
         <div className={styles.container}>
           <h1 className={styles.heros__hTitle}>welcome to the terklog</h1>
           <p className={styles.heros__subtitle}>
-            With the principle of continuous improvement, the terklog delivers
-            quality content that's ever getting better, subscribe to get the
-            latest updates{" "}
+            here to deliver top-notch hot takes on technology, software, and
+            everything in between, the terklog aims to be on the path to
+            continuous delivery and improvement, subscribe to get the latest
+            updates{" "}
           </p>
 
           <Subscribe />

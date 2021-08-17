@@ -88,11 +88,11 @@
     &__title {
       font-size: 1.3rem !important;
       font-weight: 650;
-      margin: 0.5em 0;
+      margin: 0 0 0.5em 0;
     }
 
     &__excerpt {
-      margin-bottom: 1.5em;
+      margin-bottom: 1.7em;
       color: $myGray;
       font-weight: 400;
       font-size: 0.9em;
@@ -106,7 +106,7 @@
       font-size: 0.875rem !important;
       font-weight: 600;
       text-align: start;
-      margin-bottom: 0.6em;
+      margin-bottom: 1em;
       bottom: 0;
     }
   }

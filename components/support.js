@@ -3,6 +3,7 @@ import styles from "../styles/support.module.scss";
 import { IconContext } from "react-icons/lib";
 import { SiBuymeacoffee, SiPatreon } from "react-icons/si";
 import { GiButterfly } from "react-icons/gi";
+import { MdMonetizationOn } from "react-icons/md";
 
 export const Support = () => {
   const router = useRouter();
@@ -25,6 +26,11 @@ export const Support = () => {
                 <GiButterfly />
                 <p id={styles.butter}>Flutterwave ( paypal supported ) </p>
               </a>
+              <a target="_blank" href="https://www.subscribestar.com/cazterk">
+                <MdMonetizationOn />
+                <p id={styles.subscribestar}>Subscribestar</p>
+              </a>
+
               <a target="_blank" href="https://patreon.com/cazterk">
                 <SiPatreon />
                 <p id={styles.patreon}>Patreon</p>

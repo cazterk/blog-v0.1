@@ -11,7 +11,7 @@
   padding: 2rem 0;
 
   @include tablet {
-    height: 400px;
+    height: 25em;
   }
 
   .title {
@@ -48,6 +48,10 @@
           transition: all 200ms ease-in-out;
           transform: scale(1.05);
         }
+
+        svg {
+          margin-right: 0.3em;
+        }
       }
       @include tablet {
         flex-direction: column;
@@ -64,6 +68,10 @@
       }
 
       #patreon {
+        display: inline-block;
+        color: $white;
+      }
+      #subscribestar {
         display: inline-block;
         color: $white;
       }

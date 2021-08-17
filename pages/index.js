@@ -110,7 +110,7 @@ export default function Home({ posts, load }) {
                   ></div>
 
                   <div className={styles.card__content}>
-                    <h2>{p.category}</h2>
+                    {/* <h2>{p.category}</h2> */}
                     <h2 className={styles.card__title}>{p.title}</h2>
                     <p className={styles.card__excerpt}>{p.excerpt}</p>
 

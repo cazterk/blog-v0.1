@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/support.module.scss";
 import { IconContext } from "react-icons/lib";
 import { SiBuymeacoffee, SiPatreon } from "react-icons/si";
-import { GiButterfly } from "react-icons/gi";
+import { GiButterfly, GiReceiveMoney } from "react-icons/gi";
 import { MdMonetizationOn } from "react-icons/md";
 
 export const Support = () => {
@@ -27,7 +27,7 @@ export const Support = () => {
                 <p id={styles.butter}>Flutterwave ( paypal supported ) </p>
               </a>
               <a target="_blank" href="https://www.subscribestar.com/cazterk">
-                <MdMonetizationOn />
+                <GiReceiveMoney />
                 <p id={styles.subscribestar}>Subscribestar</p>
               </a>
 

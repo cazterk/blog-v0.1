@@ -12,7 +12,7 @@ export const Heros = () => {
           <h1 className={styles.heros__hTitle}>welcome to the terklog</h1>
           <p className={styles.heros__subtitle}>
             here to deliver top-notch hot takes on technology, software, and
-            everything in between,subscribe to get the latest updates{" "}
+            everything in between, subscribe to get the latest updates{" "}
           </p>
 
           <Subscribe />

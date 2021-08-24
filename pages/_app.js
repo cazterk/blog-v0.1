@@ -1,6 +1,7 @@
 import "../styles/_global.scss";
 import Head from "next/head";
 import Script from "next/script";
+import AdSense from "../components/adSense";
 require("typeface-nunito");
 
 function MyApp({ Component, pageProps }) {
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }) {
             });
                 `}
       </Script>
+      <AdSense />
       <Component {...pageProps} />{" "}
     </>
   );

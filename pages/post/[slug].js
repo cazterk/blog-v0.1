@@ -56,8 +56,19 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={image} />
+        <meta
+          property="og:image"
+          content={imageUrl && <img src={imageUrl} />}
+        />
         <meta property="og:url" content={url} />
+
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={excerpt} />
+        <meta name="twitter:image" content={url} />
+        <meta
+          name="twitter:card"
+          content={imageUrl && <img src={imageUrl} />}
+        />
       </Head>
       <div>
         <Navbar />
@@ -68,7 +79,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
                 <h1 className={styles.top__title}>{title}</h1>
                 <p className={styles.top__excerpt}>{excerpt}</p>
                 <p className={styles.top__date}>Publish Date | {date}</p>
-                <IconContext.Provider value={{ size: 25 }}>
+                <IconContext.Provider value={{ size: 30 }}>
                   <div className={styles.top__share}>
                     <CopyToClipboard text={url}>
                       <button>

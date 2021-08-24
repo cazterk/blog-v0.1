@@ -22,7 +22,6 @@
   .body {
     text-align: start;
     line-height: 2em;
-
     margin: 1em 0;
 
     .top {
@@ -43,7 +42,22 @@
       &__date {
         color: #6b7280;
         text-align: start;
+        margin-bottom: 0em;
+      }
+
+      &__share {
+        display: flex;
         margin-bottom: 1em;
+        svg {
+          margin: 0 0.15em;
+        }
+
+        button {
+          display: flex;
+          border: none;
+          background: inherit;
+          padding: 0;
+        }
       }
     }
 
@@ -69,7 +83,7 @@
     }
 
     p {
-      margin-bottom: 1em !important;
+      margin-bottom: 1em;
       opacity: 0.9;
     }
 
@@ -162,8 +176,8 @@
           background-color: #f1f1f1;
         }
 
-        &__date {
-          margin-bottom: 0em;
+        &__share {
+          margin-bottom: 1em;
         }
       }
     }

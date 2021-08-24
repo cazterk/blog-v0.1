@@ -3,17 +3,29 @@ import Head from "next/head";
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/post.module.scss";
+
 import { Navbar } from "../../components/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
-import { Comments } from "../../components/comments";
-import { MdKeyboardArrowDown } from "react-icons/md";
+// import { Comments } from "../../components/comments";
+
 import { DiscussionEmbed } from "disqus-react";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+
+import { MdKeyboardArrowDown } from "react-icons/md";
+import {
+  TiSocialTwitterCircular,
+  TiSocialFacebookCircular,
+} from "react-icons/ti";
+import { BiLinkAlt } from "react-icons/bi";
+import { IconContext } from "react-icons/lib";
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
+  const url = window.location.href;
 
   useEffect(() => {
     const imageBuilder = imageUrlBuilder({
@@ -48,6 +60,26 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
                 <h1 className={styles.top__title}>{title}</h1>
                 <p className={styles.top__excerpt}>{excerpt}</p>
                 <p className={styles.top__date}>Publish Date | {date}</p>
+                <IconContext.Provider value={{ size: 25 }}>
+                  <div className={styles.top__share}>
+                    <CopyToClipboard text={url}>
+                      <button>
+                        <BiLinkAlt />
+                      </button>
+                    </CopyToClipboard>
+                    <TwitterShareButton
+                      url={url}
+                      quote={"Check out my new blog post"}
+                      hashtag="#blogging"
+                    >
+                      <TiSocialTwitterCircular />
+                    </TwitterShareButton>
+
+                    <FacebookShareButton url={url}>
+                      <TiSocialFacebookCircular />
+                    </FacebookShareButton>
+                  </div>
+                </IconContext.Provider>
                 <div className={styles.top__line}></div>
               </div>
               <div className={styles.mainImage}>

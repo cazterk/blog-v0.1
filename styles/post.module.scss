@@ -48,13 +48,12 @@
       &__share {
         display: flex;
         margin-bottom: 1em;
-        svg {
-          margin: 0 0.15em;
-        }
 
         button {
           display: flex;
           border: none;
+          cursor: pointer;
+          margin: 0 0.2em;
           background: inherit;
           padding: 0;
         }

@@ -94,7 +94,7 @@ export default function Home({ posts, load }) {
       <main>
         <Navbar />
         <Heros />
-        <MyAdSense />
+        {/* <MyAdSense /> */}
         <div className={styles.main}>
           <h1 className={styles.title}>Posts</h1>
           <div className={styles.cards}>
@@ -152,7 +152,7 @@ export default function Home({ posts, load }) {
           /> */}
           </div>
         </IconContext.Provider>
-        <MyAdSense />
+        {/* <MyAdSense /> */}
         <Support />
         <Footer />
       </main>

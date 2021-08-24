@@ -2,6 +2,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect } from "react";
+
 import styles from "../../styles/post.module.scss";
 
 import { Navbar } from "../../components/navbar";
@@ -25,7 +26,10 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
-  const url = window.location.href;
+  const url =
+    typeof window !== "undefined" && window.location.href
+      ? window.location.href
+      : "";
 
   useEffect(() => {
     const imageBuilder = imageUrlBuilder({
@@ -43,13 +47,17 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   const disqusConfig = {
     shortname: `terklog`,
-    config: { identifier: pageSlug, title },
+    config: { identifier: pageSlug, title: { title } },
   };
 
   return (
     <>
       <Head>
         <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content={image} />
+        <meta property="og:url" content={url} />
       </Head>
       <div>
         <Navbar />

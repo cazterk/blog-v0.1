@@ -6,6 +6,7 @@ import { Heros } from "../components/heros";
 import { Footer } from "../components/footer";
 import { Support } from "../components/support";
 import { Spinner } from "../components/spinner";
+import { MyAdSense } from "../components/myAdSense";
 
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
@@ -93,7 +94,7 @@ export default function Home({ posts, load }) {
       <main>
         <Navbar />
         <Heros />
-
+        <MyAdSense />
         <div className={styles.main}>
           <h1 className={styles.title}>Posts</h1>
           <div className={styles.cards}>
@@ -151,7 +152,7 @@ export default function Home({ posts, load }) {
           /> */}
           </div>
         </IconContext.Provider>
-
+        <MyAdSense />
         <Support />
         <Footer />
       </main>

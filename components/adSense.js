@@ -9,7 +9,7 @@ export default function AdSense() {
   }, []);
   return (
     <AdSense.Google
-      client="ca-pub-7292810486004926"
+      client={`${process.env.GOOGLE_CLIENT_ID}`}
       slot="7806394673"
       style={{ display: "block" }}
       format="auto"

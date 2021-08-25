@@ -9,7 +9,7 @@ import styles from "../styles/darkModeToggle.module.scss";
 export const DarkModeToggle = () => {
   const [isToggled, setisToggled] = useState(false);
   const darkMode = useDarkMode(false);
-  const theme = darkMode.value ? darkTheme : lightTheme;
+  // const theme = darkMode.value ? darkTheme : lightTheme;
 
   useEffect(() => {}, []);
   return (
@@ -22,12 +22,6 @@ export const DarkModeToggle = () => {
         />
         <span className={styles.switch__slider} />
       </label>
-      <button onClick={darkMode.enable}>
-        <BiMoon />
-      </button>
-      <button onClick={darkMode.disable}>
-        <BiSun />
-      </button>
     </div>
   );
 };

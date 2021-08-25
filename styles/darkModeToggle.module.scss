@@ -3,8 +3,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 3em;
+  height: 1.5em;
 
   input {
     opacity: 0;
@@ -12,7 +12,7 @@
     height: 0;
 
     &:checked + .switch__slider {
-      background-color: #2196f3;
+      background-color: $myGray;
     }
 
     &:checked + .switch__slider:before {
@@ -28,15 +28,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #2196f3;
     transition: 0.4s;
     border-radius: 34px;
 
     &:before {
       position: absolute;
       content: "";
-      height: 26px;
-      width: 26px;
+      height: 1em;
+      width: 1em;
       left: 4px;
       bottom: 4px;
       background-color: $white;

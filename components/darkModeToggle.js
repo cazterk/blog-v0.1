@@ -8,7 +8,7 @@ import styles from "../styles/darkModeToggle.module.scss";
 
 export const DarkModeToggle = () => {
   const [isToggled, setisToggled] = useState(false);
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode();
   // const theme = darkMode.value ? darkTheme : lightTheme;
 
   useEffect(() => {}, []);

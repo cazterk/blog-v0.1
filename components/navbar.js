@@ -20,10 +20,7 @@ export const Navbar = () => {
             <nav>
               <ul>
                 <li>
-                  <DarkModeToggle
-                    isToggled={isToggled}
-                    onToggle={() => setIsToggled(!isToggled)}
-                  />
+                  <DarkModeToggle />
                 </li>
               </ul>
             </nav>

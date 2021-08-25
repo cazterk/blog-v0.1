@@ -11,7 +11,7 @@
   list-style-type: none;
   margin: 0 auto;
   width: auto;
-  background: $white;
+  background: inherit;
 
   @include desktop {
     display: grid;
@@ -54,7 +54,7 @@
     max-width: 500px;
     overflow: hidden;
     border-radius: 2px;
-    background: $white;
+    background: inherit;
     color: $black;
     // box-shadow: 3px 2px 14px rgba(#262631, 0.05);
     box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);

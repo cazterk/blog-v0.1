@@ -38,11 +38,11 @@
 }
 
 .container {
-  background: $white;
+  background: inherit;
   padding: 2rem;
 
   footer {
-    background: $white;
+    background: inherit;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

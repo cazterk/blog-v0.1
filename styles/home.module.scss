@@ -95,16 +95,16 @@
 
     &__excerpt {
       margin-bottom: 1.7em;
-      color: $myGray;
+      color: inherit;
       font-weight: 600;
       font-size: 0.9em;
-      line-height: 1.5;
-      opacity: 0.9;
+      line-height: 1.35;
+      opacity: 0.65;
     }
 
     &__toolbar {
       position: absolute;
-      color: $myGray;
+      color: $lightRed;
       font-size: 0.9em !important;
       font-weight: 650;
       text-align: start;

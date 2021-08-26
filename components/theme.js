@@ -1,11 +1,11 @@
 const light = {
-  bg: "#fff",
+  bg: "#ffffff",
   fontColor: "#111",
 };
 
 const dark = {
-  bg: "#0d1017",
-  fontColor: "#fff",
+  bg: "#131417",
+  fontColor: "#ffffff",
 };
 
 export const darkTheme = { ...dark };

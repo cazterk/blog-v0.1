@@ -87,7 +87,6 @@ export default function Home({ posts, load }) {
         <Heros />
         {/* <MyAdSense /> */}
         <div className={styles.main}>
-          <h1 className={styles.title}>Posts</h1>
           <div className={styles.cards}>
             {mappedPost.length ? (
               mappedPost.slice(0, visible).map((p, index) => (

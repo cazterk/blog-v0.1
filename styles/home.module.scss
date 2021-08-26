@@ -9,7 +9,7 @@
 
 .main {
   list-style-type: none;
-  margin: 0 auto;
+  margin-top: 2em;
   width: auto;
   background: inherit;
 
@@ -57,7 +57,7 @@
     background: inherit;
     color: inherit;
     // box-shadow: 3px 2px 14px rgba(#262631, 0.05);
-    box-shadow: 0 0 8px 0 rgb(0 0 0 / 15%);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
     font-size: 1rem;
 
     // @include tablet {
@@ -87,8 +87,9 @@
 
     &__title {
       font-size: 1.3rem !important;
-      font-weight: 650;
+      font-weight: 700;
       margin: 0 0 0.5em 0;
+      letter-spacing: -0.5px;
     }
 
     &__excerpt {
@@ -104,7 +105,7 @@
       position: absolute;
       color: $myGray;
       font-size: 0.9em !important;
-      font-weight: 600;
+      font-weight: 650;
       text-align: start;
       margin-bottom: 1em;
       bottom: 0;

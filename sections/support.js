@@ -1,19 +1,15 @@
-import { useRouter } from "next/router";
 import styles from "../styles/support.module.scss";
 import { IconContext } from "react-icons/lib";
 import { SiBuymeacoffee, SiPatreon } from "react-icons/si";
 import { GiButterfly, GiReceiveMoney } from "react-icons/gi";
-import { MdMonetizationOn } from "react-icons/md";
 
 export const Support = () => {
-  const router = useRouter();
-
   return (
     <div>
       <div className={styles.container}>
         <h2 className={styles.title}> Surpport My Work</h2>
         <div className={styles.support}>
-          <IconContext.Provider value={{ size: 35 }}>
+          <IconContext.Provider value={{ size: 20 }}>
             <div className={styles.support__portal}>
               <a target="_blank" href="https://www.buymeacoffee.com/cazterk">
                 <SiBuymeacoffee />

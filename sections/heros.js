@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import styles from "../styles/heros.module.scss";
-import { Subscribe } from "./subscribe";
+import { Subscribe } from "../components/subscribe";
 
 export const Heros = () => {
   const router = useRouter();

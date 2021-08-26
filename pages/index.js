@@ -1,12 +1,12 @@
 import Head from "next/head";
 // import dynamic from "next/dynamic";
 
-import { Navbar } from "../components/navbar";
-import { Heros } from "../components/heros";
-import { Footer } from "../components/footer";
-import { Support } from "../components/support";
+import { Navbar } from "../sections/navbar";
+import { Heros } from "../sections/heros";
+import { Footer } from "../sections/footer";
+import { Support } from "../sections/support";
 import { Spinner } from "../components/spinner";
-import { MyAdSense } from "../components/myAdSense";
+// import { MyAdSense } from "../components/myAdSense";
 
 import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
@@ -55,15 +55,6 @@ export default function Home({ posts, load }) {
       setLoading(false);
     }
   }, [posts.length]);
-
-  //get current posts
-
-  // const indexOfLastpost = currentPage * postsPerPage;
-  // const indexOfFirstPost = indexOfLastpost - postsPerPage;
-  // const currentPosts = posts.slice(indexOfFirstPost, indexOfLastpost);
-
-  // //change page
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const showMoreItems = () => {
     if (visible < posts.length) {

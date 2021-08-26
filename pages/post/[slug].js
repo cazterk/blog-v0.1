@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 
 import styles from "../../styles/post.module.scss";
 
-import { Navbar } from "../../components/navbar";
+import { Navbar } from "../../sections/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
 // import { Comments } from "../../components/comments";

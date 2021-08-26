@@ -5,12 +5,7 @@
   background-color: $primary;
   color: $white;
   text-align: center;
-  padding: 2em 0;
-
-  @include desktop {
-    padding-top: 2em;
-    padding-bottom: 2em;
-  }
+  padding: 4em 0;
 
   .container {
     margin: 0 auto;
@@ -23,18 +18,18 @@
 
   &__hTitle {
     font-weight: 900;
-    font-size: 1.8em;
+    font-size: 2em;
     line-height: 1;
     margin: 0;
   }
 
   &__subtitle {
     font-style: italic;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.7em;
     font-size: 0.9rem;
     color: $white;
-    opacity: 0.8;
+    opacity: 0.65;
     margin: 1em 0 1em 0;
   }
 }

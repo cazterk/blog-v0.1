@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { DarkModeToggle } from "./darkModeToggle";
+import { DarkModeToggle } from "../components/darkModeToggle";
 import styles from "../styles/navbar.module.scss";
 import { BsHouseFill } from "react-icons/bs";
 

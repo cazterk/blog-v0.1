@@ -84,7 +84,12 @@
 
     p {
       margin-bottom: 1em;
-      opacity: 0.9;
+      opacity: 0.93;
+      word-spacing: -1px;
+
+      @include desktop {
+        word-spacing: 0;
+      }
     }
 
     ul {

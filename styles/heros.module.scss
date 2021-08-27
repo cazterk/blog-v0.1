@@ -2,34 +2,50 @@
 @import "_media-queries";
 
 .heros {
-  background-color: $primary;
-  color: $white;
+  // background-color: inherit;
+  // color: $white;
   text-align: center;
-  padding: 4em 0;
+  padding: 2em 0;
+  // box-shadow: 0 4px 8px -2px rgb(0 0 0 / 15%);
+  // // box-shadow: 0 4px 2px -2px gray;
 
   .container {
     margin: 0 auto;
     padding: 0 1em;
 
     @include desktop {
-      width: 50%;
+      width: 75%;
     }
   }
 
-  &__hTitle {
-    font-weight: 900;
+  h1 {
+    font-weight: 800;
     font-size: 2em;
     line-height: 1;
     margin: 0;
   }
 
-  &__subtitle {
+  p {
     font-style: italic;
     font-weight: 600;
     line-height: 1.7em;
     font-size: 0.9rem;
-    color: $white;
-    opacity: 0.65;
+    // color: $white;
+    opacity: 0.9;
     margin: 1em 0 1em 0;
+
+    span {
+      svg {
+        vertical-align: middle;
+      }
+    }
+
+    // @include desktop {
+    //   width: 47%;
+    // }
   }
+}
+
+.border {
+  // border-bottom: 1px solid #232323;
 }

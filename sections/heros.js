@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import styles from "../styles/heros.module.scss";
 import { Subscribe } from "../components/subscribe";
+import { CgArrowLongRight } from "react-icons/cg";
 
 export const Heros = () => {
   const router = useRouter();
@@ -9,15 +10,19 @@ export const Heros = () => {
     <div>
       <div className={styles.heros}>
         <div className={styles.container}>
-          <h1 className={styles.heros__hTitle}>welcome to the terklog</h1>
-          <p className={styles.heros__subtitle}>
+          <h1>welcome to the terklog</h1>
+          <p>
             here to deliver top-notch hot takes on technology, software, and
             everything in between, subscribe to get the latest updates{" "}
+            <span>
+              <CgArrowLongRight />
+            </span>{" "}
           </p>
 
-          <Subscribe />
+          {/* <Subscribe /> */}
         </div>
       </div>
+      <div className={styles.border}></div>
     </div>
   );
 };

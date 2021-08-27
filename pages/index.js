@@ -1,5 +1,8 @@
 import Head from "next/head";
-// import dynamic from "next/dynamic";
+
+import imageUrlBuilder from "@sanity/image-url";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 import { Navbar } from "../sections/navbar";
 import { Heros } from "../sections/heros";
@@ -8,13 +11,8 @@ import { Support } from "../sections/support";
 import { Spinner } from "../components/spinner";
 // import { MyAdSense } from "../components/myAdSense";
 
-import styles from "../styles/home.module.scss";
-import imageUrlBuilder from "@sanity/image-url";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-
 import { CgArrowLongRight } from "react-icons/cg";
-import { IconContext } from "react-icons/lib";
+import styles from "../styles/home.module.scss";
 
 export default function Home({ posts, load }) {
   if (load) {
@@ -43,12 +41,9 @@ export default function Home({ posts, load }) {
 
       setmappedPost(
         posts.map((p) => {
-          // setLoading(true);
           return {
             ...p,
             mainImage: imageBuilder.image(p.mainImage),
-            // .width(500)
-            // .height(250),
           };
         })
       );
@@ -89,6 +84,7 @@ export default function Home({ posts, load }) {
         <Heros />
         {/* <MyAdSense /> */}
         <div className={styles.main}>
+          <div className={styles.post}>Posts</div>
           <div className={styles.cards}>
             {mappedPost.length ? (
               mappedPost.slice(0, visible).map((p, index) => (
@@ -131,28 +127,20 @@ export default function Home({ posts, load }) {
           </div>
         </div>
 
-        <IconContext.Provider value={{ size: 20, color: "#fff" }}>
-          <div className={styles.holder}>
-            {visible > 4 && (
-              <div className={styles.button} onClick={showLessItems}>
-                {/* <MdNavigateBefore /> */}
-                <p className={styles.btnText}>Less</p>
-              </div>
-            )}
+        <div className={styles.holder}>
+          {visible > 4 && (
+            <div className={styles.button} onClick={showLessItems}>
+              <p className={styles.btnText}>Less</p>
+            </div>
+          )}
 
-            {visible < posts.length && (
-              <div className={styles.button} onClick={showMoreItems}>
-                <p className={styles.btnText}>More</p>
-                {/* <MdNavigateNext /> */}
-              </div>
-            )}
-            {/* <Pagination
-            postsPerPage={postsPerPage}
-            totalPosts={posts.length}
-            paginate={paginate}
-          /> */}
-          </div>
-        </IconContext.Provider>
+          {visible < posts.length && (
+            <div className={styles.button} onClick={showMoreItems}>
+              <p className={styles.btnText}>More</p>
+            </div>
+          )}
+        </div>
+
         {/* <MyAdSense /> */}
         <Support />
         <Footer />

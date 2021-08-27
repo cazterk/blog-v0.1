@@ -2,12 +2,12 @@
 @import "media-queries";
 
 .container {
-  background-color: $primary;
+  // background-color: $primary;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: $white;
+  // color: $white;
   padding: 2rem 0;
 
   @include tablet {
@@ -16,10 +16,11 @@
 
   .title {
     text-align: center;
-    font-weight: 800;
-    font-size: 1.3em;
+    font-weight: 700;
+    font-size: 1.2em;
     margin: 0;
     padding: 0 0 2rem 0;
+    color: $lightRed;
   }
 
   .support {
@@ -63,21 +64,21 @@
 
       #buymeacoffee {
         display: inline-block;
-        color: $white;
+        // color: $white;
       }
 
       #butter {
         display: inline-block;
-        color: $white;
+        // color: $white;
       }
 
       #patreon {
         display: inline-block;
-        color: $white;
+        // color: $white;
       }
       #subscribestar {
         display: inline-block;
-        color: $white;
+        // color: $white;
       }
     }
   }

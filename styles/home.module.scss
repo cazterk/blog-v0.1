@@ -18,18 +18,12 @@
     justify-items: center;
   }
 
-  .title {
-    font-size: 1.3em;
-    text-align: start;
+  .post {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
     color: $lightRed;
     margin: 0;
-    padding-left: 0.5em;
-    padding-top: 2rem;
-    border-bottom: 1px solid $lightGrey;
-
-    @include desktop {
-      width: 75%;
-    }
   }
   // box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
   .cards {
@@ -39,7 +33,6 @@
     grid-gap: 1.5rem;
     gap: 1.5rem;
     padding: 2rem 1rem 0rem 1rem;
-
     @include desktop {
       width: 75%;
     }
@@ -73,6 +66,10 @@
     &__content {
       padding: 1em;
       text-align: start;
+
+      @include tablet {
+        padding: 1em 0;
+      }
     }
 
     &__mainImage {

@@ -12,6 +12,8 @@ import styles from "../styles/home.module.scss";
 import imageUrlBuilder from "@sanity/image-url";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+
+import { BsArrowRight } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";
 
 export default function Home({ posts, load }) {
@@ -102,8 +104,10 @@ export default function Home({ posts, load }) {
 
                   <div className={styles.card__content}>
                     {/* <h2>{p.category}</h2> */}
-                    <h2 className={styles.card__title}>{p.title}</h2>
-                    <p className={styles.card__excerpt}>{p.excerpt}</p>
+                    <h2 className={styles.card__title}>
+                      {p.title} <BsArrowRight />{" "}
+                    </h2>
+                    {/* <p className={styles.card__excerpt}>{p.excerpt}</p> */}
 
                     <p className={styles.card__toolbar}>
                       Created | {p.publishedAt}

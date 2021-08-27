@@ -57,7 +57,7 @@
     background: inherit;
     color: inherit;
     // box-shadow: 3px 2px 14px rgba(#262631, 0.05);
-    box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
+    // box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
     font-size: 1rem;
 
     // @include tablet {
@@ -76,8 +76,8 @@
     }
 
     &__mainImage {
-      flex: 0 0 250px;
-      height: inherit;
+      flex: 0 0 290px;
+      height: 190px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -86,11 +86,14 @@
     }
 
     &__title {
-      font-size: 1.2rem !important;
+      font-size: 1.03rem !important;
       font-weight: 700;
-      margin: 0 0 0.5em 0;
-      opacity: 0.9;
+      margin: 0 0 1em 0;
       letter-spacing: -0.4px;
+
+      &:hover {
+        color: $lightRed;
+      }
     }
 
     &__excerpt {
@@ -103,13 +106,12 @@
     }
 
     &__toolbar {
-      position: absolute;
-      color: $lightRed;
       font-size: 0.9em !important;
-      font-weight: 600;
+      font-weight: 500;
       text-align: start;
       margin-bottom: 1em;
       bottom: 0;
+      opacity: 0.5;
     }
   }
 }

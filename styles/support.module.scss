@@ -11,7 +11,7 @@
   padding: 2rem 0;
 
   @include tablet {
-    height: 25em;
+    height: 10em;
   }
 
   .title {
@@ -40,10 +40,10 @@
       color: $lightRed;
 
       a {
-        margin-bottom: 1.5em;
+        margin: 0 1em;
         box-shadow: 0 0 8px 0 rgb(0 0 0 / 30%);
         padding: 1.2em;
-        border-radius: 2px;
+        border-radius: 100%;
 
         &:hover {
           transition: all 200ms ease-in-out;
@@ -58,28 +58,28 @@
           margin-left: 3em;
         }
       }
-      @include tablet {
-        flex-direction: column;
-      }
+      // @include tablet {
+      //   flex-direction: column;
+      // }
 
-      #buymeacoffee {
-        display: inline-block;
-        // color: $white;
-      }
+      // #buymeacoffee {
+      //   display: inline-block;
+      //   // color: $white;
+      // }
 
-      #butter {
-        display: inline-block;
-        // color: $white;
-      }
+      // #butter {
+      //   display: inline-block;
+      //   // color: $white;
+      // }
 
-      #patreon {
-        display: inline-block;
-        // color: $white;
-      }
-      #subscribestar {
-        display: inline-block;
-        // color: $white;
-      }
+      // #patreon {
+      //   display: inline-block;
+      //   // color: $white;
+      // }
+      // #subscribestar {
+      //   display: inline-block;
+      //   // color: $white;
+      // }
     }
   }
 }

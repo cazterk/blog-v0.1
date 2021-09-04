@@ -17,29 +17,29 @@
 
     &:checked + .switch__slider:before {
       transform: translateX(26px);
+      content: "🌑";
     }
   }
 
   &__slider {
     position: absolute;
     cursor: pointer;
-
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $lightRed;
+    background-color: $lightGrey;
     transition: 0.4s;
     border-radius: 34px;
 
     &:before {
       position: absolute;
-      content: "";
-      height: 1em;
+      content: "🔅";
+      height: 1.2em;
       width: 1em;
-      left: 4px;
+      left: 1px;
       bottom: 4px;
-      background-color: $white;
+      // background-color: $white;
       transition: 0.4s;
       border-radius: 34px;
     }

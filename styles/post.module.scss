@@ -99,8 +99,21 @@
     }
 
     ul {
-      background: $lightGrey;
+      padding: 0.7em;
       border-radius: 1px;
+      list-style-type: none;
+      border: 1px dashed $lightGrey;
+
+      li {
+        &:before {
+          content: "▪";
+          padding-right: 0.3em;
+          color: $lightRed;
+        }
+      }
+      @include tablet {
+        word-spacing: -1px;
+      }
     }
 
     figure {

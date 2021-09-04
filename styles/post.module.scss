@@ -84,12 +84,13 @@
 
     p {
       margin-bottom: 1em;
-      opacity: 0.75;
+      opacity: 0.7;
       word-spacing: -1px;
       font-weight: 600;
 
       @include desktop {
         word-spacing: 0;
+        opacity: 0.8;
       }
 
       a {

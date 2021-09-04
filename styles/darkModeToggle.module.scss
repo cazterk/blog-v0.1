@@ -17,7 +17,7 @@
 
     &:checked + .switch__slider:before {
       transform: translateX(26px);
-      content: "🌑";
+      content: "🌙";
     }
   }
 
@@ -37,7 +37,7 @@
       content: "🔅";
       height: 1.2em;
       width: 1em;
-      left: 1px;
+      left: 0.3px;
       bottom: 4px;
       // background-color: $white;
       transition: 0.4s;

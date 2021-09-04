@@ -90,6 +90,12 @@
       @include desktop {
         word-spacing: 0;
       }
+
+      a {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $lightRed;
+      }
     }
 
     ul {
@@ -115,10 +121,10 @@
       justify-content: center;
       padding: 1em 0;
 
-      @include mobileLarge {
-        border-top: 1.5px solid $lightGrey;
-        border-bottom: 1.5px solid $lightGrey;
-      }
+      // @include mobileLarge {
+      //   border-top: 1px solid $lightRed;
+      //   border-bottom: 1px solid $lightRed;
+      // }
     }
   }
 

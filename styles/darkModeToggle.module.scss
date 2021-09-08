@@ -4,7 +4,7 @@
   position: relative;
   display: inline-block;
   width: 2.94em;
-  height: 1.1em;
+  height: 1.2em;
   
 
   input {
@@ -14,7 +14,7 @@
 
     &:checked + .switch__slider {
      background-color: $myGray;
-     border: 0.185em solid $white;
+     border: 0.17em solid $white;
     }
 
     &:checked + .switch__slider:before {
@@ -35,7 +35,7 @@
     background-color: $white;
     transition: 0.4s;
     border-radius: 34px;
-    border: 0.185em solid $myGray;
+    border: 0.17em solid $myGray;
 
     &:before {
       position: absolute;
@@ -44,7 +44,7 @@
       width: 0.5em;
     
       left: 1px;
-      bottom: 0;
+      bottom: 1px;
       
       background-color: #ffcc00;
       transition: 0.4s;

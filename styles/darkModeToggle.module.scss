@@ -3,8 +3,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 3em;
-  height: 1.5em;
+  width: 2.94em;
+  height: 1.1em;
   
 
   input {
@@ -40,11 +40,11 @@
     &:before {
       position: absolute;
       content: "";
-      height: 0.7em;
-      width: 0.7em;
+      height: 0.5em;
+      width: 0.5em;
     
-      left: 0.8px;
-      bottom: 1.5px;
+      left: 1px;
+      bottom: 0;
       
       background-color: #ffcc00;
       transition: 0.4s;

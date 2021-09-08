@@ -5,6 +5,7 @@
   display: inline-block;
   width: 3em;
   height: 1.5em;
+  
 
   input {
     opacity: 0;
@@ -12,12 +13,15 @@
     height: 0;
 
     &:checked + .switch__slider {
-      background-color: $myGray;
+     background-color: $myGray;
+     border: 0.185em solid $white;
     }
 
     &:checked + .switch__slider:before {
       transform: translateX(26px);
-      content: "🌙";
+      background-color: $white;
+      border: 2px solid #ffcc00;
+      
     }
   }
 
@@ -28,20 +32,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $lightGrey;
+    background-color: $white;
     transition: 0.4s;
     border-radius: 34px;
+    border: 0.185em solid $myGray;
 
     &:before {
       position: absolute;
-      content: "🔅";
-      height: 1.2em;
-      width: 1em;
-      left: 0.3px;
-      bottom: 4px;
-      // background-color: $white;
+      content: "";
+      height: 0.7em;
+      width: 0.7em;
+    
+      left: 0.8px;
+      bottom: 1.5px;
+      
+      background-color: #ffcc00;
       transition: 0.4s;
       border-radius: 34px;
+      border: 2px solid $myGray;
     }
   }
 }

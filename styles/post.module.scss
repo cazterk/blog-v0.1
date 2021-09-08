@@ -101,18 +101,16 @@
     }
 
     ul {
-      padding: 0.7em;
+      padding:1em 2em;
       border-radius: 1px;
-      list-style-type: none;
-      border: 1px dashed $lightGrey;
+      font-style: italic;
+      opacity: 0.65;
+      font-size: 0.85em;
+      font-weight: 600;
+      line-height: 2;
+      border: 1px solid $lightGrey;
 
-      li {
-        &:before {
-          content: "▪";
-          padding-right: 0.3em;
-          color: $lightRed;
-        }
-      }
+     
       @include tablet {
         word-spacing: -1px;
       }

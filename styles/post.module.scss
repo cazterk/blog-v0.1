@@ -104,7 +104,12 @@
       padding: 0.7em;
       border-radius: 1px;
       list-style-type: none;
-      border: 1px dashed $lightGrey;
+      font-style: italic;
+      opacity: 0.7;
+      font-size: 0.75em;
+      font-weight: 600;
+      line-height: 1.8;
+      border: 1px dotted $lightGrey;
 
       li {
         &:before {

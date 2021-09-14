@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { Navbar } from "../sections/navbar";
 import { Heros } from "../sections/heros";
 import { Footer } from "../sections/footer";
-import { Support } from "../sections/support";
+import  Extras  from "../sections/extras";
 import { Spinner } from "../components/spinner";
 // import { MyAdSense } from "../components/myAdSense";
 
@@ -142,7 +142,7 @@ export default function Home({ posts, load }) {
         </div>
 
         {/* <MyAdSense /> */}
-        <Support />
+        <Extras />
         <Footer />
       </main>
     </>

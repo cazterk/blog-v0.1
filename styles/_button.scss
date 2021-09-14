@@ -2,16 +2,16 @@
 
 .holder {
   background: inherit;
-  padding: 10px;
   display: flex;
   justify-content: center;
+  padding: 10px;
 
   .button {
     background: $lightRed;
     margin: 2rem 0.4rem;
 
     width: 75px;
-    height: 35px;
+    height: 2.1em;
     justify-content: center;
     transition: 0.2s;
     cursor: pointer;

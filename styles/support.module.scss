@@ -8,41 +8,40 @@
   align-items: center;
   flex-direction: column;
   // color: $white;
-  padding: 2rem 0;
+  // padding: 2rem 0;
 
-  @include tablet {
-    height: 10em;
-  }
+  // @include tablet {
+  //   height: 10em;
+  // }
 
-  .title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 1.2em;
-    margin: 0;
-    padding: 0 0 2rem 0;
-    color: $lightRed;
-  }
+  // .title {
+  //   text-align: center;
+  //   font-weight: 700;
+  //   font-size: 1.2em;
+  //   margin: 0;
+  //   padding: 0 0 2rem 0;
+  //   color: $lightRed;
+  // }
 
   .support {
     text-align: start;
     justify-content: center;
     width: 65%;
-    color: $lightRed;
 
     &__portal {
       display: flex;
       flex-direction: row;
       justify-content: center;
-
       line-height: 0;
       font-size: 0.7em;
       font-weight: 700;
-      color: $lightRed;
+      color: inherit;
+      opacity: 0.7;
 
       a {
         margin: 0 1em;
         box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
-        padding: 1.2em;
+        padding: 1em;
         border-radius: 100%;
 
         &:hover {

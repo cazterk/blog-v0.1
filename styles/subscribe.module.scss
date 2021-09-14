@@ -75,23 +75,23 @@
 
 @media only screen and (min-width: 768px) {
   .subscribe {
-    // flex-direction: column;
+    flex-direction: row;
 
-    // > * {
-    //   margin-left: 0.5em;
-    //   margin-bottom: 0;
-    // }
+    > * {
+      margin-left: 0.5em;
+      margin-bottom: 0;
+    }
 
     &__formBox {
-      width: 90%;
+      width: 30%;
 
       input {
-        width: 90%;
+        width: 100%;
       }
     }
 
     button {
-      width: 90%;
+      width: auto;
     }
   }
 }

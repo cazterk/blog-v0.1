@@ -7,7 +7,7 @@ export const Support = () => {
   return (
     <div>
       <div className={styles.container}>
-        <h2 className={styles.title}> Surpport Me</h2>
+        {/* <h2 className={styles.title}> Surpport Me</h2> */}
         <div className={styles.support}>
           <IconContext.Provider value={{ size: 20 }}>
             <div className={styles.support__portal}>

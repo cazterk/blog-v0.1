@@ -12,6 +12,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <script
+            strategy="afterInteractive "
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />

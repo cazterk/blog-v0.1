@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { Navbar } from "../sections/navbar";
 import { Heros } from "../sections/heros";
 import { Footer } from "../sections/footer";
-import  Extras  from "../sections/extras";
+import Extras from "../sections/extras";
 import { Spinner } from "../components/spinner";
 // import { MyAdSense } from "../components/myAdSense";
 

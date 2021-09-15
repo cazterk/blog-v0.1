@@ -90,13 +90,15 @@
 
       @include desktop {
         word-spacing: 0;
-        opacity: 0.8;
+        opacity: 0.9;
       }
 
       a {
+        color: $lightRed;
         text-decoration: underline;
         text-decoration-thickness: 0.125em;
         text-decoration-color: $lightRed;
+        opacity: 0.9;
       }
     }
 

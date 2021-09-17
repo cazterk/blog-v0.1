@@ -3,7 +3,7 @@
 
 %headings {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   margin-right: 4rem;
 
   h3 {
@@ -44,28 +44,18 @@
   footer {
     background: inherit;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
 
-    .footerLeft {
-      @extend %headings;
-    }
-
-    .footerRight {
+    .footerTop {
       @extend %headings;
     }
 
     .footerMid {
       @extend %headings;
-    }
-
-    @include mobileSmall {
-      font-size: 1rem;
-      justify-content: start;
-    }
-    @include mobileLarge {
-      justify-content: start;
+      flex-direction: column;
     }
   }
 
@@ -73,12 +63,6 @@
     padding-top: 2rem;
     align-items: center;
     text-align: center;
-
-    &__logo {
-      font-size: 1.6em;
-      color: $myGray;
-      font-weight: 800;
-    }
 
     small {
       color: $myGray;

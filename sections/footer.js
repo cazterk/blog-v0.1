@@ -25,39 +25,30 @@ export const Footer = () => {
     <div>
       <div className={styles.container}>
         <footer>
-          <div className={styles.footerLeft}>
-            <h3 className={styles.footerLeft__heading}> More</h3>
-
-            <IconContext.Provider value={{ size: 15 }}>
+          <div className={styles.footerTop}>
+            <IconContext.Provider value={{ size: 20 }}>
               <a target="_blank" href="https://github.com/cazterk/">
-                <FaGithub /> github
+                <FaGithub />
               </a>
               <a target="_blank" href="https://cazterk.itch.io/">
-                <FaItchIo /> itchIo
+                <FaItchIo />
               </a>
               <a target="_blank" href="https://youtube.com/c/cazterk">
-                <FaYoutube /> youtube
-              </a>
-            </IconContext.Provider>
-          </div>
-          <div className={styles.footerMid}>
-            <h3 className={styles.footerLeft__heading}> Socials</h3>
-            <IconContext.Provider value={{ size: 15 }}>
-              <a target="_blank" href="https://facebook.com/cazterk">
-                <FaFacebookSquare />
-                facebook
-              </a>
-              <a target="_blank" href="https://www.instagram.com/cazterk/">
-                <FaInstagram /> instagram
+                <FaYoutube />
               </a>
               <a target="_blank" href="https://twitter.com/cazterk">
-                <FaTwitter /> twitter
+                <FaTwitter />
+              </a>
+              <a target="_blank" href="https://facebook.com/cazterk">
+                <FaFacebookSquare />
+              </a>
+              <a target="_blank" href="https://www.instagram.com/cazterk/">
+                <FaInstagram />
               </a>
             </IconContext.Provider>
           </div>
-          <div className={styles.footerRight}>
-            <h3 className={styles.footerRight__heading}>Contact</h3>
 
+          <div className={styles.footerMid}>
             <i>
               <IoLocationSharp />
               chilanga lusaka zambia
@@ -68,13 +59,10 @@ export const Footer = () => {
               zcephas2@gmail.com
             </i>
           </div>
-        </footer>
-        <div className={styles.footerBottom}>
-          <div className={styles.footerBottom__logo}>
-            <a onClick={() => router.push("/")}> terklog</a>
+          <div className={styles.footerBottom}>
+            <small>terklog © {year} All Rights Reserved.</small>
           </div>
-          <small>terklog © {year} All Rights Reserved.</small>
-        </div>
+        </footer>
       </div>
     </div>
   );

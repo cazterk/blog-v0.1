@@ -8,6 +8,7 @@ import styles from "../../styles/post.module.scss";
 import { Navbar } from "../../sections/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
+import { Footer } from "../../sections/footer";
 // import { Comments } from "../../components/comments";
 
 import { DiscussionEmbed } from "disqus-react";
@@ -133,6 +134,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
             )}
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

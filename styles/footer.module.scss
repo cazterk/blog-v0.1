@@ -1,10 +1,15 @@
 @import "colors";
 @import "media-queries";
 
-%headings {
+%text-color {
+  color: $myGray;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+%content-center {
   display: flex;
-  flex-direction: column;
-  margin-right: 4rem;
+  justify-content: center;
 
   h3 {
     color: $myGray;
@@ -18,7 +23,6 @@
     font-style: normal;
     text-decoration: none;
     color: $myGray;
-    margin-bottom: 0.5rem;
 
     &:hover {
       color: $red;
@@ -26,14 +30,11 @@
     }
 
     svg {
-      margin-right: 0.4em;
+      margin: 0.5em;
       width: auto;
       height: auto;
+      vertical-align: middle;
     }
-  }
-
-  @include mobileSmall {
-    margin-right: 2.55rem;
   }
 }
 
@@ -44,48 +45,27 @@
   footer {
     background: inherit;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
 
-    .footerLeft {
-      @extend %headings;
+    .footerTop {
+      @extend %content-center;
     }
+  }
 
-    .footerRight {
-      @extend %headings;
-    }
-
-    .footerMid {
-      @extend %headings;
-    }
-
-    @include mobileSmall {
-      font-size: 1rem;
-      justify-content: start;
-    }
-    @include mobileLarge {
-      justify-content: start;
-    }
+  .footerMid {
+    text-align: center;
+    @extend %text-color;
   }
 
   .footerBottom {
-    padding-top: 2rem;
     align-items: center;
     text-align: center;
 
-    &__logo {
-      font-size: 1.6em;
-      color: $myGray;
-      font-weight: 800;
-    }
-
     small {
-      color: $myGray;
-      font-weight: 600;
+      @extend %text-color;
     }
-  }
-  #list {
-    display: inline-block;
   }
 }

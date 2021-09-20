@@ -6,13 +6,8 @@
   font-weight: 700;
   font-size: 1.2em;
   margin: 0;
-  padding: 0 0 2rem 0;
+  padding: 0 0 0.5rem 0;
   color: $lightRed;
-}
-
-%extra {
-  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 15%);
-  padding: 1em;
 }
 
 .extras {
@@ -40,40 +35,5 @@
         @extend %title;
       }
     }
-
-    // .sub {
-    //   @extend %extra;
-
-    //   @include desktop {
-    //     flex-direction: row;
-    //     flex: 1 0 34.4em;
-    //     max-width: 43.8em;
-    //   }
-
-    //   h2 {
-    //     @extend %title;
-    //   }
-    // }
   }
-
-  //   .borderTop {
-  //     border-top: 1px solid $lightGrey;
-  //     width: 75%;
-  //     opacity: 0.45;
-
-  //     @include mobileLarge {
-  //       width: 90%;
-  //     }
-  //   }
-
-  //   .borderBottom {
-  //     border-bottom: 1px solid $lightGrey;
-  //     width: 75%;
-  //     opacity: 0.45;
-  //     padding-top: 1em;
-
-  //     @include mobileLarge {
-  //       width: 90%;
-  //     }
-  //   }
 }

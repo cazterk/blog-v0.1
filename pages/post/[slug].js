@@ -23,6 +23,8 @@ import {
 import { BiLinkAlt } from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
 
+const metaData = require["../data/metaData"];
+
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
@@ -55,11 +57,18 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
     <>
       <Head>
         <title>{title}</title>
-        <meta property="og:url" content={url} />
+        <meta
+          property="og:url"
+          content={
+            metaData.hostname +
+            window.location.pathname +
+            window.location.search
+          }
+        />
         <meta property="og:title" content={title} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image" content={metaData.hostname + imageUrl} />
 
         <meta name="twitter:card" content="summary" />
       </Head>

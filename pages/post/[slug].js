@@ -1,6 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
-import Header from "./Header";
+
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect } from "react";
 
@@ -75,7 +75,6 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta name="twitter:image" content={imageUrl} />
       </Head>
       <div>
-        <Header />
         <Navbar />
         <div className={styles.container}>
           <div className={styles.main}>

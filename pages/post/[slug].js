@@ -2,7 +2,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
 
 import BlockContent from "@sanity/block-content-to-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
 import styles from "../../styles/post.module.scss";
 
@@ -55,9 +55,8 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   };
 
   return (
-    <div>
-      <Navbar />
-      <div className={styles.container}>
+    <>
+      <Fragment>
         <Head>
           <title>{title}</title>
           <meta property="og:title" content={title} />
@@ -69,7 +68,10 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content={imageUrl} />
         </Head>
+      </Fragment>
 
+      <Navbar />
+      <div className={styles.container}>
         <div className={styles.main}>
           <div className={styles.body}>
             <div className={styles.top}>
@@ -137,7 +139,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

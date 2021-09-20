@@ -1,6 +1,5 @@
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
-import { NextSeo } from "next-seo";
 
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect } from "react";
@@ -59,7 +58,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
     <>
       <Head>
         <title>{title}</title>
-        {/* <meta property="og:title" content={title} />
+        <meta property="og:title" content={title} />
         <meta
           property="og:url"
           content={
@@ -73,11 +72,8 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta property="og:image" content={imageUrl} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={imageUrl} /> */}
+        <meta name="twitter:image" content={imageUrl} />
       </Head>
-
-      <NextSeo title={title} description={excerpt} url={url} image={imageUrl} />
-
       <div>
         <Navbar />
         <div className={styles.container}>

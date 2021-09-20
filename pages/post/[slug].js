@@ -55,98 +55,89 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   };
 
   return (
-    <>
+    <div>
       <Head>
         <title>{title}</title>
         <meta property="og:title" content={title} key="title" />
-        <meta
-          property="og:url"
-          content={
-            metaData.hostname +
-            window.location.pathname +
-            window.location.search
-          }
-          key="title"
-        />
+        <meta property="og:url" content={url} key="title" />
 
         <meta property="og:description" content={excerpt} key="title" />
         <meta property="og:image" content={imageUrl} key="title" />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content="blog" />
         <meta name="twitter:card" content="summary_large_image" key="title" />
         <meta name="twitter:image" content={imageUrl} key="title" />
       </Head>
-      <div>
-        <Navbar />
-        <div className={styles.container}>
-          <div className={styles.main}>
-            <div className={styles.body}>
-              <div className={styles.top}>
-                <h1 className={styles.top__title}>{title}</h1>
-                <p className={styles.top__excerpt}>{excerpt}</p>
-                <p className={styles.top__date}>Publish Date | {date}</p>
-                <IconContext.Provider value={{ size: 30 }}>
-                  <div className={styles.top__share}>
-                    <CopyToClipboard text={url}>
-                      <button>
-                        <BiLinkAlt />
-                      </button>
-                    </CopyToClipboard>
-                    <TwitterShareButton
-                      url={url}
-                      quote={"Check out my new blog post"}
-                      hashtag="#blogging"
-                    >
-                      <TiSocialTwitterCircular />
-                    </TwitterShareButton>
 
-                    <FacebookShareButton url={url}>
-                      <TiSocialFacebookCircular />
-                    </FacebookShareButton>
-                  </div>
-                </IconContext.Provider>
-                <div className={styles.top__line}></div>
-              </div>
-              <div className={styles.mainImage}>
-                {imageUrl && <img src={imageUrl} />}
-              </div>
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.main}>
+          <div className={styles.body}>
+            <div className={styles.top}>
+              <h1 className={styles.top__title}>{title}</h1>
+              <p className={styles.top__excerpt}>{excerpt}</p>
+              <p className={styles.top__date}>Publish Date | {date}</p>
+              <IconContext.Provider value={{ size: 30 }}>
+                <div className={styles.top__share}>
+                  <CopyToClipboard text={url}>
+                    <button>
+                      <BiLinkAlt />
+                    </button>
+                  </CopyToClipboard>
+                  <TwitterShareButton
+                    url={url}
+                    quote={"Check out my new blog post"}
+                    hashtag="#blogging"
+                  >
+                    <TiSocialTwitterCircular />
+                  </TwitterShareButton>
 
-              <BlockContent
-                blocks={body}
-                projectId="b4006agh"
-                dataset="production"
-                imageOptions={{}}
-              />
-              <div className={styles.coffee}>
-                <Coffee />
-              </div>
+                  <FacebookShareButton url={url}>
+                    <TiSocialFacebookCircular />
+                  </FacebookShareButton>
+                </div>
+              </IconContext.Provider>
+              <div className={styles.top__line}></div>
             </div>
-            <div className={styles.sub}>
-              <h4>Stay in the loop with the terklog</h4>
-              <p className={styles.subp}>
-                Love what you see? well consider subscribing for updates.
-              </p>
-              <Subscribe />
+            <div className={styles.mainImage}>
+              {imageUrl && <img src={imageUrl} />}
             </div>
-            {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
-            <div className={styles.comments}>
-              {" "}
-              {enableLoadComments && (
-                <button onClick={showComments}>
-                  Load comments <MdKeyboardArrowDown />
-                </button>
-              )}
-            </div>{" "}
-            {state === "CLICKED" && (
-              <div>
-                {" "}
-                <DiscussionEmbed {...disqusConfig} />
-              </div>
-            )}
+
+            <BlockContent
+              blocks={body}
+              projectId="b4006agh"
+              dataset="production"
+              imageOptions={{}}
+            />
+            <div className={styles.coffee}>
+              <Coffee />
+            </div>
           </div>
+          <div className={styles.sub}>
+            <h4>Stay in the loop with the terklog</h4>
+            <p className={styles.subp}>
+              Love what you see? well consider subscribing for updates.
+            </p>
+            <Subscribe />
+          </div>
+          {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
+          <div className={styles.comments}>
+            {" "}
+            {enableLoadComments && (
+              <button onClick={showComments}>
+                Load comments <MdKeyboardArrowDown />
+              </button>
+            )}
+          </div>{" "}
+          {state === "CLICKED" && (
+            <div>
+              {" "}
+              <DiscussionEmbed {...disqusConfig} />
+            </div>
+          )}
         </div>
-        <Footer />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

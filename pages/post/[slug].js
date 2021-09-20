@@ -68,7 +68,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta property="og:title" content={title} />
         <meta property="og:type" content="article" />
         <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={metaData.hostname + imageUrl} />
+        <meta property="og:image" content={imageUrl} />
 
         <meta name="twitter:card" content="summary" />
       </Head>

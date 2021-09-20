@@ -1,5 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
+import Header from "./Header";
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect } from "react";
 
@@ -57,6 +58,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
     <>
       <Head>
         <title>{title}</title>
+        <meta property="og:title" content={title} />
         <meta
           property="og:url"
           content={
@@ -65,14 +67,15 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
             window.location.search
           }
         />
-        <meta property="og:title" content={title} />
-        <meta property="og:type" content="article" />
+
         <meta property="og:description" content={excerpt} />
         <meta property="og:image" content={imageUrl} />
 
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={imageUrl} />
       </Head>
       <div>
+        <Header />
         <Navbar />
         <div className={styles.container}>
           <div className={styles.main}>

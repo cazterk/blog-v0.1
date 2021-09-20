@@ -56,20 +56,20 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   return (
     <div>
-      <Head>
-        <title>{title}</title>
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content={url} />
-
-        <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={imageUrl} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={imageUrl} />
-      </Head>
-
       <Navbar />
       <div className={styles.container}>
+        <Head>
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta property="og:url" content={url} />
+
+          <meta property="og:description" content={excerpt} />
+          <meta property="og:image" content={imageUrl} />
+          <meta property="og:type" content="article" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content={imageUrl} />
+        </Head>
+
         <div className={styles.main}>
           <div className={styles.body}>
             <div className={styles.top}>

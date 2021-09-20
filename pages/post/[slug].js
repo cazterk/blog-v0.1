@@ -23,7 +23,7 @@ import {
 import { BiLinkAlt } from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
 
-const metaData = require["../data/metaData"];
+const metaData = require("../../data/metaData");
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");

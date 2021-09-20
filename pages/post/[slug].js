@@ -55,15 +55,13 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
     <>
       <Head>
         <title>{title}</title>
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={image} />
         <meta property="og:url" content={url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content={imageUrl} />
 
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={excerpt} />
-        <meta name="twitter:image" content={url} />
-        <meta name="twitter:card" content={image} />
+        <meta name="twitter:card" content="summary" />
       </Head>
       <div>
         <Navbar />

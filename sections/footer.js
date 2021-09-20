@@ -1,15 +1,9 @@
 import { useRouter } from "next/router";
 import styles from "../styles/footer.module.scss";
 import React from "react";
-import {
-  FaInstagram,
-  FaItchIo,
-  FaGithub,
-  FaYoutube,
-  FaFacebookSquare,
-  FaTwitter,
-} from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
+import { FaGithub, FaYoutube, FaFacebook } from "react-icons/fa";
+
+import { AiFillTwitterCircle } from "react-icons/ai";
 import { IoLocationSharp } from "react-icons/io5";
 import { IconContext } from "react-icons/lib";
 
@@ -30,37 +24,23 @@ export const Footer = () => {
               <a target="_blank" href="https://github.com/cazterk/">
                 <FaGithub />
               </a>
-              <a target="_blank" href="https://cazterk.itch.io/">
-                <FaItchIo />
-              </a>
+
               <a target="_blank" href="https://youtube.com/c/cazterk">
                 <FaYoutube />
               </a>
               <a target="_blank" href="https://twitter.com/cazterk">
-                <FaTwitter />
+                <AiFillTwitterCircle />
               </a>
               <a target="_blank" href="https://facebook.com/cazterk">
-                <FaFacebookSquare />
-              </a>
-              <a target="_blank" href="https://www.instagram.com/cazterk/">
-                <FaInstagram />
+                <FaFacebook />
               </a>
             </IconContext.Provider>
           </div>
-
           <div className={styles.footerMid}>
-            <i>
-              <IoLocationSharp />
-              chilanga lusaka zambia
-            </i>
-
-            <i>
-              <GrMail />
-              zcephas2@gmail.com
-            </i>
+            <p>Terklog • blog </p>
           </div>
           <div className={styles.footerBottom}>
-            <small>terklog © {year} All Rights Reserved.</small>
+            <small>maintained by cazterk • © {year}</small>
           </div>
         </footer>
       </div>

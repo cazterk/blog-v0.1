@@ -58,7 +58,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
     <>
       <Head>
         <title>{title}</title>
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={title} key="title" />
         <meta
           property="og:url"
           content={
@@ -66,13 +66,14 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
             window.location.pathname +
             window.location.search
           }
+          key="title"
         />
 
-        <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:description" content={excerpt} key="title" />
+        <meta property="og:image" content={imageUrl} key="title" />
         <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:card" content="summary_large_image" key="title" />
+        <meta name="twitter:image" content={imageUrl} key="title" />
       </Head>
       <div>
         <Navbar />

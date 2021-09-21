@@ -1,6 +1,6 @@
 import React from "react";
 
-import SEO from "./SEO";
+import SEO from "./seo";
 const Layout = ({ children, title, description, image, slug, article }) => {
   return (
     <React.Fragment>

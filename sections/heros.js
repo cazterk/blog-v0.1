@@ -1,11 +1,8 @@
-import { useRouter } from "next/router";
 import styles from "../styles/heros.module.scss";
-import { Subscribe } from "../components/subscribe";
+// import { Subscribe } from "../components/subscribe";
 import { CgArrowLongRight } from "react-icons/cg";
 
 export const Heros = () => {
-  const router = useRouter();
-
   return (
     <div>
       <div className={styles.heros}>

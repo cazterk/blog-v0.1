@@ -25,7 +25,7 @@ import {
 import { BiLinkAlt } from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
 
-const metaData = require("../../data/metaData");
+// const metaData = require("../../data/metaData");
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
@@ -56,12 +56,13 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   };
 
   return (
-    <Layout
-      title={title}
-      image={imageUrl}
-      slug={pageSlug}
-      description={excerpt}
-    >
+    <>
+      <Layout
+        title={title}
+        image={imageUrl}
+        slug={pageSlug}
+        description={excerpt}
+      ></Layout>
       {/* <Fragment>
         <Head>
           <title>{title}</title>
@@ -145,7 +146,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         </div>
       </div>
       <Footer />
-    </Layout>
+    </>
   );
 };
 

@@ -66,6 +66,9 @@
 
     small {
       @extend %text-color;
+      svg {
+        vertical-align: middle;
+      }
     }
   }
 }

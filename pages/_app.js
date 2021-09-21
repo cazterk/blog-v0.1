@@ -9,8 +9,6 @@ import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../components/theme";
 import Div from "../components/darkMode";
 
-import SEO from "../components/seo";
-
 require("typeface-nunito");
 
 function MyApp({ Component, pageProps }) {

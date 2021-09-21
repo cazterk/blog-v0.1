@@ -5,7 +5,7 @@ import Script from "next/script";
 import { useState, useEffect } from "react";
 
 import useDarkMode from "use-dark-mode";
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../components/theme";
 import Div from "../components/darkMode";
 

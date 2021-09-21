@@ -1,5 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
+import Layout from "../../components/layout";
 
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect, Fragment } from "react";
@@ -55,8 +56,13 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   };
 
   return (
-    <>
-      <Fragment>
+    <Layout
+      title={title}
+      image={imageUrl}
+      slug={pageSlug}
+      description={excerpt}
+    >
+      {/* <Fragment>
         <Head>
           <title>{title}</title>
           <meta property="og:title" content={title} />
@@ -68,7 +74,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content={imageUrl} />
         </Head>
-      </Fragment>
+      </Fragment> */}
 
       <Navbar />
       <div className={styles.container}>
@@ -139,7 +145,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         </div>
       </div>
       <Footer />
-    </>
+    </Layout>
   );
 };
 

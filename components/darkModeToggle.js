@@ -1,13 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { BiSun, BiMoon } from "react-icons/bi";
+
 import useDarkMode from "use-dark-mode";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./theme";
+
 import styles from "../styles/darkModeToggle.module.scss";
 
 export const DarkModeToggle = () => {
-  const [isToggled, setisToggled] = useState(false);
   const darkMode = useDarkMode();
   // const theme = darkMode.value ? darkTheme : lightTheme;
 

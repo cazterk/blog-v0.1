@@ -26,11 +26,11 @@ function MyApp({ Component, pageProps }) {
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </Head>
       <Script
-        strategy="afterInteractive "
+        strategy="lazyOnload"
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-      <Script strategy="afterInteractive ">
+      <Script strategy="lazyOnload">
         {" "}
         {`
             window.dataLayer = window.dataLayer || [];

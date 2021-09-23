@@ -1,16 +1,14 @@
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
-import Layout from "../../components/layout";
+import SEO from "../../components/seo";
 
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect, Fragment } from "react";
 
 import styles from "../../styles/post.module.scss";
 
-import { Navbar } from "../../sections/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
-import { Footer } from "../../sections/footer";
 // import { Comments } from "../../components/comments";
 
 import { DiscussionEmbed } from "disqus-react";
@@ -57,27 +55,25 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   return (
     <>
-      <Layout
+      {/* <SEO
         title={title}
         image={imageUrl}
         slug={pageSlug}
         description={excerpt}
-      ></Layout>
-      {/* <Fragment>
-        <Head>
-          <title>{title}</title>
-          <meta property="og:title" content={title} />
-          <meta property="og:url" content={url} />
+      /> */}
 
-          <meta property="og:description" content={excerpt} />
-          <meta property="og:image" content={imageUrl} />
-          <meta property="og:type" content="article" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={imageUrl} />
-        </Head>
-      </Fragment> */}
+      {/* <Head>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content={url} />
 
-      <Navbar />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={imageUrl} />
+      </Head> */}
+
       <div className={styles.container}>
         <div className={styles.main}>
           <div className={styles.body}>
@@ -145,7 +141,6 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

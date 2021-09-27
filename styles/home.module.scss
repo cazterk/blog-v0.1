@@ -50,13 +50,11 @@
     border-radius: 2px;
     background: inherit;
     color: inherit;
-    // box-shadow: 3px 2px 14px rgba(#262631, 0.05);
-    // box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
     font-size: 1rem;
 
-    // @include tablet {
-    //   max-width: 430px;
-    // }
+    &__mainImage {
+      border-radius: 1px;
+    }
 
     @include desktop {
       flex-direction: row;

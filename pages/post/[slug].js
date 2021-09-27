@@ -7,10 +7,8 @@ import React, { useState, useEffect, Fragment } from "react";
 
 import styles from "../../styles/post.module.scss";
 
-import { Navbar } from "../../sections/navbar";
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
-import { Footer } from "../../sections/footer";
 // import { Comments } from "../../components/comments";
 
 import { DiscussionEmbed } from "disqus-react";
@@ -57,13 +55,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   return (
     <>
-      <Layout
-        title={title}
-        image={imageUrl}
-        slug={pageSlug}
-        description={excerpt}
-      ></Layout>
-      {/* <Fragment>
+      <div className={styles.container}>
         <Head>
           <title>{title}</title>
           <meta property="og:title" content={title} />
@@ -75,10 +67,14 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content={imageUrl} />
         </Head>
-      </Fragment> */}
 
-      <Navbar />
-      <div className={styles.container}>
+        {/* <SEO
+          title={`${title}`}
+          image={imageUrl}
+          slug={pageSlug}
+          description={excerpt}
+        /> */}
+
         <div className={styles.main}>
           <div className={styles.body}>
             <div className={styles.top}>
@@ -145,7 +141,6 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

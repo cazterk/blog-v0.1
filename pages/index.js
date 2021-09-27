@@ -4,9 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-import { Navbar } from "../sections/navbar";
 import { Heros } from "../sections/heros";
-import { Footer } from "../sections/footer";
 import Extras from "../sections/extras";
 import { Spinner } from "../components/spinner";
 // import { MyAdSense } from "../components/myAdSense";
@@ -79,8 +77,7 @@ export default function Home({ posts, load }) {
         />
       </Head>
 
-      <main>
-        <Navbar />
+      <section>
         <Heros />
         {/* <MyAdSense /> */}
         <div className={styles.main}>
@@ -143,8 +140,7 @@ export default function Home({ posts, load }) {
 
         {/* <MyAdSense /> */}
         <Extras />
-        <Footer />
-      </main>
+      </section>
     </>
   );
 }

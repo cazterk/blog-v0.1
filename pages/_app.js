@@ -4,17 +4,12 @@ import Head from "next/head";
 import Script from "next/script";
 import { useState, useEffect } from "react";
 
-import useDarkMode from "use-dark-mode";
-import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../components/theme";
-import Div from "../components/darkMode";
+import Layout from "../components/layout";
 
 require("typeface-nunito");
 
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false);
-  const darkMode = useDarkMode(true);
-  const theme = darkMode.value ? darkTheme : lightTheme;
 
   useEffect(() => {
     setIsMounted(true);
@@ -42,11 +37,8 @@ function MyApp({ Component, pageProps }) {
             });
                 `}
       </Script>
-      <React.Fragment>
-        <ThemeProvider theme={theme}>
-          <Div> {isMounted && <Component {...pageProps} />}</Div>
-        </ThemeProvider>
-      </React.Fragment>
+
+      <Layout>{isMounted && <Component {...pageProps} />}</Layout>
     </>
   );
 }

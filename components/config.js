@@ -1,14 +1,13 @@
 export default {
-  originalTitle: "terklog",
-  currentURL: "https://www.terklog.com/",
+  originalTitle: "#",
+  currentURL: "#",
   originalImage: "#",
   author: {
-    name: "Michalina",
+    name: "#",
   },
-  originalDescription:
-    "here to deliver top-notch hot takes on technology, software, and everything in between, subscribe to get the latest updates  ",
+  originalDescription: "#",
   social: {
-    twitter: "cazterk",
+    twitter: "#",
   },
-  siteName: "terklog",
+  siteName: "#",
 };

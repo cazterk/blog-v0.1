@@ -14,25 +14,22 @@ const Layout = ({ children, title, description, image, slug, article }) => {
   const theme = darkMode.value ? darkTheme : lightTheme;
 
   return (
-    <ThemeProvider theme={theme}>
-      <Div>
-        <React.Fragment>
-          <SEO
-            title={title}
-            description={description}
-            image={image}
-            slug={slug}
-            article={article}
-          />
-
-          <div className={styles.content}>
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
-        </React.Fragment>
-      </Div>
-    </ThemeProvider>
+    <React.Fragment>
+      <SEO
+        title={title}
+        description={description}
+        image={image}
+        slug={slug}
+        article={article}
+      />
+      <ThemeProvider theme={theme}>
+        <Div>
+          <Navbar />
+          <main> {children}</main>
+          <Footer />
+        </Div>
+      </ThemeProvider>
+    </React.Fragment>
   );
 };
 export default Layout;

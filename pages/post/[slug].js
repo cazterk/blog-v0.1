@@ -1,6 +1,6 @@
 import imageUrlBuilder from "@sanity/image-url";
 import Head from "next/head";
-import SEO from "../../components/seo";
+import Layout from "../../components/layout";
 
 import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect, Fragment } from "react";
@@ -55,26 +55,26 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   return (
     <>
-      {/* <SEO
-        title={title}
-        image={imageUrl}
-        slug={pageSlug}
-        description={excerpt}
-      /> */}
-
-      {/* <Head>
-        <title>{title}</title>
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content={url} />
-
-        <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={imageUrl} />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={imageUrl} />
-      </Head> */}
-
       <div className={styles.container}>
+        <Head>
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta property="og:url" content={url} />
+
+          <meta property="og:description" content={excerpt} />
+          <meta property="og:image" content={imageUrl} />
+          <meta property="og:type" content="article" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content={imageUrl} />
+        </Head>
+
+        {/* <SEO
+          title={`${title}`}
+          image={imageUrl}
+          slug={pageSlug}
+          description={excerpt}
+        /> */}
+
         <div className={styles.main}>
           <div className={styles.body}>
             <div className={styles.top}>

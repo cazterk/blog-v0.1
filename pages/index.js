@@ -77,7 +77,7 @@ export default function Home({ posts, load }) {
         />
       </Head>
 
-      <main>
+      <section>
         <Heros />
         {/* <MyAdSense /> */}
         <div className={styles.main}>
@@ -140,7 +140,7 @@ export default function Home({ posts, load }) {
 
         {/* <MyAdSense /> */}
         <Extras />
-      </main>
+      </section>
     </>
   );
 }

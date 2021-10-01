@@ -9,7 +9,7 @@ import styles from "../../styles/post.module.scss";
 
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
-// import { Comments } from "../../components/comments";
+import { Comments } from "../../components/comments";
 
 import { DiscussionEmbed } from "disqus-react";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
@@ -48,10 +48,10 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
     setEnableLoadComments(false);
   };
 
-  const disqusConfig = {
-    shortname: `terklog`,
-    config: { identifier: pageSlug, title: { title } },
-  };
+  // const disqusConfig = {
+  //   shortname: `terklog`,
+  //   config: { identifier: pageSlug, title: { title } },
+  // };
 
   return (
     <>
@@ -136,7 +136,8 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           {state === "CLICKED" && (
             <div>
               {" "}
-              <DiscussionEmbed {...disqusConfig} />
+              {/* <DiscussionEmbed {...disqusConfig} /> */}
+              <Comments />
             </div>
           )}
         </div>

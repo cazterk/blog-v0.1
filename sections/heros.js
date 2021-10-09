@@ -7,7 +7,7 @@ export const Heros = () => {
     <div>
       <div className={styles.heros}>
         <div className={styles.container}>
-          <h1>welcome to the terklog</h1>
+          <h1>Welcome to the terklog</h1>
           <p>
             here to deliver top-notch hot takes on technology, software, and
             everything in between, subscribe to get the latest updates{" "}

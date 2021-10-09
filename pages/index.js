@@ -68,7 +68,7 @@ export default function Home({ posts, load }) {
   return (
     <>
       <Head>
-        <title>terklog | home</title>
+        <title>Terklog | Home</title>
         <meta
           name="description"
           content="   here to deliver top-notch hot takes on technology, software, and

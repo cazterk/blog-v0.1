@@ -1,5 +1,5 @@
 export default {
-  originalTitle: "terklog",
+  originalTitle: "Terklog",
   currentURL: "https://www.terklog.com/",
   originalImage: "#",
   author: {
@@ -10,5 +10,5 @@ export default {
   social: {
     twitter: "@cazterk",
   },
-  siteName: "terklog",
+  siteName: "Terklog",
 };

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 
 import useDarkMode from "use-dark-mode";
 
+import { BiMoon } from "react-icons/bi";
+import { FiSun } from "react-icons/fi";
 import styles from "../styles/darkModeToggle.module.scss";
 
 export const DarkModeToggle = () => {
@@ -11,7 +13,8 @@ export const DarkModeToggle = () => {
 
   useEffect(() => {}, []);
   return (
-    <div>
+    <div className={styles.toggle}>
+      <FiSun />
       <label className={styles.switch}>
         <input
           type="checkbox"
@@ -20,6 +23,7 @@ export const DarkModeToggle = () => {
         />
         <span className={styles.switch__slider} />
       </label>
+      <BiMoon />
     </div>
   );
 };

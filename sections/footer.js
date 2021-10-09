@@ -19,7 +19,7 @@ export const Footer = () => {
       <div className={styles.container}>
         <footer>
           <div className={styles.footerTop}>
-            <IconContext.Provider value={{ size: 24.5 }}>
+            <IconContext.Provider value={{ size: 24 }}>
               <a target="_blank" href="https://github.com/cazterk/">
                 <FaGithub />
               </a>

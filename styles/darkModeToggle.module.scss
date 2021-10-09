@@ -3,7 +3,7 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 2.93em;
+  width: 2.9em;
   height: 1.22em;
 
   input {
@@ -12,14 +12,14 @@
     height: 0;
 
     &:checked + .switch__slider {
-      background-color: $myGray;
-      border: 0.17em solid $white;
+      background-color: $lightRed;
+      // border: 0.13em solid $white;
     }
 
     &:checked + .switch__slider:before {
       transform: translateX(26px);
       background-color: $white;
-      border: 2px solid #ffcc00;
+      // border: 2px solid #ffcc00;
     }
   }
 
@@ -30,24 +30,25 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $white;
+    background-color: $lightRed;
     transition: 0.4s;
     border-radius: 2.125em;
-    border: 0.17em solid $myGray;
+    // border: 0.13em solid $myGray;
 
     &:before {
       position: absolute;
       content: "";
-      height: 0.5em;
-      width: 0.5em;
+      height: 0.9em;
+      width: 0.9em;
 
-      left: 0.063em;
-      bottom: 0.062em;
-
-      background-color: #ffcc00;
+      // left: 0.063em;
+      // bottom: 0.062em;
+      vertical-align: center;
+      margin: 0.16em -1.24em;
+      background-color: $white;
       transition: 0.4s;
       border-radius: 2.125em;
-      border: 2px solid $myGray;
+      // border: 2px solid $myGray;
     }
   }
 }

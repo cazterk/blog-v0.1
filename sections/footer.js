@@ -20,17 +20,33 @@ export const Footer = () => {
         <footer>
           <div className={styles.footerTop}>
             <IconContext.Provider value={{ size: 25 }}>
-              <a target="_blank" href="https://github.com/cazterk/">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/cazterk/"
+              >
                 <FaGithub />
               </a>
 
-              <a target="_blank" href="https://youtube.com/c/cazterk">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://youtube.com/c/cazterk"
+              >
                 <FaYoutube />
               </a>
-              <a target="_blank" href="https://twitter.com/cazterk">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://twitter.com/cazterk"
+              >
                 <AiFillTwitterCircle />
               </a>
-              <a target="_blank" href="https://facebook.com/cazterk">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://facebook.com/cazterk"
+              >
                 <FaFacebook />
               </a>
             </IconContext.Provider>

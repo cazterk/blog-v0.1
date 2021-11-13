@@ -8,20 +8,16 @@ import useDarkMode from "use-dark-mode";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme";
 
-import SEO from "./seo";
+import SEO from "../next-seo.config";
+import { DefaultSeo } from "next-seo";
+
 const Layout = ({ children, title, description, image, slug, article }) => {
   const darkMode = useDarkMode(true);
   const theme = darkMode.value ? darkTheme : lightTheme;
 
   return (
     <React.Fragment>
-      <SEO
-        title={title}
-        description={description}
-        image={image}
-        slug={slug}
-        article={article}
-      />
+      <DefaultSeo {...SEO} />
       <ThemeProvider theme={theme}>
         <Div>
           <Navbar />

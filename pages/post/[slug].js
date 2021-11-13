@@ -12,9 +12,9 @@ import { Coffee } from "../../components/coffee";
 import { Comments } from "../../components/comments";
 
 import { DiscussionEmbed } from "disqus-react";
+
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-
 import { MdKeyboardArrowDown } from "react-icons/md";
 import {
   TiSocialTwitterCircular,
@@ -22,6 +22,8 @@ import {
 } from "react-icons/ti";
 import { BiLinkAlt } from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
+
+import { NextSeo } from "next-seo";
 
 // const metaData = require("../../data/metaData");
 
@@ -52,11 +54,23 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   //   shortname: `terklog`,
   //   config: { identifier: pageSlug, title: { title } },
   // };
+  const SEO = {
+    title: title,
+    description: excerpt,
+    image: imageUrl,
+
+    openGraph: {
+      title: title,
+      description: excerpt,
+      image: imageUrl,
+    },
+  };
 
   return (
     <>
+      <NextSeo {...SEO} />
       <div className={styles.container}>
-        <Head>
+        {/* <Head>
           <title>{title}</title>
           <meta property="og:title" content={title} />
           <meta property="og:url" content={url} />
@@ -66,7 +80,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           <meta property="og:type" content="article" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content={imageUrl} />
-        </Head>
+        </Head> */}
 
         {/* <SEO
           title={`${title}`}

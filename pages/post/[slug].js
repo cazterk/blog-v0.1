@@ -11,6 +11,8 @@ import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
 import { Comments } from "../../components/comments";
 
+import SyntaxHighlighter from "react-syntax-highlighter";
+
 import { DiscussionEmbed } from "disqus-react";
 
 import { FacebookShareButton, TwitterShareButton } from "react-share";
@@ -27,7 +29,7 @@ import { NextSeo } from "next-seo";
 
 // const metaData = require("../../data/metaData");
 
-const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
+const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
@@ -63,6 +65,22 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
       title: title,
       description: excerpt,
       image: imageUrl,
+    },
+  };
+
+  const serializers = {
+    types: {
+      code: ({ node = {} }) => {
+        const { code, language } = node;
+        if (!code) {
+          return null;
+        }
+        return (
+          <SyntaxHighlighter language={language || "text"}>
+            {code}
+          </SyntaxHighlighter>
+        );
+      },
     },
   };
 
@@ -126,6 +144,8 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
               projectId="b4006agh"
               dataset="production"
               imageOptions={{}}
+              code="code block"
+              serializers={serializers}
             />
             <div className={styles.coffee}>
               <Coffee />

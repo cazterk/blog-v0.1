@@ -35,7 +35,6 @@ export const Subscribe = () => {
         </form>
         <button
           type="submit"
-          type="button"
           disabled={state === "LOADING" ? "" : ""}
           onClick={subscribe}
         >

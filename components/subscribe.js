@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLProps } from "react";
 import { useState } from "react";
 import axios from "axios";
 import styles from "../styles/subscribe.module.scss";
@@ -35,7 +35,6 @@ export const Subscribe = () => {
         </form>
         <button
           type="submit"
-          type="button"
           disabled={state === "LOADING" ? "" : ""}
           onClick={subscribe}
         >

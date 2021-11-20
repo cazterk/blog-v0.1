@@ -1,9 +1,16 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import {useEffect } from "react";
+
+declare global {
+  interface Window {
+    gc_params: any;
+  }
+}
+
 
 export const Comments = () => {
   // const [enableLoadComments, setEnableLoadComments] = useState(true);
-
+  
   useEffect(() => {
     window.gc_params = {
       graphcomment_id: "terklog",

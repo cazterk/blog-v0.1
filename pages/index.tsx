@@ -1,8 +1,11 @@
+import React, { useState, useEffect } from "react";
+
+import { useRouter } from "next/router";
 import Head from "next/head";
 
 import imageUrlBuilder from "@sanity/image-url";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+
+
 
 import { Heros } from "../sections/heros";
 import Extras from "../sections/extras";
@@ -26,8 +29,7 @@ export default function Home({ posts, load }) {
   const [mappedPost, setmappedPost] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [postsPerPage] = useState(4);
+ 
   const [visible, setvisible] = useState(4);
 
   useEffect(() => {

@@ -39,7 +39,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
       : "";
 
   useEffect(() => {
-    const imageBuilder = imageUrlBuilder({
+    const imageBuilder:any = imageUrlBuilder({
       projectId: "b4006agh",
       dataset: "production",
     });
@@ -70,7 +70,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
 
   const serializers = {
     types: {
-      code: ({ node = {} }) => {
+      code : ({ node = {} }) => {
         const { code, language } = node;
         if (!code) {
           return null;
@@ -113,7 +113,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
               <h1 className={styles.top__title}>{title}</h1>
               <p className={styles.top__excerpt}>{excerpt}</p>
               <p className={styles.top__date}>Publish Date | {date}</p>
-              <IconContext.Provider value={{ size: 30 }}>
+              <IconContext.Provider value={{ size: '30' }}>
                 <div className={styles.top__share}>
                   <CopyToClipboard text={url}>
                     <button>
@@ -122,8 +122,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
                   </CopyToClipboard>
                   <TwitterShareButton
                     url={url}
-                    quote={"Check out my new blog post"}
-                    hashtag="#blogging"
+                  
                   >
                     <TiSocialTwitterCircular />
                   </TwitterShareButton>

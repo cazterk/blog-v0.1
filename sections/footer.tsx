@@ -19,7 +19,7 @@ export const Footer = () => {
       <div className={styles.container}>
         <footer>
           <div className={styles.footerTop}>
-            <IconContext.Provider value={{ size: 25 }}>
+            <IconContext.Provider value={{ size: '25' }}>
               <a
                 target="_blank"
                 rel="noopener"

@@ -1,19 +1,17 @@
-import imageUrlBuilder from "@sanity/image-url";
-import Head from "next/head";
-import Layout from "../../components/layout";
-
-import BlockContent from "@sanity/block-content-to-react";
 import React, { useState, useEffect, Fragment } from "react";
+import Head from "next/head";
 
-import styles from "../../styles/post.module.scss";
+import imageUrlBuilder from "@sanity/image-url";
+import BlockContent from "@sanity/block-content-to-react";
+import { NextSeo } from "next-seo";
+
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { DiscussionEmbed } from "disqus-react";
 
 import { Subscribe } from "../../components/subscribe";
 import { Coffee } from "../../components/coffee";
 import { Comments } from "../../components/comments";
-
-import SyntaxHighlighter from "react-syntax-highlighter";
-
-import { DiscussionEmbed } from "disqus-react";
+import Layout from "../../components/layout";
 
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -25,9 +23,10 @@ import {
 import { BiLinkAlt } from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
 
-import { NextSeo } from "next-seo";
 
-// const metaData = require("../../data/metaData");
+import styles from "../../styles/post.module.scss";
+
+
 
 const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
   const [imageUrl, setimageUrl] = useState("");
@@ -71,7 +70,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
   const serializers = {
     types: {
       code : ({ node = {} }) => {
-        const { code, language } = node;
+        const { code, language }:any = node;
         if (!code) {
           return null;
         }
@@ -189,8 +188,8 @@ export const getServerSideProps = async (pageContext) => {
   }
 
   const query = encodeURIComponent(
-    `*[ _type == 'post' && slug.current == '${pageSlug}' ]`,
-    { pageSlug }
+    `*[ _type == 'post' && slug.current == '${pageSlug}' ]`
+
   );
   const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
 

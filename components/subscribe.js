@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLProps } from "react";
 import { useState } from "react";
 import axios from "axios";
 import styles from "../styles/subscribe.module.scss";

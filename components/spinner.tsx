@@ -2,7 +2,8 @@ import React from "react";
 import styles from "../styles/spinner.module.scss";
 
 
-export const Spinner = ({}) => {
+
+export const Spinner = () => {
   return (
     <div className={styles.loader}>
       <svg
@@ -15,7 +16,6 @@ export const Spinner = ({}) => {
         width="35px"
         height="35px"
         viewBox="0 0 50 50"
-        style={{ enableBackground: "new 0 0 50 50" }}
         xmlSpace="preserve"
       >
         <path

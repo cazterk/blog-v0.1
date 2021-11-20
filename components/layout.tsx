@@ -11,7 +11,7 @@ import { lightTheme, darkTheme } from "./theme";
 import SEO from "../next-seo.config";
 import { DefaultSeo } from "next-seo";
 
-const Layout = ({ children, title, description, image, slug, article }) => {
+const Layout = ({ children }) => {
   const darkMode = useDarkMode(true);
   const theme = darkMode.value ? darkTheme : lightTheme;
 

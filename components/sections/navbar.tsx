@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { DarkModeToggle } from "../components/darkModeToggle";
-import styles from "../styles/navbar.module.scss";
+import { DarkModeToggle } from "../darkModeToggle";
+import styles from "../../styles/navbar.module.scss";
 
 export const Navbar = () => {
   const router = useRouter();

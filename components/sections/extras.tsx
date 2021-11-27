@@ -1,7 +1,7 @@
 import React from "react";
-import { Support } from "../components/support";
-import { Subscribe } from "../components/subscribe";
-import styles from "../styles/extras.module.scss";
+import { Support } from "../support";
+import { Subscribe } from "../../helpers/subscribe";
+import styles from "../../styles/extras.module.scss";
 
 export default function Extras() {
   return (

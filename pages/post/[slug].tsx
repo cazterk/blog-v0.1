@@ -11,7 +11,6 @@ import { DiscussionEmbed } from "disqus-react";
 import { Subscribe } from "../../helpers/subscribe";
 import { Coffee } from "../../components/coffee";
 import { Comments } from "../../components/comments";
-import Layout from "../../components/layout";
 
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -23,10 +22,8 @@ import {
 import { BiLinkAlt } from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
 
-
 import styles from "../../styles/post.module.scss";
-
-
+import { nord } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
@@ -38,7 +35,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
       : "";
 
   useEffect(() => {
-    const imageBuilder:any = imageUrlBuilder({
+    const imageBuilder: any = imageUrlBuilder({
       projectId: "b4006agh",
       dataset: "production",
     });
@@ -55,27 +52,16 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   //   shortname: `terklog`,
   //   config: { identifier: pageSlug, title: { title } },
   // };
-  const SEO = {
-    title: title,
-    description: excerpt,
-    image: imageUrl,
-
-    openGraph: {
-      title: title,
-      description: excerpt,
-      image: imageUrl,
-    },
-  };
 
   const serializers = {
     types: {
-      code : ({ node = {} }) => {
-        const { code, language, dark }:any = node;
+      code: ({ node = {} }) => {
+        const { code, language }: any = node;
         if (!code) {
           return null;
         }
         return (
-          <SyntaxHighlighter language={language || "text"} style={dark}>
+          <SyntaxHighlighter language={language || "text"} style={nord}>
             {code}
           </SyntaxHighlighter>
         );
@@ -85,44 +71,31 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   return (
     <>
-      <NextSeo {...SEO} />
+      <Head>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content={url} />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={imageUrl} />
+      </Head>
       <div className={styles.container}>
-        {/* <Head>
-          <title>{title}</title>
-          <meta property="og:title" content={title} />
-          <meta property="og:url" content={url} />
-
-          <meta property="og:description" content={excerpt} />
-          <meta property="og:image" content={imageUrl} />
-          <meta property="og:type" content="article" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content={imageUrl} />
-        </Head> */}
-
-        {/* <SEO
-          title={`${title}`}
-          image={imageUrl}
-          slug={pageSlug}
-          description={excerpt}
-        /> */}
-
         <div className={styles.main}>
           <div className={styles.body}>
             <div className={styles.top}>
               <h1 className={styles.top__title}>{title}</h1>
               <p className={styles.top__excerpt}>{excerpt}</p>
               <p className={styles.top__date}>Publish Date | {date}</p>
-              <IconContext.Provider value={{ size: '30' }}>
+              <IconContext.Provider value={{ size: "30" }}>
                 <div className={styles.top__share}>
                   <CopyToClipboard text={url}>
                     <button>
                       <BiLinkAlt />
                     </button>
                   </CopyToClipboard>
-                  <TwitterShareButton
-                    url={url}
-                  
-                  >
+                  <TwitterShareButton url={url}>
                     <TiSocialTwitterCircular />
                   </TwitterShareButton>
 
@@ -189,7 +162,6 @@ export const getServerSideProps = async (pageContext) => {
 
   const query = encodeURIComponent(
     `*[ _type == 'post' && slug.current == '${pageSlug}' ]`
-
   );
   const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
 

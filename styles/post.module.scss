@@ -154,17 +154,16 @@
     }
 
     pre {
-      border-radius: 2px;
+      border-radius: 6px;
 
       &::-webkit-scrollbar {
-        width: 0.5em;
-        height: 0.6em;
+        height: 0.4em;
       }
 
       // &::-webkit-scrollbar-track {
       //   border-radius: 8px;
-      //   background: $lightGrey;
-      //   border: 2px solid $lightRed;
+      //   background: $white;
+      //   border: 2px solid $white;
       // }
 
       &::-webkit-scrollbar-thumb {

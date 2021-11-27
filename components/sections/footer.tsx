@@ -6,7 +6,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { IconContext } from "react-icons/lib";
 import { TiArrowRight } from "react-icons/ti";
 
-import styles from "../styles/footer.module.scss";
+import styles from "../../styles/footer.module.scss";
 
 export const Footer = () => {
   const year = React.useMemo(() => {

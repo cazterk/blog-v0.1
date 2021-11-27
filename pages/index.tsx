@@ -7,8 +7,8 @@ import imageUrlBuilder from "@sanity/image-url";
 
 
 
-import { Heros } from "../sections/heros";
-import Extras from "../sections/extras";
+import { Heros } from "../components/sections/heros";
+import Extras from "../components/sections/extras";
 import { Spinner } from "../components/spinner";
 // import { MyAdSense } from "../components/myAdSense";
 

@@ -1,4 +1,4 @@
-import styles from "../styles/heros.module.scss";
+import styles from "../../styles/heros.module.scss";
 // import { Subscribe } from "../components/subscribe";
 import { CgArrowLongRight } from "react-icons/cg";
 

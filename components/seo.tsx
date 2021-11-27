@@ -1,5 +1,5 @@
 import Head from "next/head";
-import config from "./config";
+import config from "../helpers/config";
 export default function SEO({ description, title, image, slug, article }) {
   const {
     originalTitle,

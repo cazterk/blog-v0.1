@@ -8,7 +8,7 @@ import { NextSeo } from "next-seo";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { DiscussionEmbed } from "disqus-react";
 
-import { Subscribe } from "../../components/subscribe";
+import { Subscribe } from "../../helpers/subscribe";
 import { Coffee } from "../../components/coffee";
 import { Comments } from "../../components/comments";
 import Layout from "../../components/layout";
@@ -28,7 +28,7 @@ import styles from "../../styles/post.module.scss";
 
 
 
-const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
+const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
@@ -70,12 +70,12 @@ const Post = ({ pageSlug, title, body, image, date, excerpt, code }) => {
   const serializers = {
     types: {
       code : ({ node = {} }) => {
-        const { code, language }:any = node;
+        const { code, language, dark }:any = node;
         if (!code) {
           return null;
         }
         return (
-          <SyntaxHighlighter language={language || "text"}>
+          <SyntaxHighlighter language={language || "text"} style={dark}>
             {code}
           </SyntaxHighlighter>
         );

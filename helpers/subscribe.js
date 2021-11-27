@@ -2,7 +2,7 @@ import React, { HTMLProps } from "react";
 import { useState } from "react";
 import axios from "axios";
 import styles from "../styles/subscribe.module.scss";
-import { Spinner } from "./spinner";
+import { Spinner } from "../components/spinner";
 
 export const Subscribe = () => {
   const [email, setEmail] = useState("");

@@ -55,7 +55,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   const serializers = {
     types: {
-      code: ({ node = {} }) => {
+      codeBlock: ({ node = {} }) => {
         const { code, language }: any = node;
         if (!code) {
           return null;
@@ -115,7 +115,6 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
               projectId="b4006agh"
               dataset="production"
               imageOptions={{}}
-              code="code block"
               serializers={serializers}
             />
             <div className={styles.coffee}>

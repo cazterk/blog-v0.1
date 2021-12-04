@@ -14,7 +14,10 @@ export const DarkModeToggle = () => {
   useEffect(() => {}, []);
   return (
     <div className={styles.toggle}>
-      <FiSun />
+      <label htmlFor="light">
+        {" "}
+        <FiSun />
+      </label>
       <label className={styles.switch}>
         <input
           type="checkbox"
@@ -23,7 +26,9 @@ export const DarkModeToggle = () => {
         />
         <span className={styles.switch__slider} />
       </label>
-      <BiMoon />
+      <label htmlFor="dark">
+        <BiMoon />
+      </label>
     </div>
   );
 };

@@ -1,19 +1,37 @@
 @import "colors";
 
 .toggle {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75em;
   align-items: center;
+  height: 1.5em;
 
-  svg {
-    vertical-align: middle;
-    margin: 0 0.2em;
+  label {
+    &[for="light"] {
+      justify-self: end;
+      svg {
+        vertical-align: middle;
+        margin: 0 0.2em;
+      }
+    }
+
+    &[for="dark"] {
+      justify-self: start;
+      svg {
+        vertical-align: middle;
+        margin: 0 0.2em;
+      }
+    }
   }
 
   .switch {
     position: relative;
     display: inline-block;
-    width: 2.9em;
-    height: 1.22em;
+    width: 3em;
+    border-radius: 0.75em;
+    overflow: hidden;
+    height: 100%;
 
     input {
       opacity: 0;
@@ -41,7 +59,7 @@
       bottom: 0;
       background-color: $lightRed;
       transition: 0.4s;
-      border-radius: 2.125em;
+
       // border: 0.13em solid $myGray;
 
       &:before {

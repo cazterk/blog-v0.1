@@ -7,8 +7,12 @@
   padding: 10px;
 
   .button {
-    background: $lightRed;
-    margin: 2rem 0.4rem;
+    background: linear-gradient(
+      90deg,
+      hsla(0, 100%, 71%, 1) 0%,
+      hsla(49, 100%, 81%, 1) 100%
+    );
+    margin: 2rem;
 
     width: 75px;
     height: 2.1em;

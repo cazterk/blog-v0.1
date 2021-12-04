@@ -55,7 +55,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   const serializers = {
     types: {
-      codeBlock: ({ node = {} }) => {
+      code: ({ node = {} }) => {
         const { code, language }: any = node;
         if (!code) {
           return null;

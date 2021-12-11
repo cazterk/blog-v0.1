@@ -5,8 +5,6 @@ import Head from "next/head";
 
 import imageUrlBuilder from "@sanity/image-url";
 
-
-
 import { Heros } from "../components/sections/heros";
 import Extras from "../components/sections/extras";
 import { Spinner } from "../components/spinner";
@@ -29,7 +27,6 @@ export default function Home({ posts, load }) {
   const [mappedPost, setmappedPost] = useState([]);
   const [loading, setLoading] = useState(false);
 
- 
   const [visible, setvisible] = useState(4);
 
   useEffect(() => {

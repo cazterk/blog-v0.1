@@ -29,10 +29,38 @@
     padding: 1em;
 
     .support {
-      //   @extend %extra;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      h2 {
-        @extend %title;
+      .support__hover {
+        // position: absolute;
+        bottom: 4.688em;
+        margin-top: 0.5em;
+        padding: 1.25em;
+        min-width: 12.5em;
+        box-shadow: 0 2px 6px 0 rgb(0 0 0 / 15%);
+        border-radius: 10px;
+        visibility: hidden;
+        opacity: 0;
+        // transform: translateY(-10px);
+        transition: 0.5s;
+      }
+
+      .icon {
+        // display: contents;
+        svg {
+          box-shadow: 0 2px 6px 0 rgb(0 0 0 / 15%);
+          padding: 1em;
+          border-radius: 50%;
+        }
+
+        &:hover ~ .support__hover {
+          visibility: visible;
+          opacity: 1;
+          z-index: 2;
+        }
       }
     }
   }

@@ -48,7 +48,7 @@
     padding: 0.6em 0.9em;
     border: none;
     border-radius: 1px;
-    background: $lightRed;
+    background: $gradient;
     cursor: pointer;
     transition: 0.3s;
     font-weight: 700;
@@ -59,17 +59,13 @@
     span {
       cursor: none !important;
     }
-    &:hover {
-      background: $red;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      opacity: 0.85;
+      color: $white;
     }
-    // @include mobileSmall {
-    //   margin: 0.3em;
-    //   height: 40px;
-    // }
-    // @include mobileLarge {
-    //   margin: 0.3em;
-    //   height: 45px;
-    // }
   }
 }
 

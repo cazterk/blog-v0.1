@@ -19,13 +19,13 @@
       line-height: 0;
       font-size: 0.7em;
       font-weight: 700;
-      color: $myGray;
+      color: $white;
 
       a {
-        margin: 0 1em;
-        box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
-        padding: 1.2em;
-        border-radius: 100%;
+        margin: 0 0.7em;
+        box-shadow: 0 0 15px 0 rgb(0 0 0 / 8%);
+        padding: 1em;
+        border-radius: 2px;
 
         &:hover {
           transition: all 200ms ease-in-out;

@@ -29,10 +29,49 @@
     padding: 1em;
 
     .support {
-      //   @extend %extra;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      h2 {
-        @extend %title;
+      .support__hover {
+        position: fixed;
+        bottom: 4.688em;
+        margin-top: 0.5em;
+        padding: 1.25em;
+        background: $gradient;
+        width: 14em;
+        box-shadow: 0 2px 6px 0 rgb(0 0 0 / 10%);
+        border-radius: 2px;
+        visibility: hidden;
+        opacity: 0;
+
+        transform: translateY(-10px);
+        transition: 0.5s;
+
+        &:hover {
+          visibility: visible;
+          opacity: 1;
+          z-index: 2;
+        }
+      }
+
+      .icon {
+        // display: contents;
+
+        svg {
+          box-shadow: 0 2px 6px 0 rgb(0 0 0 / 15%);
+          padding: 1em;
+          border-radius: 50%;
+          color: $myGray;
+          background: $gradient;
+        }
+
+        &:hover ~ .support__hover {
+          visibility: visible;
+          opacity: 1;
+          z-index: 3;
+        }
       }
     }
   }

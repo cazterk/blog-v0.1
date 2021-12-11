@@ -9,7 +9,7 @@ export const Support = () => {
       <div className={styles.container}>
         {/* <h2 className={styles.title}> Surpport Me</h2> */}
         <div className={styles.support}>
-          <IconContext.Provider value={{ size: '20' }}>
+          <IconContext.Provider value={{ size: "15" }}>
             <div className={styles.support__portal}>
               <a
                 target="_blank"

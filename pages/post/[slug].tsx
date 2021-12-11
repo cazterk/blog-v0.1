@@ -3,7 +3,6 @@ import Head from "next/head";
 
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
-import { NextSeo } from "next-seo";
 
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { DiscussionEmbed } from "disqus-react";

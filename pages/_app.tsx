@@ -4,7 +4,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { useState, useEffect } from "react";
 
-import SEO from "@bradgarropy/next-seo";
+import { NextSeo } from "next-seo";
 
 import Layout from "../components/layout";
 
@@ -19,15 +19,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <SEO
-        title="terklog"
-        description="This is the terklog blog"
-        keywords={["blog", "software", "tech"]}
-        twitter={{
-          card: "summary",
-          site: "@cazterk",
-        }}
-      />
+      <NextSeo title="terklog" description="This is the terklog blog" />
       <Script
         strategy="lazyOnload"
         async

@@ -2,8 +2,6 @@ import React from "react";
 import { Navbar } from "./sections/navbar";
 import { Footer } from "./sections/footer";
 
-import SEO from "@bradgarropy/next-seo";
-
 import Div from "../helpers/darkMode";
 
 import useDarkMode from "use-dark-mode";

@@ -66,7 +66,7 @@ export default function Home({ posts, load }) {
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Terklog | Home</title>
         <meta
           name="description"
@@ -74,7 +74,7 @@ export default function Home({ posts, load }) {
           everything in between, the terklog aims to be on the path to
           continuous delivery and improvement"
         />
-      </Head> */}
+      </Head>
 
       <section>
         <Heros />

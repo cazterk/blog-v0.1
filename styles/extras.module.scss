@@ -27,52 +27,59 @@
     grid-gap: 1.5rem;
     gap: 1.5rem;
     padding: 1em;
+  }
 
-    .support {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dropdown label,
+  .dropdown ul li {
+    display: block;
+    background: $gradient;
+  }
 
-      .support__hover {
-        position: fixed;
-        bottom: 4.688em;
-        margin-top: 0.5em;
-        padding: 1.25em;
-        background: $gradient;
-        width: 14em;
-        box-shadow: 0 2px 6px 0 rgb(0 0 0 / 10%);
-        border-radius: 2px;
-        visibility: hidden;
-        opacity: 0;
+  .dropdown label {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 2px;
+    cursor: pointer;
+    color: $white;
+    padding: 0.2em;
+    width: 4em;
+    z-index: 2;
+  }
 
-        transform: translateY(-10px);
-        transition: 0.5s;
+  .dropdown input {
+    display: none;
+  }
 
-        &:hover {
-          visibility: visible;
-          opacity: 1;
-          z-index: 2;
-        }
-      }
+  .dropdown input ~ ul {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    top: -20px;
+    z-index: 1;
+  }
 
-      .icon {
-        // display: contents;
+  .dropdown input:checked ~ ul {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    padding-left: 0;
+  }
 
-        svg {
-          box-shadow: 0 2px 6px 0 rgb(0 0 0 / 15%);
-          padding: 1em;
-          border-radius: 50%;
-          color: $myGray;
-          background: $gradient;
-        }
-
-        &:hover ~ .support__hover {
-          visibility: visible;
-          opacity: 1;
-          z-index: 3;
-        }
-      }
-    }
+  .animate {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Chrome and Safari */
+    -moz-backface-visibility: hidden; /* Firefox */
+    -ms-backface-visibility: hidden; /* Internet Explorer */
   }
 }

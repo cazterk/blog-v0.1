@@ -11,7 +11,7 @@ export const DarkModeToggle = () => {
   const darkMode = useDarkMode();
   // const theme = darkMode.value ? darkTheme : lightTheme;
 
-  useEffect(() => {}, []);
+  // useEffect(() => {}, []);
   return (
     <div className={styles.toggle}>
       <label htmlFor="light">

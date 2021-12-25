@@ -6,6 +6,7 @@ import BlockContent from "@sanity/block-content-to-react";
 
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { DiscussionEmbed } from "disqus-react";
+import SEO from "@bradgarropy/next-seo";
 
 import { Subscribe } from "../../helpers/subscribe";
 import { Coffee } from "../../components/coffee";
@@ -70,7 +71,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta property="og:url" content={url} />
@@ -79,7 +80,8 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={imageUrl} />
-      </Head>
+      </Head> */}
+      <SEO title={title} icon={imageUrl} description={excerpt} />
       <div className={styles.container}>
         <div className={styles.main}>
           <div className={styles.body}>

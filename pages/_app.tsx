@@ -4,6 +4,8 @@ import Head from "next/head";
 import Script from "next/script";
 import { useState, useEffect } from "react";
 
+import SEO from "@bradgarropy/next-seo";
+
 import Layout from "../components/layout";
 
 require("typeface-nunito");
@@ -17,10 +19,15 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      </Head>
+      <SEO
+        title="terklog"
+        description="This is the terklog blog"
+        keywords={["blog", "software", "tech"]}
+        twitter={{
+          card: "summary",
+          site: "@cazterk",
+        }}
+      />
       <Script
         strategy="lazyOnload"
         async

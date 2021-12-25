@@ -9,6 +9,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@bradgarropy/next-seo": "^1.2.0",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^0.140.22",

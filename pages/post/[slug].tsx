@@ -81,7 +81,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={imageUrl} />
       </Head> */}
-      <SEO title={title} icon={imageUrl} description={excerpt} />
+      {/* <SEO title={title} icon={imageUrl} description={excerpt} /> */}
       <div className={styles.container}>
         <div className={styles.main}>
           <div className={styles.body}>

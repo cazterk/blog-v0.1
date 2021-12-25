@@ -23,6 +23,7 @@ import { IconContext } from "react-icons/lib";
 
 import styles from "../../styles/post.module.scss";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { Meta } from "../../components/meta";
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
@@ -80,6 +81,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={imageUrl} />
       </Head>
+
       <div className={styles.container}>
         <div className={styles.main}>
           <div className={styles.body}>

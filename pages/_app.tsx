@@ -11,15 +11,15 @@ import Layout from "../components/layout";
 require("typeface-nunito");
 
 function MyApp({ Component, pageProps }) {
-  const [isMounted, setIsMounted] = useState(false);
+  // const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, []);
 
   return (
     <>
-      <NextSeo title="terklog" description="This is the terklog blog" />
+      {/* <NextSeo title="terklog" description="This is the terklog blog" /> */}
       <Script
         strategy="lazyOnload"
         async
@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
                 `}
       </Script>
 
-      <Layout>{isMounted && <Component {...pageProps} />}</Layout>
+      <Layout>{<Component {...pageProps} />}</Layout>
     </>
   );
 }

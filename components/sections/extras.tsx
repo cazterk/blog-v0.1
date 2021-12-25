@@ -13,7 +13,7 @@ export default function Extras() {
       <div className={styles.extras}>
         {/* <div className={styles.borderTop}></div> */}
         <div className={styles.contents}>
-          <IconContext.Provider value={{ size: "60" }}>
+          {/* <IconContext.Provider value={{ size: "60" }}>
             <div className={styles.support}>
               <i className={styles.icon}>
                 <FaMoneyCheckAlt />
@@ -22,7 +22,19 @@ export default function Extras() {
                 <Support />
               </div>
             </div>
-          </IconContext.Provider>
+          </IconContext.Provider> */}
+
+          <div className={styles.dropdown}>
+            {" "}
+            <input id="toggle" type="checkbox" />
+            <label htmlFor="toggle" className={styles.animate}>
+              Editor
+            </label>
+            <ul className={styles.animate}>
+              <Support />
+            </ul>
+          </div>
+
           {/* <div className={styles.sub}>
           <h2>Subscribe</h2>
           <div>

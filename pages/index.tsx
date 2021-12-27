@@ -70,7 +70,7 @@ export default function Home({ posts, load }) {
         <title>Terklog | Home</title>
         <meta
           name="description"
-          content="   here to deliver top-notch hot takes on technology, software, and
+          content="here to deliver top-notch hot takes on technology, software, and
           everything in between, the terklog aims to be on the path to
           continuous delivery and improvement"
         />

@@ -75,10 +75,11 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <title>{title}</title>
         <meta property="og:title" content={title} />
         <meta property="og:url" content={url} />
-        <meta property="og:description" content={excerpt} />
-        <meta property="og:image" content={imageUrl} />
+        <meta name="description" content={excerpt} />
+        <meta name="og:image" content={imageUrl} />
         <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@cazterk" />
         <meta name="twitter:image" content={imageUrl} />
       </Head>
 

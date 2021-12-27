@@ -11,12 +11,6 @@ import Layout from "../components/layout";
 require("typeface-nunito");
 
 function MyApp({ Component, pageProps }) {
-  // const [isMounted, setIsMounted] = useState(false);
-
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, []);
-
   return (
     <>
       {/* <NextSeo title="terklog" description="This is the terklog blog" /> */}

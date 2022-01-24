@@ -27,7 +27,7 @@ export default function Home({ posts, load }) {
   const [mappedPost, setmappedPost] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const [visible, setvisible] = useState(4);
+  const [visible, setvisible] = useState(8);
 
   useEffect(() => {
     if (posts.length) {
@@ -59,7 +59,7 @@ export default function Home({ posts, load }) {
   };
 
   const showLessItems = () => {
-    if (visible > 4) {
+    if (visible > 8) {
       setvisible((preValue) => preValue - 2);
     }
   };

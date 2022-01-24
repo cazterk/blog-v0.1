@@ -23,7 +23,6 @@ import { IconContext } from "react-icons/lib";
 
 import styles from "../../styles/post.module.scss";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import { Meta } from "../../components/meta";
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");

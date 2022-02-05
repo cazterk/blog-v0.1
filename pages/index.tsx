@@ -13,6 +13,8 @@ import { Spinner } from "../components/spinner";
 import { CgArrowLongRight } from "react-icons/cg";
 import styles from "../styles/home.module.scss";
 
+const PROJID = process.env.NEXT_PUBLIC_PROJECT_ID;
+
 export default function Home({ posts, load }) {
   if (load) {
     return (
@@ -22,7 +24,6 @@ export default function Home({ posts, load }) {
       </div>
     );
   }
-  const PROJID = process.env.NEXT_PUBLIC_PROJECT_ID;
 
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
@@ -149,7 +150,7 @@ export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent(
     `*[ _type == "post"] |order(_createdAt desc) `
   );
-  const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
+  const url = `https://${PROJID}.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then((res) => res.json());
 
   if (!result.result || !result.result.length) {

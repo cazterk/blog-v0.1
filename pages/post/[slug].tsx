@@ -25,6 +25,8 @@ import styles from "../../styles/post.module.scss";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
+  const PROJID = process.env.NEXT_PUBLIC_PROJECT_ID;
+
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
@@ -35,7 +37,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
 
   useEffect(() => {
     const imageBuilder: any = imageUrlBuilder({
-      projectId: "b4006agh",
+      projectId: PROJID,
       dataset: "production",
     });
 

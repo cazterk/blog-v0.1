@@ -1,6 +1,6 @@
 # TERKLOG
 
-A blog where I post about technology and software that I find interesting, I tell my some of technology stories be sure to check out the site.
+A blog where I post about technology and software that I find interesting, I tell my some of my technology stories be sure to check out the site.
 View a running instance at [terklog.com](https://www.terklog.com/)
  
 ## Built With

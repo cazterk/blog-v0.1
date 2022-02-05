@@ -22,6 +22,7 @@ export default function Home({ posts, load }) {
       </div>
     );
   }
+  const PROJID = process.env.NEXT_PUBLIC_PROJECT_ID;
 
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
@@ -32,7 +33,7 @@ export default function Home({ posts, load }) {
   useEffect(() => {
     if (posts.length) {
       const imageBuilder = imageUrlBuilder({
-        projectId: "b4006agh",
+        projectId: PROJID,
         dataset: "production",
       });
 

@@ -30,6 +30,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
+
   const url =
     typeof window !== "undefined" && window.location.href
       ? window.location.href

@@ -24,9 +24,9 @@ import { IconContext } from "react-icons/lib";
 import styles from "../../styles/post.module.scss";
 import { nord } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
-const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
-  const PROJID = process.env.NEXT_PUBLIC_PROJECT_ID;
+const PROJID = process.env.NEXT_PUBLIC_PROJECT_ID;
 
+const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
   const [state, setState] = useState("");
   const [enableLoadComments, setEnableLoadComments] = useState(true);
@@ -166,7 +166,7 @@ export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent(
     `*[ _type == 'post' && slug.current == '${pageSlug}' ]`
   );
-  const url = `https://b4006agh.api.sanity.io/v1/data/query/production?query=${query}`;
+  const url = `https://${PROJID}.api.sanity.io/v1/data/query/production?query=${query}`;
 
   const result = await fetch(url).then((res) => res.json());
   const post = result.result[0];

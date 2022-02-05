@@ -62,5 +62,5 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Acknowledgements
 
-* [ShaanCoding](https://github.com/ShaanCoding/) readMe
+* [ShaanCoding](https://github.com/ShaanCoding/) - *readMe* -
 

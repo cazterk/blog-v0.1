@@ -2,7 +2,7 @@
 
 A blog where I post about technology and software that I find interesting. 
 
-I tell my some of my technology stories be sure to check out the site.
+I tell some of my technology stories be sure to check out the site.
 
 View live site at [terklog.com](https://www.terklog.com/)
  

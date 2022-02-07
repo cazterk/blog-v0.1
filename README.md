@@ -12,6 +12,7 @@ View live site at [terklog.com](https://www.terklog.com/)
 - JavaScript
 - TypeScript 
 - SCSS/SASS
+- Sanity.io headless cms [(check out sanity)](https://www.sanity.io/)
 
 ## Getting Started
 

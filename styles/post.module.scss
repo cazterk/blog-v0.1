@@ -199,6 +199,10 @@
       word-spacing: 0;
       font-weight: 300;
     }
+    &__input {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .comments {

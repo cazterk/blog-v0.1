@@ -130,7 +130,9 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
             <p className={styles.subp}>
               Love what you see? well consider subscribing for updates.
             </p>
-            <Subscribe />
+            <div className={styles.sub__input}>
+              <Subscribe />
+            </div>
           </div>
           {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
           <div className={styles.comments}>

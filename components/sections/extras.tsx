@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Support } from "../support";
-// import { Subscribe } from "../../helpers/subscribe";
+import { Subscribe } from "../../helpers/subscribe";
 
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
@@ -12,18 +12,25 @@ export default function Extras() {
     <>
       <div className={styles.extras}>
         {/* <div className={styles.borderTop}></div> */}
+
         <div className={styles.contents}>
-          <div className={styles.dropdown}>
-            {" "}
-            <input id="toggle" type="checkbox" />
-            <IconContext.Provider value={{ size: "30" }}>
-              <label htmlFor="toggle" className={styles.animate}>
-                <FaMoneyBillAlt />
-              </label>
-            </IconContext.Provider>
-            <ul className={styles.animate}>
-              <Support />
-            </ul>
+          <div className={styles.contents__item}>
+            <h2>Love what you see? </h2>
+            <Subscribe />
+          </div>
+          <div className={styles.contents__item}>
+            {/* <div className={styles.dropdown}>
+              {" "}
+              <input id="toggle" type="checkbox" />
+              <IconContext.Provider value={{ size: "30" }}>
+                <label htmlFor="toggle" className={styles.animate}>
+                  <FaMoneyBillAlt />
+                </label>
+              </IconContext.Provider>
+              <ul className={styles.animate}> */}
+            <Support />
+            {/* </ul>
+            </div> */}
           </div>
           {/* <div className={styles.sub}>
           <h2>Subscribe</h2>

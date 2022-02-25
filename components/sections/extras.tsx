@@ -19,8 +19,10 @@ export default function Extras() {
             <p className={styles.subp}>
               Well consider subscribing for updates.
             </p>
+          </div>
+          <div className={styles.subForm}>
+            {" "}
             <Subscribe />
-            <div className={styles.borderBottom}></div>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ const light = {
 };
 
 const dark = {
-  bg: "#131417",
+  bg: "#202124",
   fontColor: "#ffffff",
 };
 

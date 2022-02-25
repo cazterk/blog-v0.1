@@ -200,8 +200,10 @@
       font-weight: 300;
     }
     &__input {
-      display: flex;
-      justify-content: center;
+      @include mobileLarge {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 

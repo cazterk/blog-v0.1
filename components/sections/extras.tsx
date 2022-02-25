@@ -15,31 +15,14 @@ export default function Extras() {
 
         <div className={styles.contents}>
           <div className={styles.contents__item}>
-            <h2>Love what you see? </h2>
+            <h2>Love what you see?</h2>
+            <p className={styles.subp}>
+              Well consider subscribing for updates.
+            </p>
             <Subscribe />
+            <div className={styles.borderBottom}></div>
           </div>
-          <div className={styles.contents__item}>
-            {/* <div className={styles.dropdown}>
-              {" "}
-              <input id="toggle" type="checkbox" />
-              <IconContext.Provider value={{ size: "30" }}>
-                <label htmlFor="toggle" className={styles.animate}>
-                  <FaMoneyBillAlt />
-                </label>
-              </IconContext.Provider>
-              <ul className={styles.animate}> */}
-            <Support />
-            {/* </ul>
-            </div> */}
-          </div>
-          {/* <div className={styles.sub}>
-          <h2>Subscribe</h2>
-          <div>
-            <Subscribe />
-          </div>
-        </div> */}
         </div>
-        {/* <div className={styles.borderBottom}></div> */}
       </div>
     </>
   );

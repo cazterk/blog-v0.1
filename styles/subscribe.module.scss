@@ -6,14 +6,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 20em;
+  width: 100%;
 
   @include mobileLarge {
+    // width: 20em;
     padding: 0 1em;
   }
 
   @include mobileSmall {
     padding: 0 1em;
+    width: 15em;
+    /* justify-content: center; */
+    display: contents;
   }
 
   &__formBox {
@@ -39,6 +43,10 @@
       background: $lightGrey;
       width: inherit;
       font-weight: 400;
+
+      @include mobileLarge {
+        width: 20em;
+      }
     }
   }
 
@@ -67,14 +75,16 @@
       opacity: 0.85;
       color: $white;
     }
+
+    @include mobileLarge {
+      width: 100%;
+    }
   }
 }
 
 @media only screen and (min-width: 768px) {
   .subscribe {
     flex-direction: row;
-    justify-content: start;
-    width: 30em;
 
     > * {
       margin-left: 0.5em;
@@ -82,7 +92,7 @@
     }
 
     &__formBox {
-      width: 60%;
+      width: 40%;
 
       input {
         width: 100%;

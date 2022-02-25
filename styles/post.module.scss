@@ -199,6 +199,12 @@
       word-spacing: 0;
       font-weight: 300;
     }
+    &__input {
+      @include mobileLarge {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   .comments {

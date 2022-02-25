@@ -14,10 +14,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+
   @include desktop {
     // display: grid;
-    // padding: 0 12em;
+    padding: 0 12em;
   }
 
   .contents {
@@ -26,7 +26,40 @@
     flex-wrap: wrap;
     grid-gap: 1.5rem;
     gap: 1.5rem;
+    padding: 2rem 1rem 0rem 1rem;
+
     padding: 1em;
+    @include desktop {
+      padding: 2rem 0 0 0;
+    }
+    &__item {
+      flex: 1 0 300px;
+      max-width: 500px;
+      padding: 2em;
+      justify-content: center;
+
+      @include desktop {
+        flex: 1 0 550px;
+        max-width: 700px;
+      }
+
+      h2 {
+        font-size: 1.03rem !important;
+        font-weight: 800;
+        margin: 0 0 1em 0;
+        letter-spacing: -0.4px;
+        opacity: 0.85;
+        text-align: center;
+      }
+
+      .subp {
+        font-size: 1em;
+        margin: 0 1em 1em 1em;
+        word-spacing: 0;
+        font-weight: 300;
+        text-align: center;
+      }
+    }
   }
 
   .dropdown {

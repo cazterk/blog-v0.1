@@ -23,9 +23,7 @@
   .contents {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    grid-gap: 1.5rem;
-    gap: 1.5rem;
+    flex-direction: column;
     padding: 2rem 1rem 0rem 1rem;
 
     padding: 1em;
@@ -33,14 +31,9 @@
       padding: 2rem 0 0 0;
     }
     &__item {
-      flex: 1 0 300px;
-      max-width: 500px;
-      padding: 2em;
       justify-content: center;
 
       @include desktop {
-        flex: 1 0 550px;
-        max-width: 700px;
       }
 
       h2 {
@@ -58,6 +51,13 @@
         word-spacing: 0;
         font-weight: 300;
         text-align: center;
+      }
+    }
+    .subForm {
+      display: flex;
+      justify-content: center;
+      @include desktop {
+        display: block;
       }
     }
   }

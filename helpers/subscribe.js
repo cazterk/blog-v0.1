@@ -55,6 +55,7 @@ export const Subscribe = () => {
             margin: "0",
             fontWeight: "700",
             fontSize: "small",
+            textAlign: "center",
           }}
         >
           {errorMessage}
@@ -67,6 +68,7 @@ export const Subscribe = () => {
             margin: "0",
             fontWeight: "670",
             fontSize: "small",
+            textAlign: "center",
           }}
         >
           subscribed successful!!

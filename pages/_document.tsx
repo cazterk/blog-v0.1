@@ -1,4 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
+
 import { Partytown } from "@builder.io/partytown/react";
 
 class MyDocument extends Document {
@@ -13,13 +15,13 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <Partytown debug={true} forward={["dataLayer.push"]} />
-          <script
+          <Script
             strategy="afterInteractive"
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             type="text/partytown"
           />
-          <script
+          <Script
             type="text/partytown"
             dangerouslySetInnerHTML={{
               __html: `

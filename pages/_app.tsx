@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         type="text/partytown"
       />
-      <Script strategy="lazyOnload">
+      <Script strategy="lazyOnload" type="text/partytown">
         {" "}
         {`
             window.dataLayer = window.dataLayer || [];

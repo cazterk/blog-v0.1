@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/post/[slug].js", "pages/_document.js", "helpers/subscribe.js", "pages/_document.js"  ],
+, "pages/post/[slug].js", "pages/_document.tsx", "helpers/subscribe.js", "pages/_document.tsx", "pages/_app.jsx"  ],
   "exclude": [
     "node_modules"
   ]

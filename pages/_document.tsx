@@ -15,7 +15,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <Partytown debug={true} forward={["dataLayer.push"]} />
-          // google analytics script
+          {/* google analytics script */}
           <Script
             strategy="worker"
             async
@@ -32,7 +32,7 @@ class MyDocument extends Document {
             });
                 `}
           </Script>
-          // google adsbygoogle script
+          {/*  google adsbygoogle script */}
           <Script
             strategy="worker"
             async

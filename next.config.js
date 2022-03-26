@@ -16,5 +16,4 @@ module.exports = {
   experimental: {
     nextScriptWorkers: true,
   },
-  reactStrictMode: false,
 };

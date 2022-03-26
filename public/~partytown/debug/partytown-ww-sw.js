@@ -1,4 +1,4 @@
-/* Partytown 0.5.0 - MIT builder.io */
+/* Partytown 0.5.1 - MIT builder.io */
 (self => {
     const WinIdKey = Symbol();
     const InstanceIdKey = Symbol();
@@ -308,7 +308,7 @@
             return JSON.stringify(v);
         }
         if ("string" === type) {
-            return applyPath.includes("cookie") ? JSON.stringify(v.substr(0, 10) + "...") : JSON.stringify(v.length > 50 ? v.substr(0, 40) + "..." : v);
+            return applyPath.includes("cookie") ? JSON.stringify(v.slice(0, 10) + "...") : JSON.stringify(v.length > 50 ? v.slice(0, 40) + "..." : v);
         }
         if (Array.isArray(v)) {
             return `[${v.map(getLogValue).join(", ")}]`;
@@ -356,29 +356,31 @@
     };
     const taskQueue = [];
     const queue = (instance, $applyPath$, callType, $assignInstanceId$, $groupedGetters$, buffer) => {
-        taskQueue.push({
-            $winId$: instance[WinIdKey],
-            $instanceId$: instance[InstanceIdKey],
-            $applyPath$: [ ...instance[ApplyPathKey], ...$applyPath$ ],
-            $assignInstanceId$: $assignInstanceId$,
-            $groupedGetters$: $groupedGetters$
-        });
-        taskQueue[len(taskQueue) - 1].$debug$ = ((target, applyPath, callType) => {
-            let m = getTargetProp(target, applyPath);
-            1 === callType ? m += " (blocking)" : 2 === callType ? m += " (non-blocking)" : 3 === callType && (m += " (non-blocking, no-side-effect)");
-            return m.trim();
-        })(instance, $applyPath$, callType);
-        buffer && 3 !== callType && console.error("buffer must be sent NonBlockingNoSideEffect");
-        if (3 === callType) {
-            webWorkerCtx.$postMessage$([ 10, {
-                $msgId$: randomId(),
-                $tasks$: [ ...taskQueue ]
-            } ], buffer ? [ buffer instanceof ArrayBuffer ? buffer : buffer.buffer ] : void 0);
-            taskQueue.length = 0;
-        } else if (1 === callType) {
-            return sendToMain(true);
+        if (instance[ApplyPathKey]) {
+            taskQueue.push({
+                $winId$: instance[WinIdKey],
+                $instanceId$: instance[InstanceIdKey],
+                $applyPath$: [ ...instance[ApplyPathKey], ...$applyPath$ ],
+                $assignInstanceId$: $assignInstanceId$,
+                $groupedGetters$: $groupedGetters$
+            });
+            taskQueue[len(taskQueue) - 1].$debug$ = ((target, applyPath, callType) => {
+                let m = getTargetProp(target, applyPath);
+                1 === callType ? m += " (blocking)" : 2 === callType ? m += " (non-blocking)" : 3 === callType && (m += " (non-blocking, no-side-effect)");
+                return m.trim();
+            })(instance, $applyPath$, callType);
+            buffer && 3 !== callType && console.error("buffer must be sent NonBlockingNoSideEffect");
+            if (3 === callType) {
+                webWorkerCtx.$postMessage$([ 10, {
+                    $msgId$: randomId(),
+                    $tasks$: [ ...taskQueue ]
+                } ], buffer ? [ buffer instanceof ArrayBuffer ? buffer : buffer.buffer ] : void 0);
+                taskQueue.length = 0;
+            } else if (1 === callType) {
+                return sendToMain(true);
+            }
+            webWorkerCtx.$asyncMsgTimer$ = setTimeout(sendToMain, 20);
         }
-        webWorkerCtx.$asyncMsgTimer$ = setTimeout(sendToMain, 20);
     };
     const sendToMain = isBlocking => {
         clearTimeout(webWorkerCtx.$asyncMsgTimer$);
@@ -691,7 +693,7 @@
         return resolvedUrl;
     };
     const resolveUrl = (env, url, noUserHook) => resolveToUrl(env, url, noUserHook) + "";
-    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=0.5.0")}"><\/script>`;
+    const getPartytownScript = () => `<script src="${partytownLibUrl("partytown.js?v=0.5.1")}"><\/script>`;
     const createImageConstructor = env => class HTMLImageElement {
         constructor() {
             this.s = "";
@@ -1184,7 +1186,18 @@
         }, "Location");
         const $location$ = new WorkerLocation(url);
         const $isSameOrigin$ = $location$.origin === webWorkerCtx.$origin$ || "about:blank" === $location$.origin;
+        const $isTopWindow$ = $parentWinId$ === $winId$;
         const env = {};
+        const getChildEnvs = () => {
+            let childEnv = [];
+            let envWinId;
+            let otherEnv;
+            for (envWinId in environments) {
+                otherEnv = environments[envWinId];
+                otherEnv.$parentWinId$ !== $winId$ || otherEnv.$isTopWindow$ || childEnv.push(otherEnv);
+            }
+            return childEnv;
+        };
         const WorkerWindow = defineConstructorName(class extends WorkerBase {
             constructor() {
                 super($winId$, $winId$);
@@ -1197,7 +1210,7 @@
                         (() => {
                             if (!webWorkerCtx.$initWindowMedia$) {
                                 self.$bridgeToMedia$ = [ getter, setter, callMethod, constructGlobal, definePrototypePropertyDescriptor, randomId, WinIdKey, InstanceIdKey, ApplyPathKey ];
-                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=0.5.0"));
+                                webWorkerCtx.$importScripts$(partytownLibUrl("partytown-media.js?v=0.5.1"));
                                 webWorkerCtx.$initWindowMedia$ = self.$bridgeFromMedia$;
                                 delete self.$bridgeFromMedia$;
                             }
@@ -1216,6 +1229,7 @@
                     return new NodeCstr;
                 };
                 win.Window = WorkerWindow;
+                win.name = name + `${normalizedWinId($winId$)} (${$winId$})`;
                 createNodeCstr(win, env, WorkerBase);
                 createCSSStyleDeclarationCstr(win, WorkerBase, "CSSStyleDeclaration");
                 ((win, WorkerBase, cstrName) => {
@@ -1325,6 +1339,15 @@
                     $winId$: $winId$,
                     $parentWinId$: $parentWinId$,
                     $window$: new Proxy(win, {
+                        get: (win, propName) => {
+                            if ("string" != typeof propName || isNaN(propName)) {
+                                return win[propName];
+                            }
+                            {
+                                let frame = getChildEnvs()[propName];
+                                return frame ? frame.$window$ : void 0;
+                            }
+                        },
                         has: () => true
                     }),
                     $document$: $createNode$("#document", $winId$ + ".d"),
@@ -1334,6 +1357,7 @@
                     $location$: $location$,
                     $visibilityState$: $visibilityState$,
                     $isSameOrigin$: $isSameOrigin$,
+                    $isTopWindow$: $isTopWindow$,
                     $createNode$: $createNode$
                 });
                 win.requestAnimationFrame = cb => setTimeout((() => cb(performance.now())), 9);
@@ -1384,14 +1408,20 @@
                 input = "string" == typeof input || input instanceof URL ? String(input) : input.url;
                 return fetch(resolveUrl(env, input), init);
             }
+            get frames() {
+                return env.$window$;
+            }
             get frameElement() {
-                return $winId$ === $parentWinId$ ? null : getOrCreateNodeInstance($parentWinId$, $winId$, "IFRAME");
+                return $isTopWindow$ ? null : getOrCreateNodeInstance($parentWinId$, $winId$, "IFRAME");
             }
             get globalThis() {
-                return this;
+                return env.$window$;
             }
             get head() {
                 return env.$head$;
+            }
+            get length() {
+                return getChildEnvs().length;
             }
             get location() {
                 return $location$;
@@ -1401,9 +1431,6 @@
             }
             get Image() {
                 return createImageConstructor(env);
-            }
-            get name() {
-                return name + `${normalizedWinId($winId$)} (${$winId$})`;
             }
             get navigator() {
                 return (env => {
@@ -1447,7 +1474,7 @@
                         return environments[envWinId].$window$;
                     }
                 }
-                return this;
+                return env.$window$;
             }
             postMessage(...args) {
                 if (environments[args[0]]) {
@@ -1461,18 +1488,18 @@
                 callMethod(this, [ "postMessage" ], args, 3);
             }
             get self() {
-                return this;
+                return env.$window$;
             }
             get top() {
                 for (let envWinId in environments) {
-                    if (environments[envWinId].$winId$ === environments[envWinId].$parentWinId$) {
+                    if (environments[envWinId].$isTopWindow$) {
                         return environments[envWinId].$window$;
                     }
                 }
-                return this;
+                return env.$window$;
             }
             get window() {
-                return this;
+                return env.$window$;
             }
             get XMLHttpRequest() {
                 const Xhr = XMLHttpRequest;

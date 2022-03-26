@@ -1,6 +1,5 @@
 import "../styles/_global.scss";
 import React from "react";
-import Head from "next/head";
 import Script from "next/script";
 
 import { Partytown } from "@builder.io/partytown/react";
@@ -14,22 +13,24 @@ function MyApp({ Component, pageProps }) {
     <>
       <Partytown debug={true} forward={["dataLayer.push"]} />
       <Script
-        strategy="lazyOnload"
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        type="text/partytown"
+        strategy="worker"
       />
-      <Script strategy="lazyOnload" type="text/partytown">
-        {" "}
-        {`
+
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
               page_path: window.location.pathname,
             });
-                `}
-      </Script>
+                `,
+        }}
+        type="text/partytown"
+      />
 
       <Layout>{<Component {...pageProps} />}</Layout>
     </>

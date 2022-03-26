@@ -15,13 +15,14 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <Partytown debug={true} forward={["dataLayer.push"]} />
-          <script
+          {/*  google adsbygoogle script */}
+          {/* <Script
+            strategy="worker"
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            type="text/partytown"
           />
-          <script
-            type="text/partytown"
+          <Script
+            strategy="worker"
             dangerouslySetInnerHTML={{
               __html: `
                (adsbygoogle = window.adsbygoogle || []).push({
@@ -30,7 +31,7 @@ class MyDocument extends Document {
               });
                 `,
             }}
-          />
+          /> */}
         </Head>
         <body>
           <Main />

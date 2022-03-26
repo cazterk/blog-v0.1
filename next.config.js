@@ -10,11 +10,10 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+};
+
+module.exports = {
   experimental: {
     nextScriptWorkers: true,
-  },
-  reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
   },
 };

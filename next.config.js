@@ -10,9 +10,10 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-};
 
-module.exports = {
+  images: {
+    domains: ["cdn.sanity.io"],
+  },
   experimental: {
     nextScriptWorkers: true,
   },

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Image from "next/image";
 
 import imageUrlBuilder from "@sanity/image-url";
 
@@ -93,8 +94,15 @@ export default function Home({ posts, load }) {
                 >
                   <div
                     className={styles.card__mainImage}
-                    style={{ backgroundImage: `url(${p.mainImage}` }}
-                  ></div>
+                    // style={{ backgroundImage: `url(${p.mainImage}` }}
+                  >
+                    <Image
+                      src={`${p.mainImage}`}
+                      objectFit="cover"
+                      layout="fill"
+                      quality={65}
+                    />
+                  </div>
 
                   <div className={styles.card__content}>
                     {/* <h2>{p.category}</h2> */}

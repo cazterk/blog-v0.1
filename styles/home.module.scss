@@ -52,10 +52,6 @@
     color: inherit;
     font-size: 1rem;
 
-    &__mainImage {
-      border-radius: 1px;
-    }
-
     @include desktop {
       flex-direction: row;
       flex: 1 0 550px;
@@ -74,11 +70,11 @@
     &__mainImage {
       flex: 0 0 290px;
       height: 190px;
+      position: relative;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      // border: 20px solid #f2f6fc;
-      // border-radius: 2px;
+      border-radius: 1px;
     }
 
     &__title {

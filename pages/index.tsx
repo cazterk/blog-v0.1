@@ -98,9 +98,8 @@ export default function Home({ posts, load }) {
                   >
                     <Image
                       src={`${p.mainImage}`}
-                      width={14}
-                      height={9.4}
-                      layout="responsive"
+                      objectFit="cover"
+                      layout="fill"
                       quality={65}
                     />
                   </div>

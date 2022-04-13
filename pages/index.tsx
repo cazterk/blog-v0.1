@@ -81,7 +81,6 @@ export default function Home({ posts, load }) {
 
       <section>
         <Heros />
-        <Spinner />
         {/* <MyAdSense /> */}
         <div className={styles.main}>
           <div className={styles.post}>Posts</div>

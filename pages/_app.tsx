@@ -2,8 +2,6 @@ import "../styles/_global.scss";
 import React from "react";
 import Script from "next/script";
 
-import { Partytown } from "@builder.io/partytown/react";
-
 import Layout from "../components/layout";
 
 require("typeface-nunito");
@@ -11,11 +9,10 @@ require("typeface-nunito");
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Partytown debug={true} forward={["dataLayer.push"]} />
       <Script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        strategy="worker"
+        strategy="lazyOnload"
       />
 
       <Script
@@ -29,7 +26,7 @@ function MyApp({ Component, pageProps }) {
             });
                 `,
         }}
-        type="text/partytown"
+        strategy="lazyOnload"
       />
 
       <Layout>{<Component {...pageProps} />}</Layout>

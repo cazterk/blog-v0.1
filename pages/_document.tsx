@@ -1,8 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
-import { Partytown } from "@builder.io/partytown/react";
-
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -14,7 +12,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <Partytown debug={true} forward={["dataLayer.push"]} />
           {/*  google adsbygoogle script */}
           {/* <Script
             strategy="worker"

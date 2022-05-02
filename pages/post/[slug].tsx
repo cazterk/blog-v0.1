@@ -5,7 +5,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { DiscussionEmbed } from "disqus-react";
 
 import { Subscribe } from "../../helpers/subscribe";
 import { Coffee } from "../../components/coffee";

@@ -1,0 +1,20 @@
+@import "colors";
+
+:root {
+  // RIGHT, will work in all Sass versions.
+  $accent-color-primary: $accent;
+  $color-primary: $black;
+  $color-paragraph: $myGray;
+  $colorBackground: $white;
+  $grey-accent: $lightGrey;
+  $gradient-primary: $gradient;
+}
+
+[data-theme="dark"] {
+  $accent-color-primary: $accent;
+  $color-primary: $white;
+  $color-paragraph: $myGray;
+  $color-background: $black;
+  $grey-accent: $myGray;
+  $gradient-primary: $gradient;
+}

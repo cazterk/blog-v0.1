@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import { Navbar } from "./sections/navbar";
 import { Footer } from "./sections/footer";
@@ -12,16 +13,16 @@ import { lightTheme, darkTheme } from "../helpers/theme";
 const Layout = ({ children }) => {
   const darkMode = useDarkMode(true);
   const theme = darkMode.value ? darkTheme : lightTheme;
-
+  const [themeMode, setThemeMode] = useState(theme);
   return (
     <React.Fragment>
-      <ThemeProvider theme={theme}>
-        <Div>
-          <Navbar />
-          <main> {children}</main>
-          <Footer />
-        </Div>
-      </ThemeProvider>
+      {/* <ThemeProvider theme={theme}> */}
+      <div>
+        <Navbar />
+        <main> {children}</main>
+        <Footer />
+      </div>
+      {/* </ThemeProvider> */}
     </React.Fragment>
   );
 };

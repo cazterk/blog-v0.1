@@ -32,3 +32,22 @@ input {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  // RIGHT, will work in all Sass versions.
+  --accent-color-primary: #{$accent};
+  --color-primary: #{$primary};
+  --color-paragraph: #{$myGray};
+  --color-background: #{$white};
+  --grey-accent: #{$lightGrey};
+  --gradient-primary: #{$gradient};
+}
+
+[data-theme="dark"] {
+  --accent-color-primary: #{$accent};
+  --color-primary: #{$white};
+  --color-paragraph: #{$myGray};
+  --color-background: #{$white};
+  --grey-accent: #{$myGray};
+  --gradient-primary: #{$gradient};
+}

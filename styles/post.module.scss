@@ -244,9 +244,9 @@
       .top {
         &__line {
           margin: 1em 0;
-          height: 1.5px;
+          height: 2.5px;
           border-radius: 1px;
-          background-color: #f1f1f1;
+          background-color: var(--grey-accent);
         }
 
         &__share {

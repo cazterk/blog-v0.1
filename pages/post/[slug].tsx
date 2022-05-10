@@ -80,7 +80,7 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta name="og:description" content={excerpt} />
         <meta name="og:image" content={imageUrl} />
         <meta property="og:type" content="article" />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content={excerpt} />
         <meta name="twitter:site" content="@cazterk" />
         <meta name="twitter:image" content={imageUrl} />
       </Head>

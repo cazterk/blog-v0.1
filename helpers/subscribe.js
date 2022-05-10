@@ -39,7 +39,14 @@ export const Subscribe = () => {
           onClick={subscribe}
         >
           {(state === "IDLE" || state === "ERROR" || state === "SUCCESS") && (
-            <p> Subscribe</p>
+            <p
+              style={{
+                color: "#ffffff",
+              }}
+            >
+              {" "}
+              Subscribe
+            </p>
           )}
           {state === "LOADING" && (
             <i>

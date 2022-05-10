@@ -77,12 +77,12 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content={url} />
         <meta name="description" content={excerpt} />
-        <meta name="og:description" content={excerpt} />
         <meta name="og:image" content={imageUrl} />
         <meta property="og:type" content="article" />
-        <meta name="twitter:card" content={excerpt} />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@cazterk" />
         <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:description" content={excerpt} />
       </Head>
 
       <div className={styles.container}>

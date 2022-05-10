@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "partytown": "partytown copylib public/~partytown",
     "start": "next start",
     "postbuild": "next-sitemap"
   },
@@ -31,10 +30,8 @@
     "react-share": "^4.4.0",
     "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.51.0",
-    "styled-components": "^5.3.5",
     "typeface-inter": "^3.18.1",
-    "typeface-nunito": "^1.1.13",
-    "use-dark-mode": "^2.3.1"
+    "typeface-nunito": "^1.1.13"
   },
   "devDependencies": {
     "@types/node": "^16.11.31",

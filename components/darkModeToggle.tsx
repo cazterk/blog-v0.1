@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import useDarkMode from "use-dark-mode";
-
 import { BiMoon } from "react-icons/bi";
 import { FiSun } from "react-icons/fi";
+
 import styles from "../styles/darkModeToggle.module.scss";
 
 export const DarkModeToggle = () => {

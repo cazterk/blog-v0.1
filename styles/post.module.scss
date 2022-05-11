@@ -155,10 +155,13 @@
     }
 
     pre {
-      border-radius: 2px;
+      max-height: 35em;
+      border-radius: 4px;
+      font-size: 1rem;
 
       &::-webkit-scrollbar {
-        height: 0.4em;
+        height: 0.5em;
+        width: 0.5em;
       }
 
       // &::-webkit-scrollbar-track {

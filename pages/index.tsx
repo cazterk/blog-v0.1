@@ -74,8 +74,7 @@ export default function Home({ posts, load }) {
         <meta
           name="description"
           content="here to deliver top-notch hot takes on technology, software, and
-          everything in between, the terklog aims to be on the path to
-          continuous delivery and improvement"
+          everything in between, with continuous delivery and improvement"
         />
       </Head>
 
@@ -101,6 +100,7 @@ export default function Home({ posts, load }) {
                       objectFit="cover"
                       layout="fill"
                       quality={65}
+                      alt={p.title}
                     />
                   </div>
 

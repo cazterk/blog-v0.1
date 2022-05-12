@@ -57,7 +57,9 @@
 
   .footerMid {
     text-align: center;
-    @extend %text-color;
+    p {
+      @extend %text-color;
+    }
   }
 
   .footerBottom {

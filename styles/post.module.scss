@@ -176,6 +176,14 @@
       }
     }
 
+    blockquote {
+      margin: 1em 0;
+      padding: 1em;
+      font-style: italic;
+      color: var(--color-paragraph);
+      border-left: 4px solid var(--grey-accent);
+    }
+
     .coffee {
       display: flex;
       align-items: center;

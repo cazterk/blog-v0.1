@@ -12,13 +12,14 @@
       justify-self: end;
       svg {
         vertical-align: middle;
+        color: var(--color-paragraph);
       }
     }
 
     &[for="dark"] {
       justify-self: start;
       svg {
-        vertical-align: middle;
+        color: var(--color-paragraph);
       }
     }
   }

@@ -1,7 +1,7 @@
 @import "colors";
 
 .header {
-  background: inherit;
+  background: var(--nav-color);
   text-align: center;
   box-shadow: 0 2px 6px 0 rgb(0 0 0 / 10%);
 
@@ -13,20 +13,11 @@
   }
 
   a {
-    color: transparent;
-    background-image: $gradient;
+    color: var(--color-paragraph);
     text-decoration: none;
     cursor: pointer;
-    -webkit-background-clip: text;
     font-size: 1.2rem;
     font-weight: 800;
-    animation: move 1.5s infinite;
-
-    @keyframes move {
-      50% {
-        background-image: $gradient-animate;
-      }
-    }
   }
 
   .logo {

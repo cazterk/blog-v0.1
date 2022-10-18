@@ -1,15 +1,16 @@
-$primary: #16191d;
-$red: #ff304f;
-$black: #010101;
-$accent: #f8fff4;
-$white: #ffffff;
-$blue: #276afb;
-$myGray: #6b7280;
-$oycrayola: #f4d35e;
-$lightRed: #ff6b6b;
-$lightGrey: #eee;
-$lightGrey2: #f4f4f9;
-$darkGrey: #262626;
+$primary: hsl(224, 44, 10);
+$red: hsl(351, 100, 59);
+$black: hsl(0, 0, 0);
+$accent: hsl(98, 100, 98);
+$white: hsl(0, 0, 100);
+$blue: hsl(221, 96, 57);
+$myGray: hsl(220, 9, 46);
+$oycrayola: hsl(47, 87, 66);
+$lightRed: hsl(0, 100, 71);
+$lightGrey: hsl(0, 0, 93);
+$lightGrey2: hsl(240, 29, 97);
+$lightBlue: hsl(223, 43, 13);
+$darkGrey: hsl(0, 0, 15);
 $gradient: linear-gradient(
   90deg,
   hsla(0, 100%, 71%, 1) 0%,

@@ -43,13 +43,15 @@ input {
   --color-background: #{$white};
   --grey-accent: #{$lightGrey};
   --gradient-primary: #{$gradient};
+  --nav-color: var(--color-background);
 }
 
 [data-theme="dark"] {
   --accent-color-primary: #{$accent};
   --color-primary: #{$white};
   --color-paragraph: #{$white};
-  --color-background: #{$black};
+  --color-background: #{$primary};
   --grey-accent: #{$darkGrey};
   --gradient-primary: #{$gradient};
+  --nav-color: #{$lightBlue};
 }

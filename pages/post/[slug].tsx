@@ -27,8 +27,7 @@ const PROJID = process.env.NEXT_PUBLIC_PROJECT_ID;
 
 const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
   const [imageUrl, setimageUrl] = useState("");
-  const [state, setState] = useState("");
-  const [enableLoadComments, setEnableLoadComments] = useState(true);
+  const [showComments, setShowComments] = useState(false);
 
   const url =
     typeof window !== "undefined" && window.location.href
@@ -44,9 +43,8 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
     setimageUrl(imageBuilder.image(image));
   }, [image]);
 
-  const showComments = () => {
-    setState("CLICKED");
-    setEnableLoadComments(false);
+  const commentsState = () => {
+    setShowComments(!showComments);
   };
 
   // const disqusConfig = {
@@ -137,13 +135,13 @@ const Post = ({ pageSlug, title, body, image, date, excerpt }) => {
           {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
           <div className={styles.comments}>
             {" "}
-            {enableLoadComments && (
-              <button onClick={showComments}>
+            {!showComments && (
+              <button onClick={commentsState}>
                 Load comments <MdKeyboardArrowDown />
               </button>
             )}
           </div>{" "}
-          {state === "CLICKED" && (
+          {showComments && (
             <div>
               {" "}
               {/* <DiscussionEmbed {...disqusConfig} /> */}

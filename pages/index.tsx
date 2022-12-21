@@ -26,11 +26,13 @@ export default function Home({ posts, load }) {
     );
   }
 
+  let initialPost = 9;
+
   const router = useRouter();
   const [mappedPost, setmappedPost] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const [visible, setvisible] = useState(8);
+  const [visible, setvisible] = useState(initialPost);
 
   useEffect(() => {
     if (posts.length) {
@@ -62,7 +64,7 @@ export default function Home({ posts, load }) {
   };
 
   const showLessItems = () => {
-    if (visible > 8) {
+    if (visible > initialPost) {
       setvisible((preValue) => preValue - 2);
     }
   };
@@ -134,7 +136,7 @@ export default function Home({ posts, load }) {
         </div>
 
         <div className={styles.holder}>
-          {visible > 4 && (
+          {visible > initialPost && (
             <div className={styles.button} onClick={showLessItems}>
               <p className={styles.btnText}>Less</p>
             </div>

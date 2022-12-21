@@ -14,8 +14,6 @@
   background: inherit;
 
   @include desktop {
-    display: grid;
-
     padding: 0 12em;
   }
 
@@ -31,14 +29,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-gap: 1.5rem;
-    gap: 1.5rem;
+    grid-gap: 1rem;
+    gap: 1rem;
     padding: 2rem 1rem 0rem 1rem;
     @include desktop {
       display: grid;
-      gap: 10px;
+
       grid-template-columns: repeat(3, 1fr);
-      padding: 1rem 0 0 0;
+      margin: 0 10rem;
+      padding: 0;
     }
   }
 
@@ -48,7 +47,7 @@
     flex-direction: column;
     cursor: pointer;
     flex: 1 0 300px;
-    max-width: 500px;
+    // max-width: 400px;
     overflow: hidden;
     border-radius: 2px;
     background: inherit;
@@ -56,10 +55,8 @@
     font-size: 1rem;
 
     @include desktop {
-      // flex-direction: row;
-
-      min-width: 270px;
-      max-width: 440px;
+      min-width: 330px;
+      padding: 0.5rem;
     }
 
     &__content {
@@ -72,17 +69,18 @@
     }
 
     &__mainImage {
-      flex: 0 0 290px;
-      height: 190px;
+      flex: 0 0 240px;
       position: relative;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      border-radius: 1px;
+
+      span {
+        border-radius: 5px;
+      }
 
       @include desktop {
-        flex: 0 0 250px;
-        // height: 50px;
+        flex: 0 0 220px;
       }
     }
 

@@ -2,7 +2,7 @@
 @import "_media-queries";
 
 .heros {
-  // background-color: inherit;
+  background-color: var(--gradient-primary);
   // color: $white;
   text-align: center;
   padding: 2em 0;

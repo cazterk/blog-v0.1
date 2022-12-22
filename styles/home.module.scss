@@ -14,8 +14,6 @@
   background: inherit;
 
   @include desktop {
-    display: grid;
-    // justify-items: center;
     padding: 0 12em;
   }
 
@@ -31,12 +29,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-gap: 1.5rem;
-    gap: 1.5rem;
+    grid-gap: 1rem;
+    gap: 1rem;
     padding: 2rem 1rem 0rem 1rem;
+
     @include desktop {
-      padding: 2rem 0 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 10rem;
+      padding: 0;
     }
+    // @include tablet {
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
   }
 
   .card {
@@ -45,7 +51,7 @@
     flex-direction: column;
     cursor: pointer;
     flex: 1 0 300px;
-    max-width: 500px;
+    // max-width: 400px;
     overflow: hidden;
     border-radius: 2px;
     background: inherit;
@@ -53,9 +59,8 @@
     font-size: 1rem;
 
     @include desktop {
-      flex-direction: row;
-      flex: 1 0 550px;
-      max-width: 700px;
+      min-width: 330px;
+      padding: 0.5rem;
     }
 
     &__content {
@@ -68,13 +73,19 @@
     }
 
     &__mainImage {
-      flex: 0 0 290px;
-      height: 190px;
+      flex: 0 0 240px;
       position: relative;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
-      border-radius: 1px;
+
+      span {
+        border-radius: 5px;
+      }
+
+      @include desktop {
+        flex: 0 0 220px;
+      }
     }
 
     &__title {

@@ -2,7 +2,7 @@
 @import "_media-queries";
 
 .heros {
-  // background-color: inherit;
+  background: var(--heros-background);
   // color: $white;
   text-align: center;
   padding: 2em 0;
@@ -11,28 +11,42 @@
 
   .container {
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 2.5rem 1em;
 
     @include desktop {
       width: 75%;
+      padding: 5rem 1em;
     }
   }
 
   h1 {
+    // color: $black;
     font-weight: 800;
     font-size: 2em;
     line-height: 1;
     margin: 0;
+    opacity: 0.8;
+    @include desktop {
+      font-size: 4rem;
+    }
   }
 
   p {
+    // color: $black;
     font-style: italic;
     font-weight: 600;
     line-height: 1.7em;
     font-size: 0.9rem;
-    // color: $white;
     opacity: 0.9;
     margin: 1em 0 1em 0;
+
+    @include desktop {
+      padding: 0 8rem;
+      font-size: 1rem;
+    }
+
+    @include tablet {
+    }
 
     span {
       svg {

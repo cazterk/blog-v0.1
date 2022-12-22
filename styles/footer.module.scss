@@ -50,6 +50,13 @@
     flex-wrap: wrap;
     margin: 0 auto;
 
+    .topLine {
+      margin: 1em 0;
+      height: 2.5px;
+      border-radius: 1px;
+      background-color: var(--grey-accent);
+    }
+
     .footerTop {
       @extend %content-center;
     }

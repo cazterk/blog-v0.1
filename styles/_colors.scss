@@ -1,4 +1,4 @@
-$primary: hsl(224, 44, 10);
+$primary: rgb(37, 44, 63);
 $red: hsl(351, 100, 59);
 $black: hsl(0, 0, 0);
 $accent: hsl(98, 100, 98);
@@ -9,7 +9,7 @@ $oycrayola: hsl(47, 87, 66);
 $lightRed: hsl(0, 100, 71);
 $lightGrey: hsl(0, 0, 93);
 $lightGrey2: hsl(240, 29, 97);
-$lightBlue: hsl(223, 43, 13);
+$lightBlue: rgb(33, 39, 54);
 $darkGrey: hsl(0, 0, 15);
 $gradient: linear-gradient(
   90deg,
@@ -22,3 +22,4 @@ $gradient-animate: linear-gradient(
   hsla(0, 100%, 71%, 1) 0%,
   hsla(49, 100%, 81%, 1) 100%
 );
+$aliceblue: hsl(208, 100, 97);

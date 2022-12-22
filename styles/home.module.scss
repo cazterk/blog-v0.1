@@ -32,13 +32,17 @@
     grid-gap: 1rem;
     gap: 1rem;
     padding: 2rem 1rem 0rem 1rem;
+
     @include desktop {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
       margin: 0 10rem;
       padding: 0;
     }
+    // @include tablet {
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
   }
 
   .card {

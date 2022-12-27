@@ -44,11 +44,7 @@ input {
   --grey-accent: #{$lightGrey};
   --gradient-primary: #{$gradient};
   --nav-color: (var(--color-primary));
-  --heros-background: linear-gradient(
-    to right,
-    rgb(255, 228, 230),
-    rgb(204, 251, 241)
-  );
+  --heros-background: #{$lightGrey2};
 }
 
 [data-theme="dark"] {

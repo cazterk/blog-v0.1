@@ -3,7 +3,7 @@
 
 .heros {
   background: var(--heros-background);
-  // color: $white;
+  color: $white;
   text-align: center;
   padding: 2em 0;
   // box-shadow: 0 4px 8px -2px rgb(0 0 0 / 15%);
@@ -21,7 +21,8 @@
 
   h1 {
     // color: $black;
-    font-weight: 800;
+
+    font-weight: 900;
     font-size: 2em;
     line-height: 1;
     margin: 0;

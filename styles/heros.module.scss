@@ -2,7 +2,7 @@
 @import "_media-queries";
 
 .heros {
-  background: var(--heros-background);
+  // background: var(--heros-background);
   color: $white;
   text-align: center;
   padding: 2em 0;
@@ -15,7 +15,7 @@
 
     @include desktop {
       width: 75%;
-      padding: 5rem 1em;
+      padding: 3.5rem 1em;
     }
   }
 
@@ -27,14 +27,14 @@
     margin: 0;
     opacity: 0.8;
     @include desktop {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
 
   p {
     // color: $black;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.7em;
     font-size: 0.9rem;
     opacity: 0.9;

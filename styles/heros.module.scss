@@ -15,19 +15,19 @@
 
     @include desktop {
       width: 75%;
-      padding: 4rem 1em;
+      padding: 3.5rem 1em;
     }
   }
 
   h1 {
     // color: $black;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1;
     margin: 0;
     opacity: 0.8;
     @include desktop {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
 
